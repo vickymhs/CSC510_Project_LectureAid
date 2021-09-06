@@ -1,10 +1,35 @@
 import spacy
+import sys
 
 
 def keyword_extractor(data: list) -> list:
     """Function to implement removal of stopwords and punctuation marks using spacy and return only keywords.
     Add further necessary documentation here."""
-    pass
+    try:
+        nlp = spacy.load("en_core_web_lg")
+    except OSError as e:
+        print("Please make sure you have Spacy Word Model en_core_web_lg downloaded.")
+        print(e)
+        sys.exit()
+    pos_tag = ["NOUN"]
+    for slide in data:
+        doc_header = nlp(slide["header"].lower())
+        doc_paragraph = nlp(slide["paragraph"].lower())
+        header_keywords = []
+        paragraph_keywords = []
+        for token in doc_header:
+            if token.text in nlp.Defaults.stop_words or token.is_punct:
+                continue
+            if token.pos_ in pos_tag:
+                header_keywords.append(token)
+        for token in doc_paragraph:
+            if token.text in nlp.Defaults.stop_words or token.is_punct:
+                continue
+            if token.pos_ in pos_tag:
+                paragraph_keywords.append(token)
+        slide["header_keywords"] = header_keywords
+        slide["paragraph_keywords"] = paragraph_keywords
+    return data
 
 
 def duplicate_word_removal(data: list) -> list:
@@ -33,7 +58,7 @@ if __name__ == "__main__":
             n What if a reply is received?",
              "slide": 9},
             {"header": "Dimensionality Reduction PCA",
-             "paragraph": "Goal is to find a projecRon that captures the largest amount of variaRon in data \
+             "paragraph": "Goal is to find a projection that captures the largest amount of variation in data \
              Find the eigenvectors of the covariance matrix The eigenvectors define the new space",
              "slide": 10}]
 
