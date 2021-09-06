@@ -41,7 +41,19 @@ def duplicate_word_removal(data: list) -> list:
 def merge_slide_with_same_headers(data: list) -> list:
     """Function to implement merging of slide paragraphs where the slide header is the same. Add further necessary
     documentation here. """
-    pass
+    merged = []
+    headers = []
+    for slide in data:
+        if slide["header"] not in headers:
+            headers.append(slide["header"])
+            paragraph_keywords = []
+            slide_numbers = []
+            for x in [y for y in data if y["header"] == slide["header"]]:
+                paragraph_keywords += x["paragraph_keywords"]
+                slide_numbers.append(x["slide"])
+            merged.append({"header": slide["header"], "header_keywords": slide["header_keywords"],
+                           "paragraph_keywords": paragraph_keywords, "slides": slide_numbers})
+    return merged
 
 
 if __name__ == "__main__":
@@ -63,5 +75,8 @@ if __name__ == "__main__":
              "slide": 10}]
 
     keyword_data = keyword_extractor(data)
-    keyword_data = duplicate_word_removal(keyword_data)
+    print(keyword_data)
+    # keyword_data = duplicate_word_removal(keyword_data)
     keyword_data = merge_slide_with_same_headers(keyword_data)
+
+    print(keyword_data)
