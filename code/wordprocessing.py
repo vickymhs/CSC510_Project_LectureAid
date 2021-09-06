@@ -1,6 +1,6 @@
-import spacy
-import sys
 from collections import OrderedDict
+import sys
+import spacy
 
 
 def keyword_extractor(data: list) -> list:
