@@ -1,5 +1,6 @@
 import spacy
 import sys
+from collections import OrderedDict
 
 
 def keyword_extractor(data: list) -> list:
@@ -35,7 +36,10 @@ def keyword_extractor(data: list) -> list:
 def duplicate_word_removal(data: list) -> list:
     """Function to implement removal of duplicate words present within the list, while maintaining inherent order of
     words in the list. Add further necessary documentation here."""
-    pass
+    for dictionary in data:
+        dictionary['header_keywords'] = list(OrderedDict.fromkeys(dictionary['header_keywords']))
+        dictionary['paragraph_keywords'] = list(OrderedDict.fromkeys(dictionary['paragraph_keywords']))
+    return data
 
 
 def merge_slide_with_same_headers(data: list) -> list:
