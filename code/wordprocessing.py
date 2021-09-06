@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
     keyword_data = keyword_extractor(data)
     print(keyword_data)
-    # keyword_data = duplicate_word_removal(keyword_data)
     keyword_data = merge_slide_with_same_headers(keyword_data)
-
+    print(keyword_data)
+    keyword_data = duplicate_word_removal(keyword_data)
     print(keyword_data)
