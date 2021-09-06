@@ -61,7 +61,7 @@ def merge_slide_with_same_headers(data: list) -> list:
 
 
 if __name__ == "__main__":
-    data = [{"header": "Dimensionality Reduction PCA",
+    main_data = [{"header": "Dimensionality Reduction PCA",
              "paragraph": "Dimensionality Reduction Purposes: – Avoid curse of dimensionality – Reduce amount \
             of time and memory required by data mining algorithms Allow data to be more easily \
             visualized May help to eliminate irrelevant features or reduce noise Techniques Principal Component Analysis \
@@ -78,7 +78,7 @@ if __name__ == "__main__":
              Find the eigenvectors of the covariance matrix The eigenvectors define the new space",
              "slide": 10}]
 
-    keyword_data = keyword_extractor(data)
+    keyword_data = keyword_extractor(main_data)
     print(keyword_data)
     keyword_data = merge_slide_with_same_headers(keyword_data)
     print(keyword_data)
