@@ -4,8 +4,12 @@ import spacy
 
 
 def keyword_extractor(data: list) -> list:
-    """Function to implement removal of stopwords and punctuation marks using spacy and return only keywords.
-    Add further necessary documentation here."""
+    """
+    Function to extract keywords from the headers and paragraphs of slides
+    :param data: The list of dictionaries of the form [{"header":"", "paragraph":"", slide:int}]
+    :return: The list of dictionaries with keywords extracted of the form [{"header":"", "paragraph":"",
+             "header_keywords": [], "paragraph_keywords": [], slide:int}]
+    """
     try:
         nlp = spacy.load("en_core_web_lg")
     except OSError as e:
@@ -34,8 +38,13 @@ def keyword_extractor(data: list) -> list:
 
 
 def duplicate_word_removal(data: list) -> list:
-    """Function to implement removal of duplicate words present within the list, while maintaining inherent order of
-    words in the list. Add further necessary documentation here."""
+    """
+
+    :param data: The list of dictionaries of the form [{"header":"", "header_keywords": [],
+                "paragraph_keywords": [], slides:[int]}]
+    :return: The list of dictionaries with duplicate keywords removed of the form [{"header":"", "header_keywords": [],
+                "paragraph_keywords": [], slides:[int]}]
+    """
     for dictionary in data:
         dictionary['header_keywords'] = list(OrderedDict.fromkeys(dictionary['header_keywords']))
         dictionary['paragraph_keywords'] = list(OrderedDict.fromkeys(dictionary['paragraph_keywords']))
@@ -43,8 +52,13 @@ def duplicate_word_removal(data: list) -> list:
 
 
 def merge_slide_with_same_headers(data: list) -> list:
-    """Function to implement merging of slide paragraphs where the slide header is the same. Add further necessary
-    documentation here. """
+    """
+
+    :param data: The list of dictionaries of the form [{"header":"", "paragraph":"", "header_keywords": [],
+                "paragraph_keywords": [], slide:int}]
+    :return: The list of dictionaries where slides containing the same header are merged
+             of the form [{"header":"", "header_keywords": [], "paragraph_keywords": [], slides:[int]}]
+    """
     merged = []
     headers = []
     for slide in data:
