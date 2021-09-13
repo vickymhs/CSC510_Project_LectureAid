@@ -1,6 +1,7 @@
 from collections import OrderedDict
 import sys
 import spacy
+import re
 
 
 def keyword_extractor(data: list) -> list:
@@ -16,7 +17,7 @@ def keyword_extractor(data: list) -> list:
         print("Please make sure you have Spacy Word Model en_core_web_lg downloaded.")
         print(e)
         sys.exit()
-    pos_tag = ["NOUN"]
+    pos_tag = ["PROPN", "NOUN"]
     for slide in data:
         doc_header = nlp(slide["header"].lower())
         doc_paragraph = nlp(slide["paragraph"].lower())
@@ -26,12 +27,16 @@ def keyword_extractor(data: list) -> list:
             if token.text in nlp.Defaults.stop_words or token.is_punct:
                 continue
             if token.pos_ in pos_tag:
-                header_keywords.append(token.text)
+                word = re.sub(r"[^0-9a-zA-Z]+", "", token.text)
+                if word != "":
+                    header_keywords.append(word)
         for token in doc_paragraph:
             if token.text in nlp.Defaults.stop_words or token.is_punct:
                 continue
             if token.pos_ in pos_tag:
-                paragraph_keywords.append(token.text)
+                word = re.sub(r"[^0-9a-zA-Z]+", "", token.text)
+                if word != "":
+                    paragraph_keywords.append(word)
         slide["header_keywords"] = header_keywords
         slide["paragraph_keywords"] = paragraph_keywords
     return data
