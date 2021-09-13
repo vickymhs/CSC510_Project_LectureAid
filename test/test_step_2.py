@@ -1,20 +1,37 @@
-import unittest
-import sys
-sys.path.append("../code")
+"""
+
+Unit tests for step 2
+
+"""
+
 from step1 import get_doc
 from step2 import get_sizes, tag_text, text_to_groupings
+import unittest
 
 
 class MyTestCase(unittest.TestCase):
+    """
 
+    Test cases for the step 2
+    Includes testing None cases and valid PDFs
+
+    """
     def test_font_doc_none(self):
+        """
+        Asserts that when None is passed into get_sizes,
+        no error happens and None is returned
+        """
         # assert when no document is passed, it returns none
         unique_fonts = get_sizes(None)
         self.assertIsNone(unique_fonts)
 
     def test_dict_fonts_none(self):
+        """
+        Asserts that when None is passed into tag_text,
+        no error happens and None is returned
+        """
         # assert when no document is passed, it returns none
-        dict_none = tag_text(None)
+        dict_none = tag_text(None, None)
         self.assertIsNone(dict_none)
 
     def test_font_size_1(self):
@@ -26,6 +43,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(expected_fonts, actual_fonts)
 
     def test_text_to_groupings_1(self):
+        """
+        Tests the groupings given a file
+        """
         filename = "data/Test_1.pdf"
         doc = get_doc(filename)
         actual_dict = text_to_groupings(doc)
