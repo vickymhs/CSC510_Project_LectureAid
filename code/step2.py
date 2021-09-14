@@ -5,7 +5,7 @@ of headers and paragraphs
 
 """
 import sys
-from step1 import get_doc
+from .step1 import get_doc
 
 page_blocks = []
 

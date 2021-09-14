@@ -3,9 +3,8 @@
 Unit tests for step 2
 
 """
-
-from step1 import get_doc
-from step2 import get_sizes, tag_text, text_to_groupings
+from code.step1 import get_doc
+from code.step2 import (get_sizes, tag_text, text_to_groupings)
 import unittest
 
 
@@ -35,7 +34,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsNone(dict_none)
 
     def test_font_size_1(self):
-        filename = "data/Test_1.pdf"
+        filename = "./test/data/Test_1.pdf"
         doc = get_doc(filename)
         actual_fonts = get_sizes(doc)
 
@@ -46,7 +45,7 @@ class MyTestCase(unittest.TestCase):
         """
         Tests the groupings given a file
         """
-        filename = "data/Test_1.pdf"
+        filename = "./test/data/Test_1.pdf"
         doc = get_doc(filename)
         actual_dict = text_to_groupings(doc)
 
