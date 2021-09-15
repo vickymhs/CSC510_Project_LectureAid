@@ -3,7 +3,8 @@
 Unit tests for step 2
 
 """
-from code.step1 import get_doc
+import json
+
 from code.step2 import (get_sizes, tag_text, text_to_groupings)
 import unittest
 
@@ -15,49 +16,98 @@ class MyTestCase(unittest.TestCase):
     Includes testing None cases and valid PDFs
 
     """
+
     def test_font_doc_none(self):
         """
         Asserts that when None is passed into get_sizes,
         no error happens and None is returned
         """
-        # assert when no document is passed, it returns none
-        unique_fonts = get_sizes(None)
-        self.assertIsNone(unique_fonts)
+        # assert when no document is passed, it returns an empty lst
+        unique_fonts = get_sizes([])
+        self.assertEqual(unique_fonts, [])
 
     def test_dict_fonts_none(self):
         """
         Asserts that when None is passed into tag_text,
         no error happens and None is returned
         """
-        # assert when no document is passed, it returns none
-        dict_none = tag_text(None, None)
-        self.assertIsNone(dict_none)
+        # assert when no document is passed, it returns an empty dict
+        dict_none = tag_text([], [])
+        self.assertEqual(dict_none, {})
 
     def test_font_size_1(self):
-        filename = "./test/data/Test_1.pdf"
-        doc = get_doc(filename)
-        actual_fonts = get_sizes(doc)
+        """
+        Tests the unique font size is as expected for Test1
+        """
+        filename = "./test/data/Test_1.json"
+        with open(filename, encoding='utf-8') as file_pointer:
+            doc = json.load(file_pointer)
+            actual_fonts = get_sizes(doc)
 
-        expected_fonts = [12, 28, 44, 60]
-        self.assertEqual(expected_fonts, actual_fonts)
+            expected_fonts = [10, 11, 12, 14]
+            self.assertEqual(expected_fonts, actual_fonts)
 
     def test_text_to_groupings_1(self):
         """
         Tests the groupings given a file
         """
-        filename = "./test/data/Test_1.pdf"
-        doc = get_doc(filename)
-        actual_dict = text_to_groupings(doc)
+        filename = "./test/data/Test_1.json"
 
-        # check the text
-        page1 = {'Header': 'Test 1 : Computer Science', 'Paragraph': '', 'slide': 0}
-        page2 = {'Header': 'Large Heading', 'Paragraph': 'Medium text Small text', 'slide': 1}
-        page3 = {'Header': 'Large Heading 2', 'Paragraph': 'Medium text 2 Small text 2', 'slide': 2}
-        expected = [page1, page2, page3]
-        self.assertEqual(expected[0], actual_dict[0], "Page 0")
-        self.assertEqual(expected[1], actual_dict[1], "Page 1")
-        self.assertEqual(expected[2], actual_dict[2], "Page 2")
-        self.assertEqual(expected, actual_dict)
+        with open(filename, encoding='utf-8') as file_pointer:
+            doc = json.load(file_pointer)
+            actual_dict = text_to_groupings(doc)
+
+            # check the text
+            page0 = {'Header': 'Possible title',
+                     'Paragraph': '',
+                     'slide': 0}
+            page1 = {'Header': 'Possible heading',
+                     'Paragraph': 'Possible subheading Possible paragraph',
+                     'slide': 1}
+            page2 = {'Header': 'Heading Another Heading',
+                     'Paragraph': 'Paragraph',
+                     'slide': 2}
+            self.assertEqual(page0, actual_dict[0], f'Expected Page 0 to be {page0}')
+            self.assertEqual(page1, actual_dict[1], f'Expected Page 1 to be {page1}')
+            self.assertEqual(page2, actual_dict[2], f'Expected Page 2 to be {page2}')
+            self.assertEqual([page0, page1, page2], actual_dict)
+
+    def test_font_size_2(self):
+        """
+        Tests the unique font size is as expected for Test2
+        """
+        filename = "./test/data/Test_2.json"
+        with open(filename, encoding='utf-8') as file_pointer:
+            doc = json.load(file_pointer)
+            actual_fonts = get_sizes(doc)
+
+            expected_fonts = [12, 28, 44, 60]
+            self.assertEqual(expected_fonts, actual_fonts)
+
+    def test_text_to_groupings_2(self):
+        """
+        Tests the groupings given a file
+        """
+        filename = "./test/data/Test_2.json"
+        with open(filename, encoding='utf-8') as file_pointer:
+            doc = json.load(file_pointer)
+
+            actual_dict = text_to_groupings(doc)
+
+            # check the text
+            page0 = {'Header': 'Test 1 : Computer Science',
+                     'Paragraph': '',
+                     'slide': 0}
+            page1 = {'Header': 'Large Heading',
+                     'Paragraph': 'Medium text Small text',
+                     'slide': 1}
+            page2 = {'Header': 'Large Heading 2',
+                     'Paragraph': 'Medium text 2 Small text 2',
+                     'slide': 2}
+            self.assertEqual(page0, actual_dict[0], f'Expected Page 0 to be {page0}')
+            self.assertEqual(page1, actual_dict[1], f'Expected Page 1 to be {page1}')
+            self.assertEqual(page2, actual_dict[2], f'Expected Page 2 to be {page2}')
+            self.assertEqual([page0, page1, page2], actual_dict)
 
 
 if __name__ == '__main__':
