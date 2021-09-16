@@ -78,6 +78,26 @@ def merge_slide_with_same_headers(data: list) -> list:
                            "paragraph_keywords": paragraph_keywords, "slides": slide_numbers})
     return merged
 
+def merge_slide_with_same_slide_number(data: list) -> list:
+    '''
+
+    :param data:
+    :return:
+    '''
+    merged = []
+    slide_number = []
+    for slide in data:
+        if slide["slide"] not in slide_number:
+            slide_number.append(slide["slide"])
+            header_keywords = []
+            paragraph_keywords = []
+            for x in [y for y in data if y["slide"] == slide["slide"]]:
+                header_keywords += x["Header_keywords"]
+                paragraph_keywords += x["Paragraph_keywords"]
+            merged.append({"Header": slide["Header"], "Header_keywords": header_keywords,
+                           "Paragraph_keywords": paragraph_keywords,
+                           "slide": slide["slide"]})
+    return merged
 
 if __name__ == "__main__":
     main_data = [{"header": "Dimensionality Reduction PCA",
