@@ -1,6 +1,18 @@
 # CSC510_Project_LectureAid
 Project 1 for CSC510 SE Fall 21
 
+## Requirements
+
++ Python atleast 3.8
++ Pip
+
+## How to use
+
++ Run `pip install -r requirements.txt`
+  + this installs all requirements for the project
+
+To process a PDF, run:
+.....
 
 ## Extract sizes
 

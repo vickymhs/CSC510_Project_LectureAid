@@ -33,7 +33,9 @@ def get_sizes(doc: list) -> list:
 
 def tag_text(unique_fonts: list, doc: list) -> dict:
     """
-    Categorizes each text into L, M, or S.
+    Categorizes each text into either Heading or paragraph.
+    Heading includes the top 2 sizes, either title or main heading.
+    Paragraph contains all other sizes
 
     :param unique_fonts: a list of unique fonts in the powerpoint
     :type unique_fonts: list
