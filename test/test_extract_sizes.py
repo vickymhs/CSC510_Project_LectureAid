@@ -1,18 +1,18 @@
 """
 
-Unit tests for step 2
+Unit tests for extract sizes
 
 """
 import json
-
-from code.step2 import (get_sizes, tag_text, text_to_groupings)
 import unittest
+from src.extract_sizes import (get_sizes, tag_text, text_to_groupings)
 
 
-class MyTestCase(unittest.TestCase):
+
+class TestExtractSizes(unittest.TestCase):
     """
 
-    Test cases for the step 2
+    Test cases for the extract sizes
     Includes testing None cases and valid PDFs
 
     """
