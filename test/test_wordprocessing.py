@@ -1,5 +1,5 @@
 import unittest
-from wordprocessing import keyword_extractor, duplicate_word_removal, merge_slide_with_same_headers
+from code.wordprocessing import keyword_extractor, duplicate_word_removal, merge_slide_with_same_headers
 
 
 class TestWordProcessing(unittest.TestCase):
@@ -29,12 +29,13 @@ class TestWordProcessing(unittest.TestCase):
                 {"header": "This is a Header", "paragraph": "This is paragraph two", "header_keywords": ["header"],
                  "paragraph_keywords": ["paragraph", "two"], "slide": 11}]
         merged_data = merge_slide_with_same_headers(data)
-        data[0]["slides"] = [10,11]
+        data[0]["slides"] = [10, 11]
         data[0]["paragraph_keywords"] = ["paragraph", "one", "paragraph", "two"]
         data[0].pop("paragraph", None)
         data[0].pop("slide", None)
         data.pop()
         self.assertEqual(data, merged_data)
+
 
 if __name__ == "__main__":
     unittest.main()
