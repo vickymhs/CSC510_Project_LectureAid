@@ -4,7 +4,30 @@ File completing step 2: given a pdf document, return a dictionary
 of headers and paragraphs
 
 """
+import sys
+import fitz
 
+def extract_words():
+    pdf =  sys.argv[1]
+    document = fitz.open(pdf)
+    doc_data = {}
+    doc_data["meta_data"] = document.metadata
+    doc_data["data"] = []
+    for index, page in enumerate(document):
+        page_data = {}
+        page_data["slide"] = index+1
+        page_data["blocks"] = []
+        blocks = page.getText("dict")["blocks"]
+        for block in blocks:  # iterate through the text blocks
+            if block['type'] == 0:  # block contains text
+                for line in block["lines"]:  # iterate through the text lines
+                    for span in line["spans"]:  # iterate through the text spans
+                        page_data["blocks"].append({
+                            "text": span["text"],
+                            "size": span["size"]
+                        })
+        doc_data["data"].append(page_data)
+    return doc_data
 
 def get_sizes(doc: list) -> list:
     """
