@@ -1,5 +1,6 @@
 import unittest
-from code.wordprocessing import keyword_extractor, duplicate_word_removal, merge_slide_with_same_headers
+from code.wordprocessing import keyword_extractor, duplicate_word_removal, merge_slide_with_same_headers, \
+    merge_slide_with_same_slide_number
 
 
 class TestWordProcessing(unittest.TestCase):
@@ -36,6 +37,29 @@ class TestWordProcessing(unittest.TestCase):
         data.pop()
         self.assertEqual(data, merged_data)
 
+    def test_merge_slide_with_same_slide_number(self):
+        input_data = [{'Header': 'Dimensionality Reduction PCA',
+                       'Paragraph': 'This is paragraph 1',
+                       'slide': 8, 'Header_keywords': ['dimensionality', 'reduction', 'pca'],
+                       'Paragraph_keywords': ['dimensionality', 'reduction', 'purposes']},
+                      {'Header': 'Gratuitous ARP',
+                       'Paragraph': 'This is paragraph 2',
+                       'slide': 9, 'Header_keywords': ['arp'],
+                       'Paragraph_keywords': ['machine', 'mapping', 'arp', 'caches']},
+                      {'Header': 'Dimensionality Reduction PCA',
+                       'Paragraph': 'This is paragraph 3',
+                       'slide': 9, 'Header_keywords': ['dimensionality', 'reduction', 'pca'],
+                       'Paragraph_keywords': ['goal', 'projection']}]
 
-if __name__ == "__main__":
-    unittest.main()
+        merged_data = merge_slide_with_same_slide_number(input_data)
+        output_data = [{'Header': 'Dimensionality Reduction PCA',
+                        'slide': 8, 'Header_keywords': ['dimensionality', 'reduction', 'pca'],
+                        'Paragraph_keywords': ['dimensionality', 'reduction', 'purposes']},
+                       {'Header': 'Gratuitous ARP',
+                        'slide': 9, 'Header_keywords': ['arp', 'dimensionality', 'reduction', 'pca'],
+                        'Paragraph_keywords': ['machine', 'mapping', 'arp', 'caches', 'goal', 'projection']}]
+
+        self.assertEqual(output_data, merged_data)
+
+        if __name__ == "__main__":
+            unittest.main()
