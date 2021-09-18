@@ -7,9 +7,9 @@ import re
 def keyword_extractor(data: list) -> list:
     """
     Function to extract keywords from the headers and paragraphs of slides
-    :param data: The list of dictionaries of the form [{"header":"", "paragraph":"", slide:int}]
-    :return: The list of dictionaries with keywords extracted of the form [{"header":"", "paragraph":"",
-             "header_keywords": [], "paragraph_keywords": [], slide:int}]
+    :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", slide:int}]
+    :return: The list of dictionaries with keywords extracted of the form [{"Header":"", "Paragraph":"",
+             "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     """
     try:
         nlp = spacy.load("en_core_web_lg")
@@ -45,10 +45,10 @@ def keyword_extractor(data: list) -> list:
 def duplicate_word_removal(data: list) -> list:
     """
 
-    :param data: The list of dictionaries of the form [{"header":"", "header_keywords": [],
-                "paragraph_keywords": [], slides:[int]}]
-    :return: The list of dictionaries with duplicate keywords removed of the form [{"header":"", "header_keywords": [],
-                "paragraph_keywords": [], slides:[int]}]
+    :param data: The list of dictionaries of the form [{"Header":"", "Header_keywords": [],
+                "Paragraph_keywords": [], slides:[int]}]
+    :return: The list of dictionaries with duplicate keywords removed of the form [{"Header":"", "Header_keywords": [],
+                "Paragraph_keywords": [], slides:[int]}]
     """
     for dictionary in data:
         dictionary['Header_keywords'] = list(OrderedDict.fromkeys(dictionary['Header_keywords']))
@@ -58,11 +58,11 @@ def duplicate_word_removal(data: list) -> list:
 
 def merge_slide_with_same_headers(data: list) -> list:
     """
-
-    :param data: The list of dictionaries of the form [{"header":"", "paragraph":"", "header_keywords": [],
-                "paragraph_keywords": [], slide:int}]
+    Function to merge slides with the same header.
+    :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", "Header_keywords": [],
+                "Paragraph_keywords": [], slide:int}]
     :return: The list of dictionaries where slides containing the same header are merged
-             of the form [{"header":"", "header_keywords": [], "paragraph_keywords": [], slides:[int]}]
+             of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
     """
     merged = []
     headers = []
@@ -81,9 +81,11 @@ def merge_slide_with_same_headers(data: list) -> list:
 
 def merge_slide_with_same_slide_number(data: list) -> list:
     '''
-
-    :param data:
-    :return:
+    Function to merge slides with the same slide number into a single one. Merge the dict with the same slide number into a single on
+    :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", "Header_keywords": [],
+                "Paragraph_keywords": [], slide:int}]
+    :return: The list of dictionaries where slides containing the same slide number are merged
+             of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     '''
     merged = []
     slide_number = []
