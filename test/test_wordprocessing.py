@@ -18,7 +18,7 @@ class TestWordProcessing(unittest.TestCase):
                                                                                   "Paragraph",
                  "Header_keywords": ["header", "header"],
                  "Paragraph_keywords": ["paragraph", "paragraph"], "slide": 10}]
-        remove_duplicates = keyword_extractor(data)
+        remove_duplicates = duplicate_word_removal(data)
         data[0]["Header_keywords"] = ["header"]
         data[0]["Paragraph_keywords"] = ["paragraph"]
         self.assertEqual(data, remove_duplicates)
