@@ -4,6 +4,7 @@ import sys
 import fitz
 from extract_sizes import extract_words, text_to_groupings
 import wordprocessing as wp
+from rapidapi_search import rapid_search
 import pprint
 import re
 
@@ -40,9 +41,18 @@ def user_menu():
 
 
 if __name__ == "__main__":
-    file = user_menu()
-    raw_data = extract_words(file)
+    # file = user_menu()
+    # raw_data = extract_words(file)
+    raw_data = extract_words("../data/lecture4.pdf")
+    print(raw_data)
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.merge_slide_with_same_slide_number(wp.keyword_extractor(raw_data))
     keyword_data = wp.duplicate_word_removal(wp.merge_slide_with_same_headers(keyword_data))
     print(keyword_data)
+
+    for data in keyword_data:
+        header_and_para = data['Header_keywords'] + data['Paragraph_keywords']
+        header_and_para = [data for data in header_and_para if len(data) >= 3]
+
+        print(header_and_para)
+        print(rapid_search(header_and_para))
