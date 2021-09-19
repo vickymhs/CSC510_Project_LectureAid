@@ -40,6 +40,3 @@ def rapid_search(search_term: str) -> json:
             urls.append(i['url'])
     url_json = json.dumps(urls)
     return(url_json)
-
-if __name__ == "__main__":
-    rapid_search('sql')
