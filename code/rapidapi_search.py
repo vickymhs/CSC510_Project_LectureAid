@@ -39,7 +39,7 @@ def rapid_search(search_term: str) -> json:
         for i in rel_obj['value']:
             urls.append(i['url'])
     url_json = json.dumps(urls)
-    print(url_json)
+    return(url_json)
 
 if __name__ == "__main__":
     rapid_search('sql')
