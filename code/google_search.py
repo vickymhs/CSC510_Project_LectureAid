@@ -2,6 +2,7 @@ from googleapiclient.discovery import build
 import json
 import configparser
 
+
 # requires pip install google-api-python-client
 
 # Global variables for search request
@@ -52,7 +53,10 @@ def search_call(search_term) -> json:
     """
 
     query_result = google_search(search_term, getCredentials(API_KEY), getCredentials(CSE_ID), num = SEARCH_COUNT)
-    return query_result
+    links = []
+    for item in query_result["items"]:
+        links.append(item["formattedUrl"])
+    return links
 
 
 # Store result
