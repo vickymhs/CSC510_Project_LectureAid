@@ -28,7 +28,7 @@ def extract_words(file: str) -> dict:
                 for line in block["lines"]:  # iterate through the text lines
                     for span in line["spans"]:  # iterate through the text spans
                         page_data["blocks"].append({
-                            "text": re.sub(r"[^0-9a-zA-Z]+", " ", span["text"]),
+                            "text": re.sub(r"\W{3,}", " ", span["text"]),
                             "size": span["size"]
                         })
         doc_data["data"].append(page_data)
