@@ -55,9 +55,10 @@ def search_call(search_term) -> json:
 
     query_result = google_search(search_term, getCredentials(API_KEY), getCredentials(CSE_ID), num = SEARCH_COUNT)
     links = []
-    for item in query_result["items"]:
-        links.append(item["formattedUrl"])
-    return links
+    if "items" in query_result:
+        for item in query_result["items"]:
+            links.append(item["formattedUrl"])
+        return links
 
 def get_people_also_ask_links(search_term):
     rel_qns = people_also_ask.get_related_questions(search_term)

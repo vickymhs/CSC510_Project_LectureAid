@@ -18,6 +18,7 @@ def keyword_extractor(data: list) -> list:
         print(e)
         sys.exit()
     pos_tag = ["PROPN", "NOUN"]
+    dep_tag = ["nsubj"]
     for slide in data:
         doc_header = nlp(slide["Header"].lower())
         doc_paragraph = nlp(slide["Paragraph"].lower())
