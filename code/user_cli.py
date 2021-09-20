@@ -43,7 +43,7 @@ def user_menu():
 
 if __name__ == "__main__":
     # file = user_menu()
-    file = "../data/lecture4.pdf"
+    file = "../data/lec7.pdf"
     raw_data = extract_words(file)
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.merge_slide_with_same_slide_number(wp.keyword_extractor(raw_data))
@@ -64,5 +64,5 @@ if __name__ == "__main__":
         print_file += str(people_also_ask_result) + "\n"
         print_file += "Google Search Results \n"
         print_file += str(query_result_data) + "\n"
-    with open("Result.txt", "wr+") as f:
+    with open("Result2.txt", mode="w") as f:
         f.write(print_file)

@@ -1,0 +1,242 @@
+Results for ../data/lecture4.pdf
+=============================== 
+Query Words 
+lecture data mining iii min chi department computer science north carolina state university
+Slide Numbers 
+[1]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2041075', 'https://www.linkedin.com/in/agaweda', 'https://scholar.google.com/citations?user=8MFFVgEAAAAJ&hl=ko', 'https://link.springer.com/content/pdf/bfm%3A978-3-319-07221-0%2F1.pdf', 'unc-public.courseleaf.com/graduate/schools-departments/computer-science/']
+Query Words 
+outline types data afributes datasets quality measure similarity dissimilarity
+Slide Numbers 
+[2]
+People Also Ask Results 
+[{'Question': 'What are different ways of measuring data similarity and dissimilarity?', 'Answer': 'http://jcsites.juniata.edu/faculty/rhodes/ml/simdissim.htm'}, {'Question': 'What is the similarity and dissimilarity between?', 'Answer': 'http://cs.tsu.edu/ghemri/CS497/ClassNotes/ML/Similarity%20Measures.pdf'}, {'Question': 'What are the measures of similarity in data mining?', 'Answer': 'http://mines.humanoriented.com/classes/2010/fall/csci568/portfolio_exports/bhoenes/similarity.html'}, {'Question': 'What methods are used for measuring the similarity?', 'Answer': 'https://www.sciencedirect.com/topics/computer-science/similarity-measurement#:~:text=Distances%20between%20feature%20vectors%20may,the%20vector%20space%20to%20similarities.'}]
+Google Search Results 
+None
+Query Words 
+data preprocessing aggregation sampling discretization binarization attribute transformation feature creation subset selection dimensionality reduction
+Slide Numbers 
+[3, 13, 18, 22]
+People Also Ask Results 
+[{'Question': 'What are the different techniques for data preprocessing?', 'Answer': 'https://medium.com/easyread/basics-of-data-preprocessing-71c314bc7188#:~:text=There%20are%20four%20methods%20of,Data%20Transformation%2C%20and%20Data%20Reduction.'}, {'Question': 'What is discretization and binarization in data mining?', 'Answer': 'https://www.javatpoint.com/discretization-in-data-mining#:~:text=Data%20discretization%20and%20binarization%20in,discrete%20attributes%20into%20binary%20attributes.'}, {'Question': 'What is binarization in data preprocessing?', 'Answer': 'https://cran.r-project.org/web/packages/Binarize/vignettes/Vignette.pdf'}]
+Google Search Results 
+['https://towardsdatascience.com/data-preprocessing-in-data-mining-machine- learning-79a9662e2eb', 'https://medium.com/.../data-mining-introduction-data-preprocessing- 5080be604f96', 'https://www.homeworkmarket.com/sites/default/.../preprocessing_0.pdf', 'https://www.brainscape.com/flashcards/lecture-3-3248375/packs/5003376', 'https://mhassanb.files.wordpress.com/2014/12/data-preprocessing.ppt']
+Query Words 
+iris data sepal length width petal class iris setosa versicolor virginica
+Slide Numbers 
+[4]
+People Also Ask Results 
+[{'Question': 'What is the predicted petal width for Iris Setosa for a flower with a petal length of?', 'Answer': 'http://rstudio-pubs-static.s3.amazonaws.com/420656_c17c8444d32548eba6f894bcbdffcaab.html#:~:text=If%20Petal.,If%20Petal.'}, {'Question': 'What are the four variables in the iris dataset?', 'Answer': 'https://medium.com/analytics-vidhya/exploratory-data-analysis-uni-variate-analysis-of-iris-data-set-690c87a5cd40#:~:text=Iris%20data%20is%20a%20multivariate,and%20petal%20width%2C%20in%20centimeters.'}, {'Question': 'What is the attributes in IRIS data set?', 'Answer': 'https://en.wikipedia.org/wiki/Iris_flower_data_set#:~:text=The%20dataset%20contains%20a%20set,length%2C%20petal%20width%20and%20species.'}, {'Question': 'What is sepal length and petal width?', 'Answer': 'https://www.sciencedirect.com/topics/mathematics/length-sepal'}]
+Google Search Results 
+['https://adataanalyst.com/wp-content/uploads/2016/06/Iris_flower_data_set', 'man.hubwiz.com/docset/Scikit.docset/.../datasets/plot_iris_dataset.html', 'https://documentation.sas.com/doc/.../stathpug_hpcandisc_examples01.htm', 'https://www.neuraldesigner.com/learning/examples/iris-flowers-classification', 'https://www.sciencedirect.com/topics/mathematics/length-sepal']
+Query Words 
+discretization width length values
+Slide Numbers 
+[5, 7, 8, 9]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://www.mathworks.com/help/matlab/ref/double.discretize.html', 'man.hubwiz.com/docset/.../sklearn.preprocessing.KBinsDiscretizer.html', 'https://www.tandfonline.com/doi/full/10.1080/0284186X.2017.1351624', 'https://towardsdatascience.com/an-introduction-to-discretization-in-data- science-55ef8c9775a2', 'https://nanopdf.com/.../andy-merber-o-96-20-lockheed-artificial-intelligence- center_pdf']
+Query Words 
+discretization class labels data interval width frequency
+Slide Numbers 
+[6]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://academic.oup.com/jamia/article/20/3/544/741699', 'man.hubwiz.com/docset/.../sklearn.preprocessing.KBinsDiscretizer.html', 'https://mafiadoc.com/.../discretization-of-temporal-data-a-survey-semantic- scholar_599964cf1723dd98bdc71bbb.html', 'https://towardsdatascience.com/feature-engineering-deep-dive-into-encoding- and-binning-techniques-5618d55a6b38', 'https://bmcgenomics.biomedcentral.com/articles/10.../1471-2164-16-S11-S3']
+Query Words 
+tuple width length species type element array count value components slope solution magic pca eigenvectors eigenvalues matrix algebra roots eigenvector example determinant column vector elements magnitude sign sum ual trace uare matrices iven properties columns principal component variables variance data dataadjust plot covariance increase uwv rsybzz1c feature mean 167580142 table 0991094375 438046137 eigenvecto reconstruction eigen left means paper
+Slide Numbers 
+[10, 11, 26, 39, 42, 47, 52, 53, 54, 55, 56, 58, 61, 62, 63, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 76]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://demonstrations.wolfram.com/siteindex.html', 'https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/', 'https://docs.andrewhenke.com/how-to-program/comprehensive-guide.pdf', 'https://www.chegg.com/xml/qandamaster357.xml', 'https://www.kgay4all.com/.../Books/.../machine_learning_in_action.pdf.gz']
+Query Words 
+array count attribute
+Slide Numbers 
+[12]
+People Also Ask Results 
+[{'Question': 'How do you count items in an array?', 'Answer': "https://www.tutorialrepublic.com/faq/how-to-count-all-elements-in-an-array-in-php.php#:~:text=Answer%3A%20Use%20the%20PHP%20count,variable%20that%20isn't%20set."}, {'Question': 'How many objects are in an array?', 'Answer': 'https://stackoverflow.com/questions/5892905/how-many-objects-are-created-with-an-array-java#:~:text=6%20Answers&text=Nine%20objects%20are%20created.,Each%20String%20is%20TWO%20objects.'}, {'Question': 'How do you count an array in Python?', 'Answer': 'https://www.askpython.com/python/array/array-length-in-python#:~:text=Python%20len()%20method%20enables,elements%20in%20the%20array%2Fobject.'}, {'Question': 'What does array length return?', 'Answer': 'https://www.javascripttutorial.net/javascript-array-length/#:~:text=Summary-,The%20length%20property%20of%20an%20array%20is%20an%20unsigned%2C%2032,that%20a%20dense%20array%20has.'}]
+Google Search Results 
+['https://stackoverflow.com/.../how-to-count-same-object-attribute-values-in- array', 'https://docs.microsoft.com/en-us/dotnet/api/system.array.length', 'https://stackoverflow.com/.../counting-occurrences-of-particular-property- value-in-array-of-objects', 'https://developer.mozilla.org.cach3.com/en-US/docs/Web/.../Array/length', 'https://www.w3schools.com/jsref/jsref_length_array.asp']
+Query Words 
+transformation function set values attribute replacement value functions logx standardization normalization
+Slide Numbers 
+[14]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://cran.rstudio.com/web/packages/bestNormalize/bestNormalize.pdf', 'https://towardsdatascience.com/feature-engineering-for-machine-learning- 3a5e293a5114', 'go.sas.com/65346.013', 'https://www.analyticsvidhya.com/.../types-of-feature-transformation-and- scaling/', 'https://mhassanb.files.wordpress.com/2014/12/data-preprocessing.ppt']
+Query Words 
+transformaron acron
+Slide Numbers 
+[15]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://www.toxexpo.com/groups/ss/RASS/.../Martyn_Smith_Presentation.pdf', 'www.wanilah.com/.../Rapid-Process-Discovery-Documentation-and- Measurement-.pdf', 'https://static1.squarespace.com/static/.../Brian+ACIC+2013+Presentation.pdf', 'https://www.studocu.com/hk/document/the-university-of.../3704809', 'https://www.cimdata.com/images/Webinars/CIMdata_Webinar_8-4-15.pdf']
+Query Words 
+adribute transforma8on ac8on
+Slide Numbers 
+[16]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+dierent ones
+Slide Numbers 
+[17]
+People Also Ask Results 
+[{'Question': 'Why is it called Pigs three different ones?', 'Answer': "https://iloveclassicrock.com/the-story-behind-pigs-three-different-ones-by-pink-floyd/#:~:text=The%20song's%20title%20alludes%20to,the%20morality%20campaigner%20Mary%20Whitehouse."}, {'Question': 'Why does Pink Floyd use a pig?', 'Answer': "https://www.bbc.com/culture/article/20170508-how-the-pink-floyd-pig-was-a-sign-of-protest#:~:text=Pink%20Floyd's%20enduring%20symbol%20is,even%20violence%2C%20writes%20Jonathan%20Glancey.&text=Others%20tell%20of%20an%20airline,the%20pig%20at%2030%2C000ft."}, {'Question': 'Who wrote Pigs three different ones?', 'Answer': None}]
+Google Search Results 
+['https://www.nature.com/articles/1602522', 'https://www.scientificamerican.com/article/bring-science-home-free-fall/', 'https://ifalpes.com/blog/different-regions-of-france-have-different-accents/', 'https://www.mdpi.com/2077-0383/9/9/2684', 'https://www.sciencedirect.com/science/article/pii/S0958946518309569']
+Query Words 
+curse dimensionality dimensionality data space definitions density distance points clustering outlier detection difference max min pair
+Slide Numbers 
+[19]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://zims-en.kiwix.campusafrica.gos.orange.com/.../Curse_of_ dimensionality', 'https://www.analyticsvidhya.com/blog/2017/.../test-data-scientist-clustering/', 'https://zims-en.kiwix.campusafrica.gos.orange.com/...en.../Cluster_analysis', 'https://quizlet.com/566136241/feature-scalingdimensionality-flash-cards/', 'irdatamining.persiangig.com/document/ch8.pdf']
+Query Words 
+selection way dimensionality data features information attributes example purchase price product sales tax mining task hand students gpa techniques force approach feature subsets input algorithm approaches selection filter wrapper box
+Slide Numbers 
+[20, 21]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://towardsdatascience.com/data-preprocessing-in-data-mining-machine- learning-79a9662e2eb', 'https://quizlet.com/137035772/data-mining-flash-cards/', 'https://www.coursehero.com/file/55412176/3preprocessing-1pptx/', 'https://wenku.baidu.com/view/3bd3e82077232f60dccca12e.html', 'https://mhassanb.files.wordpress.com/2014/12/data-preprocessing.ppt']
+Query Words 
+dimensionality reduction purposes curse dimensionality time memory data mining algorithms features noise techniques component analysis value decomposition
+Slide Numbers 
+[23]
+People Also Ask Results 
+[{'Question': 'What are 3 ways of reducing dimensionality?', 'Answer': 'https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/'}, {'Question': 'What is dimensionality reduction What are the components of dimensionality reduction?', 'Answer': 'https://www.geeksforgeeks.org/dimensionality-reduction/#:~:text=Methods%20of%20Dimensionality%20Reduction&text=Principal%20Component%20Analysis%20(PCA),Generalized%20Discriminant%20Analysis%20(GDA)'}, {'Question': 'What are dimensionality reduction techniques?', 'Answer': 'https://machinelearningmastery.com/dimensionality-reduction-for-machine-learning/#:~:text=Dimensionality%20reduction%20refers%20to%20techniques,as%20the%20curse%20of%20dimensionality.'}, {'Question': 'What is dimensionality reduction in data mining?', 'Answer': 'https://towardsdatascience.com/dimensionality-reduction-in-data-mining-f08c734b3001#:~:text=Dimensionality%20reduction%20is%20the%20process,variables%20or%20attributes%20under%20consideration.&text=High%2Ddimensionality%20reduction%20has%20emerged,(columns%20in%20your%20database).'}]
+Google Search Results 
+['https://adataanalyst.com/wp-content/uploads/.../Dimensionality_reduction1', 'https://www.analyticsvidhya.com/.../questions-dimensionality-reduction-data- scientist/', 'https://towardsdatascience.com/data-preprocessing-in-data-mining-machine- learning-79a9662e2eb', 'https://machinelearningmastery.com/principal-components-analysis-for- dimensionality-reduction-in-python/', 'https://www.mygreatlearning.com/.../machine-learning-interview-questions/']
+Query Words 
+data
+Slide Numbers 
+[24, 59]
+People Also Ask Results 
+[{'Question': 'What do you mean by data?', 'Answer': 'https://searchdatamanagement.techtarget.com/definition/data#:~:text=In%20computing%2C%20data%20is%20information,converted%20into%20binary%20digital%20form.&text=Raw%20data%20is%20a%20term,its%20most%20basic%20digital%20format.'}, {'Question': 'What is data short for?', 'Answer': 'https://acronyms.thefreedictionary.com/DATA'}, {'Question': 'What is data in your own words?', 'Answer': 'https://www.yourdictionary.com/data#:~:text=Data%20is%20defined%20as%20facts,collected%20for%20a%20research%20paper.'}, {'Question': 'What is data on a computer?', 'Answer': 'https://searchdatamanagement.techtarget.com/definition/data#:~:text=In%20computing%2C%20data%20is%20information,converted%20into%20binary%20digital%20form.&text=Raw%20data%20is%20a%20term,its%20most%20basic%20digital%20format.'}]
+Google Search Results 
+['aaronbazar.com/wiki/FATA', 'https://www.merriam-webster.com/dictionary/data', 'https://datastudio.google.com/', 'go.nature.com/afp3lv', 'https://elink.clickdimensions.com/c/6/?T...K=xqpneTNshuCXr1az...']
+Query Words 
+dimensionality reducron pca goal projecron variaron data eigenvectors covariance matrix space
+Slide Numbers 
+[25, 28, 60, 67]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://www.coursehero.com/file/48462890/Lecture5-PCAFinalLecturepdf/']
+Query Words 
+components vector vectors axis project minimum rms error
+Slide Numbers 
+[27, 29, 64]
+People Also Ask Results 
+[{'Question': 'What does RMS error tell you?', 'Answer': 'https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error/#:~:text=Root%20Mean%20Square%20Error%20(RMSE)%20is%20the%20standard%20deviation%20of,the%20line%20of%20best%20fit.'}, {'Question': 'How does Python calculate RMS error?', 'Answer': 'https://www.askpython.com/python/examples/rmse-root-mean-square-error#:~:text=So%2C%20as%20seen%20above%2C%20Root,value%20of%20the%20variable%2Ffeature.&text=Calculate%20the%20difference%20between%20the,subtract()%20function.&text=sqrt()%20function%20to%20get%20the%20RMSE%20value.'}, {'Question': 'How do you calculate RMS error?', 'Answer': 'https://statweb.stanford.edu/~susan/courses/s60/split/node60.html#:~:text=To%20do%20this%2C%20we%20use,square%20error%20(r.m.s.%20error).&text=is%20the%20predicted%20value.,gives%20us%20the%20r.m.s%20error.'}, {'Question': 'What is an acceptable RMS error?', 'Answer': 'https://www.researchgate.net/post/Whats-the-acceptable-value-of-Root-Mean-Square-Error-RMSE-Sum-of-Squares-due-to-error-SSE-and-Adjusted-R-square#:~:text=Based%20on%20a%20rule%20of,more%20is%20acceptable%20as%20well.'}]
+Google Search Results 
+['https://cran.rstudio.com/web/packages/rms/rms.pdf', 'https://www.mathworks.com/.../answers/4064-rmse-root-mean-square-error', 'https://stackoverflow.com/.../is-there-a-library-function-for-root-mean-square -error-rmse-in-python', 'free-online-ebooks.appspot.com/python/.../scipy.spatial.distance.cdist.html', 'https://pdf4pro.com/file/d5134/pdf_1704.06053.pdf.pdf']
+Query Words 
+pca components analysis pca data subspace axes points component
+Slide Numbers 
+[30]
+People Also Ask Results 
+[{'Question': 'What do the axes mean in PCA?', 'Answer': 'https://www.nonlinear.com/support/progenesis/lc-ms/faq/v4.1/pca.aspx#:~:text=The%20first%20step%20in%20PCA,highest%20variation%20through%20the%20data.'}, {'Question': 'How do you find principal components in PCA?', 'Answer': 'https://builtin.com/data-science/step-step-explanation-principal-component-analysis'}]
+Google Search Results 
+['https://en.wikipedia.com/wiki/Principal_component_analysis', 'https://towardsdatascience.com/principal-component-analysis-for- dimensionality-reduction-115a3d157bad', 'https://machinelearningmastery.com/calculate-principal-component-analysis- scratch-python/', 'https://towardsdatascience.com/the-mathematics-behind-principal-component -analysis-fff2d7f4b643', 'https://www.mathworks.com/help/stats/pca.html']
+Query Words 
+pca faces eigenfaces face component components
+Slide Numbers 
+[31]
+People Also Ask Results 
+[{'Question': 'What are eigenfaces in PCA?', 'Answer': 'https://en.wikipedia.org/wiki/Eigenface#:~:text=A%20set%20of%20eigenfaces%20can,of%20many%20pictures%20of%20faces.'}, {'Question': 'Is PCA based on eigenfaces?', 'Answer': 'https://www.sciencedirect.com/science/article/pii/S2212017312000242/pdf?md5=cfc9b3cac044230000e2c4457b62f22a&pid=1-s2.0-S2212017312000242-main.pdf'}, {'Question': 'Which technique is based on eigenfaces?', 'Answer': 'https://www.sciencedirect.com/science/article/pii/S2212017312000242/pdf?md5=cfc9b3cac044230000e2c4457b62f22a&pid=1-s2.0-S2212017312000242-main.pdf'}]
+Google Search Results 
+['https://www.open-open.com/misc/goto?guid=4959618434546592632', 'https://learnopencv.com/eigenface-using-opencv-c-python/', 'https://towardsdatascience.com/eigenfaces-recovering-humans-from-ghosts- 17606c328184', 'https://www.pyimagesearch.com/.../opencv-eigenfaces-for-face-recognition/', 'https://towardsdatascience.com/eigenfaces-face-classification-in-python- 7b8d2af3d3ea']
+Query Words 
+pca relighrng images dierent illuminaron matusik mcmillan variaron rst principal components
+Slide Numbers 
+[32, 33]
+People Also Ask Results 
+[{'Question': 'How do you find principal components in Matlab?', 'Answer': 'https://www.mathworks.com/help/stats/pca.html#:~:text=coeff%20%3D%20pca(%20X%20)%20returns,is%20p%2Dby%2Dp.'}, {'Question': 'What is the principal components of the brain?', 'Answer': 'https://mayfieldclinic.com/pe-anatbrain.htm#:~:text=The%20brain%20has%20three%20main,and%20fine%20control%20of%20movement.'}]
+Google Search Results 
+None
+Query Words 
+pca example
+Slide Numbers 
+[34, 35, 36]
+People Also Ask Results 
+[{'Question': 'What is PCA used for?', 'Answer': 'https://www.sartorius.com/en/knowledge/science-snippets/what-is-principal-component-analysis-pca-and-how-it-is-used-507186#:~:text=Principal%20component%20analysis%2C%20or%20PCA,more%20easily%20visualized%20and%20analyzed.'}, {'Question': 'What is PCA in machine learning with example?', 'Answer': 'https://medium.com/apprentice-journal/pca-application-in-machine-learning-4827c07a61db#:~:text=Principal%20Component%20Analysis%20(PCA)%20is,a%20large%20number%20of%20features.&text=PCA%20can%20also%20be%20used,datasets%2C%20such%20as%20image%20compression.'}]
+Google Search Results 
+['https://builtin.com/data.../step-step-explanation-principal-component-analysis', 'https://towardsdatascience.com/a-one-stop-shop-for-principal-component- analysis-5582fb7e0a9c', 'https://www.joyk.com/dig/redirect/1619999858802557', 'man.hubwiz.com/docset/Scikit.docset/.../sklearn.decomposition.PCA.html', 'https://en.wikipedia.com/wiki/Principal_component_analysis']
+Query Words 
+variables eigenvalues rule thumb eigenvalue
+Slide Numbers 
+[37, 40]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://www.statisticssolutions.com/free-resources/...of.../factor-analysis/', 'https://journals.sagepub.com/doi/pdf/10.1177/1094428104263675', 'https://onlinelibrary.wiley.com/doi/10.1111/evo.13835', 'https://www.spss-tutorials.com/spss-factor-analysis-tutorial/', 'https://www.cytel.com/hubfs/0-library-0/pdfs/SP07.pdf']
+Query Words 
+variance
+Slide Numbers 
+[38]
+People Also Ask Results 
+[{'Question': 'What is a variance in statistics?', 'Answer': 'https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch12/5214891-eng.htm#:~:text=Unlike%20range%20and%20interquartile%20range,points%20in%20a%20data%20set.&text=The%20variance%20is%20mean%20squared,distribution%20measured%20by%20the%20mean.'}, {'Question': 'What do you mean by variance?', 'Answer': 'https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch12/5214891-eng.htm#:~:text=Unlike%20range%20and%20interquartile%20range,points%20in%20a%20data%20set.&text=The%20variance%20is%20mean%20squared,distribution%20measured%20by%20the%20mean.'}, {'Question': 'How do I calculate the variance?', 'Answer': 'https://www.statisticshowto.com/probability-and-statistics/variance/'}, {'Question': 'What is variance in math?', 'Answer': 'https://www.investopedia.com/terms/v/variance.asp#:~:text=The%20term%20variance%20refers%20to,by%20this%20symbol%3A%20%CF%832.'}]
+Google Search Results 
+['https://www.investopedia.com/terms/v/variance.asp', 'https://www.statisticshowto.com/probability-and-statistics/variance/', 'https://www.variance.com/', 'www.variancejournal.com/', 'https://www.merriam-webster.com/dictionary/variance']
+Query Words 
+eigenvalue scree plot
+Slide Numbers 
+[41]
+People Also Ask Results 
+[{'Question': 'How is a scree plot constructed?', 'Answer': 'https://www.theanalysisfactor.com/factor-analysis-how-many-factors/#:~:text=A%20scree%20plot%20shows%20the,be%20generated%20by%20the%20analysis.'}, {'Question': 'What is scree plot in SPSS?', 'Answer': 'https://www.ibm.com/docs/SSLVMB_23.0.0/spss/tutorials/fac_cars_scree_01.html#:~:text=Figure%201.-,Scree%20plot,contribute%20little%20to%20the%20solution.'}, {'Question': 'What does a high eigenvalue mean?', 'Answer': 'https://www.researchgate.net/post/What_is_the_practical_importance_of_finding_the_eigenvalues_of_the_co-variance_matrix_in_principal_component_analysis#:~:text=The%20typical%20practical%20use%20is,eigenvector%20direction%20(principal%20component).'}]
+Google Search Results 
+['https://zims-en.kiwix.campusafrica.gos.orange.com/wikipedia.../Scree_plot', 'https://www.theanalysisfactor.com/factor-analysis-how-many-factors/', 'https://bioturing.medium.com/how-to-read-pca-biplots-and-scree-plots- 186246aae063', 'https://sanchitamangale12.medium.com/scree-plot-733ed72c8608', 'https://www.sciencedirect.com/topics/mathematics/scree-plot']
+Query Words 
+components
+Slide Numbers 
+[43, 44, 45, 46]
+People Also Ask Results 
+[{'Question': 'What is an example of a component?', 'Answer': 'https://www.yourdictionary.com/component#:~:text=An%20example%20of%20a%20component,an%20ingredient%20in%20a%20recipe.&text=One%20element%20of%20a%20larger,part%20of%20a%20larger%20system.'}, {'Question': 'What are components called?', 'Answer': 'https://www.dictionary.com/browse/component#:~:text=definitions%20for%20component-,component,devices%20to%20form%20a%20circuit'}, {'Question': 'What is the synonym of components?', 'Answer': 'https://www.thesaurus.com/browse/components'}, {'Question': 'What are mathematical components?', 'Answer': 'https://sciencing.com/basic-components-math-7859470.html#:~:text=The%20main%20components%2C%20or%20elements,%2C%20subtraction%2C%20multiplication%20and%20division.'}]
+Google Search Results 
+['https://www.merriam-webster.com/dictionary/component', 'https://20170801t144119-dot-material-io.appspot.com/components', 'https://link.segmentfault.com/?...org%2Fv2%2Fguide%2Fcomponents... Components', 'https://ionicframework.com/docs/components', 'https://getbootstrap.com/docs/5.1/components/accordion/']
+Query Words 
+transformation matrices transformation matrix scales multiple scale vector value multiply result length direction observation matrices formation eigenvectors eigenvalues solution
+Slide Numbers 
+[48, 49]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://ai-tutor.com/link?url=https://en.wikipedia.org/wiki/Eigenvectors', 'https://en.wikipedia.com/wiki/Principal_component_analysis', 'https://stats.stackexchange.com/.../making-sense-of-principal-component- analysis-eigenvectors-eigenvalues', 'https://blog.vagupu.com/wp.../05/A-Level-Matrix-and-tranformation.pdf', 'https://edunorth.files.wordpress.com/.../linear-algebra-cherney-et-al.-2013. pdf']
+Query Words 
+problem problem form matrix vector scalar value equation solution eigenvalue eigenvector example question iven eigenvalues
+Slide Numbers 
+[50, 51]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://ai-tutor.com/link?url=https://en.wikipedia.org/wiki/Eigenvectors', 'https://nanopdf.com/download/1803-la5-eigenvalues-and-eigenvectors_pdf', 'https://web--proxy.herokuapp.com/https/en.../Eigenvalue_decomposition', 'www.bumatematikozelders.com/.../matrix.../eigen_value_eigen_vector_and_ diagonalization_2.pdf', 'https://www.mathworks.com/help/matlab/ref/eig.html']
+Query Words 
+pca covariance matrix dimensionsas dimensions properties variances variables cov ycov data
+Slide Numbers 
+[57]
+People Also Ask Results 
+[]
+Google Search Results 
+['https://khmer2k.files.wordpress.com/.../an-introduction-to-market-risk- measurement.pdf']
+Query Words 
+pca feature selecron extracron price thousands length vehicle type analyses component scores
+Slide Numbers 
+[77]
+People Also Ask Results 
+[{'Question': 'What is PCA component score?', 'Answer': 'https://stats.stackexchange.com/questions/222/what-are-principal-component-scores#:~:text=The%20principal%20component%20score%20is,small%2C%20the%20data%20varies%20litte.'}, {'Question': 'What does a PCA analysis tell you?', 'Answer': 'https://builtin.com/data-science/step-step-explanation-principal-component-analysis#:~:text=Principal%20Component%20Analysis%2C%20or%20PCA,information%20in%20the%20large%20set.'}, {'Question': 'How do you analyze PCA results?', 'Answer': 'https://support.minitab.com/en-us/minitab/18/help-and-how-to/modeling-statistics/multivariate/how-to/principal-components/interpret-the-results/key-results/'}, {'Question': 'What is PCA for feature selection?', 'Answer': 'https://arxiv.org/pdf/1306.1326#:~:text=Principal%20Component%20Analysis%20(PCA)%20is,original%20features%20for%20principal%20component.&text=The%20method%20generates%20a%20new%20set%20of%20variables%2C%20called%20principal%20components.'}]
+Google Search Results 
+None

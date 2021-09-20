@@ -1,0 +1,82 @@
+Results for ../data/lec7.pdf
+=============================== 
+Query Words 
+insertion sort case mergesort heapsort quicksort sorting algorithm notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[1]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+bounds overview decision tree model compari son problems comparison sort integers range improvement numbers interval notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[2]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+bounds time algorithm case input size problem number comparisons notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[3]
+People Also Ask Results 
+[]
+Google Search Results 
+['link.springer.com/content/pdf/bbm%3A978-3-642-14764-7%2F1.pdf', 'vavohu.com/zoomba1/sysproj1a/zoom_dictionary.zdat', 'https://valueboard.blogspot.com/search/label/as?m=0']
+Query Words 
+decision tree node comparison branch leaf outcome order insertion sort introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[4]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+comparison sort deci sion tree case number compares algorithm height decision leaf outcome elements outcomes ele ments leaves notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[5]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+comparison sort deci sion tree decision leaf outcome outcomes algorithm elements leaves case number compares ing height conclusion notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[6]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+case number compares stirling notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[7]
+People Also Ask Results 
+[]
+Google Search Results 
+['link.springer.com/content/pdf/bbm%3A978-3-642-14764-7%2F1.pdf']
+Query Words 
+array elements phase count use time notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[8]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+phase elts downto total notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[9]
+People Also Ask Results 
+[]
+Google Search Results 
+None
+Query Words 
+sorting algorithm elements value order sort insertion mergesort heapsort quicksort notes introduction algorithms cormen leiserson rivest stein lecture carla savage csc 505 ncsu
+Slide Numbers 
+[10]
+People Also Ask Results 
+[]
+Google Search Results 
+['link.springer.com/content/pdf/bbm%3A978-3-642-14764-7%2F1.pdf']
