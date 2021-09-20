@@ -34,7 +34,7 @@ def keyword_extractor(data: list) -> list:
         for token in doc_paragraph:
             if token.text in nlp.Defaults.stop_words or token.is_punct:
                 continue
-            if token.pos_ in pos_tag:
+            if token.pos_ in pos_tag and token.dep_ in dep_tag:
                 word = re.sub(r"[^0-9a-zA-Z]+", "", token.text)
                 if word != "":
                     paragraph_keywords.append(word)
