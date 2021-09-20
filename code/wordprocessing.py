@@ -2,6 +2,8 @@ from collections import OrderedDict
 import sys
 import spacy
 import re
+from collections import Counter
+import numpy as np
 
 
 def keyword_extractor(data: list) -> list:
@@ -17,7 +19,7 @@ def keyword_extractor(data: list) -> list:
         print("Please make sure you have Spacy Word Model en_core_web_lg downloaded.")
         print(e)
         sys.exit()
-    pos_tag = ["PROPN", "NOUN"]
+    pos_tag = ["NOUN"]
     dep_tag = ["nsubj"]
     for slide in data:
         doc_header = nlp(slide["Header"].lower())
@@ -27,16 +29,18 @@ def keyword_extractor(data: list) -> list:
         for token in doc_header:
             if token.text in nlp.Defaults.stop_words or token.is_punct:
                 continue
-            if token.pos_ in pos_tag:
-                word = re.sub(r"[^0-9a-zA-Z]+", "", token.text)
-                if word != "":
+            if token.pos_ in pos_tag or token.dep_ in dep_tag:
+                word = re.sub(r"[^0-9a-zA-Z]+", " ", token.text)
+                word = word.strip()
+                if len(word) >= 3:
                     header_keywords.append(word)
         for token in doc_paragraph:
             if token.text in nlp.Defaults.stop_words or token.is_punct:
                 continue
-            if token.pos_ in pos_tag and token.dep_ in dep_tag:
-                word = re.sub(r"[^0-9a-zA-Z]+", "", token.text)
-                if word != "":
+            if token.pos_ in pos_tag or token.dep_ in dep_tag:
+                word = re.sub(r"[^a-zA-Z]+", " ", token.text)
+                word = word.strip()
+                if len(word) >= 3:
                     paragraph_keywords.append(word)
         slide["Header_keywords"] = header_keywords
         slide["Paragraph_keywords"] = paragraph_keywords
@@ -102,6 +106,26 @@ def merge_slide_with_same_slide_number(data: list) -> list:
                            "Paragraph_keywords": paragraph_keywords,
                            "slide": slide["slide"]})
     return merged
+
+def construct_search_query(data: list) -> list:
+    header_keywords = []
+    paragraph_keywords = []
+    for item in data:
+        header_keywords += item["Header_keywords"] * len(item["slides"])
+        paragraph_keywords += item["Paragraph_keywords"] * len(item["slides"])
+    header_counts = Counter(header_keywords)
+    paragraph_counts = Counter(paragraph_keywords)
+    header_mean = np.array(list(header_counts.values())).mean()
+    paragraph_mean = np.array(list(paragraph_counts.values())).mean()
+    header_search = []
+    paragraph_search = []
+    for key, value in header_counts.items():
+        if value > header_mean:
+            header_search.append(key)
+    for key, value in paragraph_counts.items():
+        if value > paragraph_mean:
+            paragraph_search.append(key)
+    return header_search + paragraph_search
 
 
 if __name__ == "__main__":

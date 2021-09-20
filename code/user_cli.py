@@ -8,6 +8,7 @@ from rapidapi_search import rapid_search
 import pprint
 import re
 from google_search import search_call, get_people_also_ask_links
+from collections import Counter
 
 
 def user_menu():
@@ -43,26 +44,27 @@ def user_menu():
 
 if __name__ == "__main__":
     # file = user_menu()
-    file = "../data/lec7.pdf"
+    file = "../data/lecture4.pdf"
     raw_data = extract_words(file)
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.merge_slide_with_same_slide_number(wp.keyword_extractor(raw_data))
     keyword_data = wp.duplicate_word_removal(wp.merge_slide_with_same_headers(keyword_data))
-    print_file = "Results for " + file + "\n" + "=============================== \n"
+    search_query = wp.construct_search_query(keyword_data)
+    print(keyword_data)
+    print(search_query)
+    people_also_ask_result = get_people_also_ask_links(search_query)
+    query_result_data = search_call(search_query)
+    print(people_also_ask_result)
+    print(query_result_data)
 
-    for data in keyword_data:
-        header_and_para = data['Header_keywords'] + data['Paragraph_keywords']
-        header_and_para = [data for data in header_and_para if len(data) >= 3]
-        query = " ".join(header_and_para)
-        print_file += "Query Words \n"
-        print_file += query + "\n"
-        print_file += "Slide Numbers \n"
-        print_file += str(data["slides"]) + "\n"
-        people_also_ask_result = get_people_also_ask_links(query)
-        query_result_data = search_call(query)
-        print_file += "People Also Ask Results \n"
-        print_file += str(people_also_ask_result) + "\n"
-        print_file += "Google Search Results \n"
-        print_file += str(query_result_data) + "\n"
-    with open("Result2.txt", mode="w") as f:
-        f.write(print_file)
+    # for data in keyword_data:
+    #     header_and_para = data['Header_keywords'] + data['Paragraph_keywords']
+    #     header_and_para = [data for data in header_and_para if len(data) >= 3]
+    #     query = " ".join(header_and_para)
+    #     print_file += "Query Words \n"
+    #     print_file += query + "\n"
+    #     print_file += "Slide Numbers \n"
+    #     print_file += str(data["slides"]) + "\n"
+    #     people_also_ask_result = get_people_also_ask_links(query)
+    #     query_result_data = search_call(query)
+    #     pr
