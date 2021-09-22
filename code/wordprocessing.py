@@ -1,3 +1,4 @@
+import string
 from collections import OrderedDict
 import sys
 import spacy
@@ -126,6 +127,44 @@ def construct_search_query(data: list) -> list:
         if value > paragraph_mean:
             paragraph_search.append(key)
     return header_search + paragraph_search
+
+def extract_noun_chunks(data: list) -> list:
+    try:
+        nlp = spacy.load("en_core_web_lg")
+    except OSError as e:
+        print("Please make sure you have Spacy Word Model en_core_web_lg downloaded.")
+        print(e)
+        sys.exit()
+    for slide in data:
+        doc_header_noun_chunks = nlp(slide["Header"].lower()).noun_chunks
+        doc_paragraph_noun_chunks = nlp(slide["Paragraph"].lower()).noun_chunks
+        header_keywords = []
+        paragraph_keywords = []
+        for token in doc_header_noun_chunks:
+            processed_words = []
+            words = token.text.split()
+            for word in words:
+                word = re.sub(r"[^a-zA-Z]+", "", word).strip()
+                if word in nlp.Defaults.stop_words or word in string.punctuation:
+                    continue
+                if len(word) >=3:
+                    processed_words.append(word)
+            if len(processed_words) >=2:
+                header_keywords.append(" ".join(processed_words))
+        for token in doc_paragraph_noun_chunks:
+            processed_words = []
+            words = token.text.split()
+            for word in words:
+                word = re.sub(r"[^a-zA-Z]+", "", word).strip()
+                if word in nlp.Defaults.stop_words or word in string.punctuation:
+                    continue
+                if len(word) >=3:
+                    processed_words.append(word)
+            if len(processed_words) >=2:
+                paragraph_keywords.append(" ".join(processed_words))
+        slide["Header_keywords"] = header_keywords
+        slide["Paragraph_keywords"] = paragraph_keywords
+    return data
 
 
 if __name__ == "__main__":
