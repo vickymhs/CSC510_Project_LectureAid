@@ -1,13 +1,13 @@
-src package
-===========
+code package
+============
 
 Submodules
 ----------
 
-src.extract\_sizes module
--------------------------
+code.extract\_sizes module
+--------------------------
 
-.. automodule:: src.extract_sizes
+.. automodule:: code.extract_sizes
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ src.extract\_sizes module
 Module contents
 ---------------
 
-.. automodule:: src
+.. automodule:: code
    :members:
    :undoc-members:
    :show-inheritance:

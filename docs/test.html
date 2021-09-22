@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>test package &#8212; Lecture Aid  documentation</title>
-    <link rel="stylesheet" type="text/css" href="static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="static/documentation_options.js"></script>
-    <script src="static/jquery.js"></script>
-    <script src="static/underscore.js"></script>
-    <script src="static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="src package" href="src.html" />
+    <link rel="prev" title="code package" href="code.html" />
    
-  <link rel="stylesheet" href="static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -37,55 +37,8 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="module-test.test_extract_sizes">
-<span id="test-test-extract-sizes-module"></span><h2>test.test_extract_sizes module<a class="headerlink" href="#module-test.test_extract_sizes" title="Permalink to this headline">¶</a></h2>
-<p>Unit tests for extract sizes</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="test.test_extract_sizes.TestExtractSizes">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">test.test_extract_sizes.</span></span><span class="sig-name descname"><span class="pre">TestExtractSizes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.test_extract_sizes.TestExtractSizes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
-<p>Test cases for the extract sizes
-Includes testing None cases and valid PDFs</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="test.test_extract_sizes.TestExtractSizes.test_dict_fonts_none">
-<span class="sig-name descname"><span class="pre">test_dict_fonts_none</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_extract_sizes.TestExtractSizes.test_dict_fonts_none" title="Permalink to this definition">¶</a></dt>
-<dd><p>Asserts that when None is passed into tag_text,
-no error happens and None is returned</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="test.test_extract_sizes.TestExtractSizes.test_font_doc_none">
-<span class="sig-name descname"><span class="pre">test_font_doc_none</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_extract_sizes.TestExtractSizes.test_font_doc_none" title="Permalink to this definition">¶</a></dt>
-<dd><p>Asserts that when None is passed into get_sizes,
-no error happens and None is returned</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="test.test_extract_sizes.TestExtractSizes.test_font_size_1">
-<span class="sig-name descname"><span class="pre">test_font_size_1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_extract_sizes.TestExtractSizes.test_font_size_1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tests the unique font size is as expected for Test1</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="test.test_extract_sizes.TestExtractSizes.test_font_size_2">
-<span class="sig-name descname"><span class="pre">test_font_size_2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_extract_sizes.TestExtractSizes.test_font_size_2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tests the unique font size is as expected for Test2</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="test.test_extract_sizes.TestExtractSizes.test_text_to_groupings_1">
-<span class="sig-name descname"><span class="pre">test_text_to_groupings_1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_extract_sizes.TestExtractSizes.test_text_to_groupings_1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tests the groupings given a file</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="test.test_extract_sizes.TestExtractSizes.test_text_to_groupings_2">
-<span class="sig-name descname"><span class="pre">test_text_to_groupings_2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_extract_sizes.TestExtractSizes.test_text_to_groupings_2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tests the groupings given a file</p>
-</dd></dl>
-
-</dd></dl>
-
+<section id="test-test-extract-sizes-module">
+<h2>test.test_extract_sizes module<a class="headerlink" href="#test-test-extract-sizes-module" title="Permalink to this headline">¶</a></h2>
 </section>
 <section id="module-test">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-test" title="Permalink to this headline">¶</a></h2>
@@ -112,10 +65,10 @@ no error happens and None is returned</p>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">CSC510_Project_LectureAid</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="src.html">src package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html">code package</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">test package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-test.test_extract_sizes">test.test_extract_sizes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-test-extract-sizes-module">test.test_extract_sizes module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-test">Module contents</a></li>
 </ul>
 </li>
@@ -128,7 +81,7 @@ no error happens and None is returned</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="modules.html">CSC510_Project_LectureAid</a><ul>
-      <li>Previous: <a href="src.html" title="previous chapter">src package</a></li>
+      <li>Previous: <a href="code.html" title="previous chapter">code package</a></li>
   </ul></li>
   </ul></li>
 </ul>
