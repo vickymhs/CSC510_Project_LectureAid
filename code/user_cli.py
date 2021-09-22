@@ -3,9 +3,7 @@ import pyfiglet
 import sys
 from extract_sizes import extract_words, text_to_groupings
 import wordprocessing as wp
-from rapidapi_search import rapid_search
-from google_search import search_call, get_people_also_ask_links
-import time
+from google_search import get_people_also_ask_links
 import concurrent.futures
 
 
@@ -41,20 +39,21 @@ def user_menu():
 
 
 if __name__ == "__main__":
-    # file = user_menu()
-    file = "../data/lecture4.pdf"
+    file = user_menu()
     raw_data = extract_words(file)
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.extract_noun_chunks(raw_data)
     keyword_data = wp.merge_slide_with_same_headers(keyword_data)
     keyword_data = wp.duplicate_word_removal(keyword_data)
     search_query = wp.construct_search_query(keyword_data)
-    print(search_query)
-    print(len(search_query))
 
-    start = time.time()
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        results = executor.map(get_people_also_ask_links, search_query[:20])
-    print(time.time() - start)
-    for result in results:
-        print(result)
+        #when testing use searchquery[:10 or less]. Still working on better threading to get faster results
+        results = executor.map(get_people_also_ask_links, search_query[:3])
+
+    with open("results.txt", mode="w") as f:
+        for result in results:
+            for qa in result:
+                f.write("Question: {}".format(qa["Question"]) + "\n")
+                f.write("Answer Link: {}".format(qa["Answer"]) + "\n")
+            f.write("\n\n")
