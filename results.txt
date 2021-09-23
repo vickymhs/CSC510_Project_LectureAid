@@ -1,0 +1,22 @@
+Question: What do you mean by Address Resolution?
+Answer Link: https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP#:~:text=Address%20Resolution%20Protocol%20(ARP)%20is,local%20area%20network%20(LAN).&text=ARP%20can%20also%20be%20used,FDDI)%20and%20IP%20over%20ATM.
+Question: How does address resolution work?
+Answer Link: https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP#:~:text=ARP%20broadcasts%20a%20request%20packet,and%20proceed%20with%20the%20communication.
+Question: What is Address Resolution Protocol used for?
+Answer Link: https://www.sciencedirect.com/topics/computer-science/address-resolution#:~:text=Address%20Resolution%20Protocol(ARP)%20is,poisoning%20and%20ARP%20spoofing%20attacks.
+Question: What is Address Resolution Protocol and does it use by all IP versions?
+Answer Link: https://www.erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html#:~:text=IP%20operates%20at%20the%20network,computers%20using%20IP%20over%20Ethernet.
+
+
+
+
+Question: What does the Address Resolution Protocol do?
+Answer Link: https://www.fortinet.com/resources/cyberglossary/what-is-arp#:~:text=Address%20Resolution%20Protocol%20(ARP)%20is,%2Darea%20network%20(LAN).
+Question: What is meant by Address Resolution?
+Answer Link: https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP#:~:text=Address%20Resolution%20Protocol%20(ARP)%20is,Access%20Control%20or%20MAC%20address.
+Question: What is Address Resolution in IPv6?
+Answer Link: https://sourcedaddy.com/windows-7/address-resolution-in-ipv6.html#:~:text=The%20ND%20protocol%20resolves%20IPv6,adapter%20in%20the%20first%20place.
+Question: What is the primary purpose of ARP Address Resolution Protocol )?
+Answer Link: https://www.globalknowledge.com/us-en/resources/resource-library/articles/address-resolution-protocol-arp/#:~:text=The%20purpose%20of%20ARP%20is,not%20know%20the%20MAC%20address.
+
+
