@@ -4,4 +4,4 @@ python:
 install:
   - pip3 install -r requirements.txt
 script:
-  - python -m unittest
+  - python -m pytest -v test/
