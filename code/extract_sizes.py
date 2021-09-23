@@ -13,6 +13,8 @@ def extract_words(file: str) -> dict:
     Given a filename, opens the PDF and extracts words and metadata from each slide.
 
     :param file: String representing file path
+    :type: string
+    :rtype: dict
     :return: dictionary representing document metadata and words extracted from each slide
     """
     document = fitz.open(file)
