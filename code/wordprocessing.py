@@ -50,11 +50,10 @@ def keyword_extractor(data: list) -> list:
 
 def duplicate_word_removal(data: list) -> list:
     """
-
     :param data: The list of dictionaries of the form [{"Header":"", "Header_keywords": [],
-                "Paragraph_keywords": [], slides:[int]}]
+    "Paragraph_keywords": [], slides:[int]}]
     :return: The list of dictionaries with duplicate keywords removed of the form [{"Header":"", "Header_keywords": [],
-                "Paragraph_keywords": [], slides:[int]}]
+    "Paragraph_keywords": [], slides:[int]}]
     """
     for dictionary in data:
         dictionary['Header_keywords'] = list(OrderedDict.fromkeys(dictionary['Header_keywords']))
@@ -66,9 +65,9 @@ def merge_slide_with_same_headers(data: list) -> list:
     """
     Function to merge slides with the same header.
     :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", "Header_keywords": [],
-                "Paragraph_keywords": [], slide:int}]
+    "Paragraph_keywords": [], slide:int}]
     :return: The list of dictionaries where slides containing the same header are merged
-             of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
+    of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
     """
     merged = []
     headers = []
@@ -86,13 +85,13 @@ def merge_slide_with_same_headers(data: list) -> list:
 
 
 def merge_slide_with_same_slide_number(data: list) -> list:
-    '''
+    """
     Function to merge slides with the same slide number into a single one. Merge the dict with the same slide number into a single on
     :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", "Header_keywords": [],
-                "Paragraph_keywords": [], slide:int}]
+    "Paragraph_keywords": [], slide:int}]
     :return: The list of dictionaries where slides containing the same slide number are merged
-             of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
-    '''
+    of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
+    """
     merged = []
     slide_number = []
     for slide in data:

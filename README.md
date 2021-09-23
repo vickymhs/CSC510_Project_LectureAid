@@ -3,8 +3,21 @@
 # CSC510_Project_LectureAid
 Project 1 for CSC510 SE Fall 21
 
+# Requirements
+- Python (atleast 3.8) and pip
 
-## Extract sizes
+# Setup
+- run `pip install -r requirements.txt`
+  - this installs all of the required python libraries
 
-Given a dictionary of pdf pages, extracts the size of each word.
-Then, based on the unique sizes, separates the text into headers and non-headers for each page.
+# How to run
+- `python code/user_cli.py`
+- Press 1 to enter a pdf
+  - Future work includes pressing 2 for pptx
+- Enter the path to your pdf file
+- The results are stored in results.txt
+
+# Future work
+- Include more than pdf
+- Have a website instead
+- Speed up the program
