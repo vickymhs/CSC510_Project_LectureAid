@@ -16,6 +16,7 @@ def rapid_search(search_term: str) -> json:
     """
 
     Perform a search using Rapid Search API
+
     :param search_term: The param represents the search strings for the web search
     :param api_key: Represents the credentials for API hit
     :return: The web search API response in JSON format
@@ -39,4 +40,4 @@ def rapid_search(search_term: str) -> json:
         for i in rel_obj['value']:
             urls.append(i['url'])
     url_json = json.dumps(urls)
-    return(url_json)
+    return url_json
