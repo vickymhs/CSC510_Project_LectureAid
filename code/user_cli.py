@@ -45,12 +45,12 @@ def user_menu():
         sys.exit(0)
 
 
-def generate_wordcloud(keyword_data: list) -> None:
+def generate_wordcloud(keyword_data: list, file: str) -> None:
     """
     Given keywords of a document, display a wordcloud.
 
     :param keyword_data: List of cleaned keywords in a document
-
+    :param file: The name of the lecture document
     """
     wordcloud_string = ''
     for slide in keyword_data:
@@ -63,13 +63,16 @@ def generate_wordcloud(keyword_data: list) -> None:
         wordcloud_string += curr_slide_keywords
 
     wordcloud = WordCloud().generate(wordcloud_string)
+    # gets the filename by choosing the last word split by /
+    # then selects everything but .pdf
+    formatted_name = file.split("/")[-1].replace(".pdf", "")
+
     plt.figure(figsize=(8, 8), facecolor=None)
     plt.imshow(wordcloud)
     plt.axis("off")
-    plt.title(f'Wordcloud for {file}')
+    plt.title(f'Wordcloud for {formatted_name}')
     plt.tight_layout(pad=0)
-
-    plt.show()
+    plt.savefig(f'{formatted_name}.png')
 
 
 if __name__ == "__main__":
@@ -80,8 +83,7 @@ if __name__ == "__main__":
     keyword_data = wp.merge_slide_with_same_headers(keyword_data)
 
     # generate a wordcloud
-    generate_wordcloud(keyword_data)
-    """
+    generate_wordcloud(keyword_data, file)
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
     search_query = wp.construct_search_query(keyword_data)
@@ -95,4 +97,3 @@ if __name__ == "__main__":
                 f.write("Question: {}".format(qa["Question"]) + "\n")
                 f.write("Answer Link: {}".format(qa["Answer"]) + "\n")
             f.write("\n\n")
-    """

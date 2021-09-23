@@ -8,3 +8,5 @@ pytest
 pyfiglet
 PyMuPDF
 wordcloud
+matplotlib
+
