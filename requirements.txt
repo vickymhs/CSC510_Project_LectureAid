@@ -7,3 +7,6 @@ pymupdf
 pytest
 pyfiglet
 PyMuPDF
+wordcloud
+matplotlib
+

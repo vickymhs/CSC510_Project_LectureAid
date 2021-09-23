@@ -16,6 +16,8 @@ Project 1 for CSC510 SE Fall 21
   - Future work includes pressing 2 for pptx
 - Enter the path to your pdf file
 - The results are stored in results.txt
+- A wordcloud is generated as a png file
+
 
 # Future work
 - Include more than pdf
