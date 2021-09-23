@@ -9,7 +9,7 @@ import re
 # Global variables for search request
 API_KEY = "api_key"
 CSE_ID = "cse_id"
-SEARCH_COUNT = 5
+SEARCH_COUNT = 10
 
 # Initialize config parameters
 config = configparser.ConfigParser()
@@ -42,7 +42,7 @@ def google_search(search_term: str, api_key: str, cse_id: str, **kwargs) -> json
    service = build("customsearch", "v1", developerKey=api_key)
    # Execute request
    query_result = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
-   return query_result
+   return query_result['items']
 
 
 # Call for the Web search
