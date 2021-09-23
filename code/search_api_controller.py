@@ -3,6 +3,7 @@ from google_search import *
 if __name__ == "main":
     # Response of the Google web API Search
     google_search_results = search_call("model in ruby")
+    # Response of the Google web API Search
 
     # Response of the Rapid web API Search
     # rapidapi_search_results = search_call("model in ruby")

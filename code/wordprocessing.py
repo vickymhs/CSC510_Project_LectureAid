@@ -10,9 +10,11 @@ import numpy as np
 def keyword_extractor(data: list) -> list:
     """
     Function to extract keywords from the headers and paragraphs of slides
-    :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", slide:int}]
-    :return: The list of dictionaries with keywords extracted of the form [{"Header":"", "Paragraph":"",
-    "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
+
+    :param data: The list of dictionaries of the form
+    :type: [{"Header":"", "Paragraph":"", slide:int}]
+    :return: The list of dictionaries with keywords extracted of the form
+    :rtype: [{"Header":"", "Paragraph":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     """
     try:
         nlp = spacy.load("en_core_web_lg")
@@ -51,10 +53,12 @@ def keyword_extractor(data: list) -> list:
 def duplicate_word_removal(data: list) -> list:
     """
     Function to remove duplicate words
-    :param data: The list of dictionaries of the form [{"Header":"", "Header_keywords": [],
-    "Paragraph_keywords": [], slides:[int]}]
-    :return: The list of dictionaries with duplicate keywords removed of the form [{"Header":"", "Header_keywords": [],
-    "Paragraph_keywords": [], slides:[int]}]
+
+    :param data: The list of dictionaries of the form
+    :type: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
+    :return: The list of dictionaries with duplicate keywords removed of the form
+    :rtype: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
+
     """
     for dictionary in data:
         dictionary['Header_keywords'] = list(OrderedDict.fromkeys(dictionary['Header_keywords']))
@@ -65,10 +69,11 @@ def duplicate_word_removal(data: list) -> list:
 def merge_slide_with_same_headers(data: list) -> list:
     """
     Function to merge slides with the same header.
-    :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", "Header_keywords": [],
-    "Paragraph_keywords": [], slide:int}]
+
+    :param data: The list of dictionaries of the form
+    :type: [{"Header":"", "Paragraph":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     :return: The list of dictionaries where slides containing the same header are merged
-    of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
+    :rtype: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
     """
     merged = []
     headers = []
@@ -87,11 +92,12 @@ def merge_slide_with_same_headers(data: list) -> list:
 
 def merge_slide_with_same_slide_number(data: list) -> list:
     """
-    Function to merge slides with the same slide number into a single one. Merge the dict with the same slide number into a single on
-    :param data: The list of dictionaries of the form [{"Header":"", "Paragraph":"", "Header_keywords": [],
-    "Paragraph_keywords": [], slide:int}]
-    :return: The list of dictionaries where slides containing the same slide number are merged
-    of the form [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
+    Function to merge slides with the same slide number into a single one.
+
+    :param data: The list of dictionaries of the form
+    :type: [{"Header":"", "Paragraph":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
+    :return: The list of dictionaries where slides containing the same slide number are merged of the form
+    :type: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     """
     merged = []
     slide_number = []
@@ -108,7 +114,16 @@ def merge_slide_with_same_slide_number(data: list) -> list:
                            "slide": slide["slide"]})
     return merged
 
+
 def construct_search_query(data: list) -> list:
+    """
+    Constructs a search query given a PDF data
+
+    :param data: The list of data
+    :type: list
+    :return: List of words to search
+    :rtype: list
+    """
     header_keywords = []
     paragraph_keywords = []
     for item in data:
@@ -128,7 +143,18 @@ def construct_search_query(data: list) -> list:
             paragraph_search.append(key)
     return header_search + paragraph_search
 
+
 def extract_noun_chunks(data: list) -> list:
+    """
+
+    Extracts nouns using Spacy
+
+    :param data: list of PDF data
+    :type: list
+    :return: list of data with nouns extracted
+    :rtype: list
+
+    """
     try:
         nlp = spacy.load("en_core_web_lg")
     except OSError as e:

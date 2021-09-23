@@ -45,7 +45,8 @@ of headers and paragraphs</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.extract_sizes.extract_words">
 <span class="sig-prename descclassname"><span class="pre">code.extract_sizes.</span></span><span class="sig-name descname"><span class="pre">extract_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#code.extract_sizes.extract_words" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Given a filename, opens the PDF and extracts words and metadata from each slide.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> – String representing file path</p>
 </dd>
@@ -103,7 +104,7 @@ Paragraph contains all other sizes</p>
 <dd><p>Given a pdf document, returns a dictionary of Headers, Paragraphs, and page number</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>doc</strong> – a PDF document containg only words</p>
+<dd class="field-odd"><p><strong>doc</strong> – a PDF document containing only words</p>
 </dd>
 <dt class="field-even">Type</dt>
 <dd class="field-even"><p>list</p>
@@ -123,32 +124,70 @@ Paragraph contains all other sizes</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.google_search.getCredentials">
 <span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">getCredentials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#code.google_search.getCredentials" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the sensitive credentials from the configuration files
-:param key: The key for the credential value
-:return: The authenticate value for the key</p>
+<dd><p>Returns the sensitive credentials from the configuration files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – The key for the credential value</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The authenticate value for the key</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.google_search.get_people_also_ask_links">
-<span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">get_people_also_ask_links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#code.google_search.get_people_also_ask_links" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">get_people_also_ask_links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.google_search.get_people_also_ask_links" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a search term, returns the google People Also Ask links</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>search_term</strong> – The query to google</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of links returned by people also ask</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.google_search.google_search">
 <span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">google_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cse_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'C:\\Program</span> <span class="pre">Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\json\\__init__.py'&gt;</span></span></span><a class="headerlink" href="#code.google_search.google_search" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform a Google search using Custom Search API
-:param search_term: The param represents the search strings for the web search
-:param api_key: Represents the credentials for API hit
-:param cse_id: Represents the credentials for API hit
-:return: The web search API response in JSON format</p>
+<dd><p>Perform a Google search using Custom Search API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>search_term</strong> – The param represents the search strings for the web search</p></li>
+<li><p><strong>api_key</strong> – Represents the credentials for API hit</p></li>
+<li><p><strong>cse_id</strong> – Represents the credentials for API hit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The web search API response in JSON format</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.google_search.search_call">
-<span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">search_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'C:\\Program</span> <span class="pre">Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\json\\__init__.py'&gt;</span></span></span><a class="headerlink" href="#code.google_search.search_call" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the sensitive credentials from the configuration files
-:param key: The key for the credential value
-:return: The authenticate value for the key</p>
+<span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">search_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.google_search.search_call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a search term, returns the google links</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>search_term</strong> – The query for google</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The links returned by google</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -157,10 +196,18 @@ Paragraph contains all other sizes</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.rapidapi_search.rapid_search">
 <span class="sig-prename descclassname"><span class="pre">code.rapidapi_search.</span></span><span class="sig-name descname"><span class="pre">rapid_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'C:\\Program</span> <span class="pre">Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\json\\__init__.py'&gt;</span></span></span><a class="headerlink" href="#code.rapidapi_search.rapid_search" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform a search using Rapid Search API
-:param search_term: The param represents the search strings for the web search
-:param api_key: Represents the credentials for API hit
-:return: The web search API response in JSON format</p>
+<dd><p>Perform a search using Rapid Search API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>search_term</strong> – The param represents the search strings for the web search</p></li>
+<li><p><strong>api_key</strong> – Represents the credentials for API hit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The web search API response in JSON format</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -172,7 +219,8 @@ Paragraph contains all other sizes</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.user_cli.user_menu">
 <span class="sig-prename descclassname"><span class="pre">code.user_cli.</span></span><span class="sig-name descname"><span class="pre">user_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#code.user_cli.user_menu" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Runner class. Prompts the user for input and returns a txt file of results</p>
+</dd></dl>
 
 </section>
 <section id="module-code.wordprocessing">
@@ -180,50 +228,121 @@ Paragraph contains all other sizes</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.construct_search_query">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">construct_search_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.construct_search_query" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Constructs a search query given a PDF data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – The list of data</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of words to search</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.duplicate_word_removal">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">duplicate_word_removal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.duplicate_word_removal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to remove duplicate words
-:param data: The list of dictionaries of the form [{“Header”:””, “Header_keywords”: [],
-“Paragraph_keywords”: [], slides:[int]}]
-:return: The list of dictionaries with duplicate keywords removed of the form [{“Header”:””, “Header_keywords”: [],
-“Paragraph_keywords”: [], slides:[int]}]</p>
+<dd><p>Function to remove duplicate words</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – The list of dictionaries of the form</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slides:[int]}]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The list of dictionaries with duplicate keywords removed of the form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slides:[int]}]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.extract_noun_chunks">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">extract_noun_chunks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.extract_noun_chunks" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Extracts nouns using Spacy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – list of PDF data</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of data with nouns extracted</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.keyword_extractor">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">keyword_extractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.keyword_extractor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to extract keywords from the headers and paragraphs of slides
-:param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, slide:int}]
-:return: The list of dictionaries with keywords extracted of the form [{“Header”:””, “Paragraph”:””,
-“Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+<dd><p>Function to extract keywords from the headers and paragraphs of slides</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – The list of dictionaries of the form</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Paragraph”:””, slide:int}]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The list of dictionaries with keywords extracted of the form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Paragraph”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.merge_slide_with_same_headers">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_slide_with_same_headers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.merge_slide_with_same_headers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to merge slides with the same header.
-:param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, “Header_keywords”: [],
-“Paragraph_keywords”: [], slide:int}]
-:return: The list of dictionaries where slides containing the same header are merged
-of the form [{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slides:[int]}]</p>
+<dd><p>Function to merge slides with the same header.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – The list of dictionaries of the form</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Paragraph”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The list of dictionaries where slides containing the same header are merged</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slides:[int]}]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.merge_slide_with_same_slide_number">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_slide_with_same_slide_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.merge_slide_with_same_slide_number" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to merge slides with the same slide number into a single one. Merge the dict with the same slide number into a single on
-:param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, “Header_keywords”: [],
-“Paragraph_keywords”: [], slide:int}]
-:return: The list of dictionaries where slides containing the same slide number are merged
-of the form [{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+<dd><p>Function to merge slides with the same slide number into a single one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – The list of dictionaries of the form</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Paragraph”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The list of dictionaries where slides containing the same slide number are merged of the form</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>[{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>

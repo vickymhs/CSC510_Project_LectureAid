@@ -8,6 +8,9 @@ class TestWordProcessing(unittest.TestCase):
         pass
 
     def test_keyword_extractor(self):
+        """
+        Tests the keyword_extractor method
+        """
         data = [{"Header": "This is a Header", "Paragraph": "This is a Paragraph", "slide": 10}]
         keywords = keyword_extractor(data)
         data[0]["Header_keywords"] = ["header"]
@@ -15,6 +18,9 @@ class TestWordProcessing(unittest.TestCase):
         self.assertEqual(keywords, data)
 
     def test_duplicate_word_removal(self):
+        """
+        Tests the duplicate_word_removal method
+        """
         data = [{"Header": "This is a Header, and this is a Header", "Paragraph": "This is a Paragraph, and this is a "
                                                                                   "Paragraph",
                  "Header_keywords": ["header", "header"],
@@ -25,6 +31,9 @@ class TestWordProcessing(unittest.TestCase):
         self.assertEqual(data, remove_duplicates)
 
     def test_merge_slide_with_same_header(self):
+        """
+        Tests the merge_slide_with_same_header method
+        """
         data = [{"Header": "This is a Header", "Paragraph": "This is paragraph one", "Header_keywords": ["header"],
                  "Paragraph_keywords": ["paragraph", "one"], "slide": 10},
                 {"Header": "This is a Header", "paragraph": "This is paragraph two", "Header_keywords": ["header"],
@@ -38,6 +47,9 @@ class TestWordProcessing(unittest.TestCase):
         self.assertEqual(data, merged_data)
 
     def test_merge_slide_with_same_slide_number(self):
+        """
+        Tests the merge_slide_with_same_slide_number method
+        """
         input_data = [{'Header': 'Dimensionality Reduction PCA',
                        'Paragraph': 'This is paragraph 1',
                        'slide': 8, 'Header_keywords': ['dimensionality', 'reduction', 'pca'],

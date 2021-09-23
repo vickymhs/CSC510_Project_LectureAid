@@ -8,6 +8,11 @@ import concurrent.futures
 
 
 def user_menu():
+    """
+
+    Runner class. Prompts the user for input and returns a txt file of results
+
+    """
     format_welcome_message = pyfiglet.figlet_format("LECTURE AID")
     size = shutil.get_terminal_size(fallback=(120, 50))
     valid_choices = ["1", "2", "Q", "q"]

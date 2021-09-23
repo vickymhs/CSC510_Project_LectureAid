@@ -4,16 +4,17 @@ File completing step 2: given a pdf document, return a dictionary
 of headers and paragraphs
 
 """
-import sys
 import fitz
 import re
 
+
 def extract_words(file: str) -> dict:
-    '''
+    """
+    Given a filename, opens the PDF and extracts words and metadata from each slide.
 
     :param file: String representing file path
     :return: dictionary representing document metadata and words extracted from each slide
-    '''
+    """
     document = fitz.open(file)
     doc_data = {}
     doc_data["meta_data"] = document.metadata
@@ -33,6 +34,7 @@ def extract_words(file: str) -> dict:
                         })
         doc_data["data"].append(page_data)
     return doc_data
+
 
 def get_sizes(doc: list) -> list:
     """
@@ -101,7 +103,7 @@ def text_to_groupings(doc: list) -> dict:
     """
     Given a pdf document, returns a dictionary of Headers, Paragraphs, and page number
 
-    :param doc: a PDF document containg only words
+    :param doc: a PDF document containing only words
     :type: list
     :rtype: dict
     :return: a dictionary categorizing each text into its respective category
