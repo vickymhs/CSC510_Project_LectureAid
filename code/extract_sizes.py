@@ -36,7 +36,7 @@ def extract_words(file: str) -> dict:
     return doc_data
 
 
-def get_sizes(doc: list) -> list:
+def get_sizes(doc: dict) -> list:
     """
     Helper function to get unique sizes within a PDF
 
@@ -61,20 +61,20 @@ def get_sizes(doc: list) -> list:
     return sorted_fonts
 
 
-def tag_text(unique_fonts: list, doc: list) -> dict:
+def tag_text(unique_fonts: list, doc: dict) -> list:
     """
     Categorizes each text into L, M, or S.
 
     :param unique_fonts: a list of unique fonts in the powerpoint
     :type unique_fonts: list
     :param doc: a list of blocks per each document page
-    :type doc: list
-    :rtype: dict
-    :return: a dictionary categorizing each text into its respective category
+    :type doc: dict
+    :rtype: list
+    :return: a list of dictionaries categorizing each text into its respective category
     """
     # check that both are not None, or empty
     if not doc or not unique_fonts:
-        return {}
+        return []
 
     # The Header will be the top 2 font sizes
     # top font size is Title, second would be header
@@ -97,18 +97,18 @@ def tag_text(unique_fonts: list, doc: list) -> dict:
     return all_pages
 
 
-def text_to_groupings(doc: list) -> dict:
+def text_to_groupings(doc: dict) -> list:
     """
     Given a pdf document, returns a dictionary of Headers, Paragraphs, and page number
 
     :param doc: a PDF document containing only words
-    :type: list
-    :rtype: dict
+    :type: dict
+    :rtype: list
     :return: a dictionary categorizing each text into its respective category
     """
     font_count = get_sizes(doc)
-    dict_fonts = tag_text(font_count, doc)
-    return dict_fonts
+    lst_fonts = tag_text(font_count, doc)
+    return lst_fonts
 
 
 if __name__ == "__main__":
