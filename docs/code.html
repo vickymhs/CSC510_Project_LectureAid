@@ -164,11 +164,16 @@ Paragraph contains all other sizes</p>
 </dd></dl>
 
 </section>
-<section id="code-search-api-controller-module">
-<h2>code.search_api_controller module<a class="headerlink" href="#code-search-api-controller-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-code.search_api_controller">
+<span id="code-search-api-controller-module"></span><h2>code.search_api_controller module<a class="headerlink" href="#module-code.search_api_controller" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="code-user-cli-module">
-<h2>code.user_cli module<a class="headerlink" href="#code-user-cli-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-code.user_cli">
+<span id="code-user-cli-module"></span><h2>code.user_cli module<a class="headerlink" href="#module-code.user_cli" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="code.user_cli.user_menu">
+<span class="sig-prename descclassname"><span class="pre">code.user_cli.</span></span><span class="sig-name descname"><span class="pre">user_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#code.user_cli.user_menu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </section>
 <section id="module-code.wordprocessing">
 <span id="code-wordprocessing-module"></span><h2>code.wordprocessing module<a class="headerlink" href="#module-code.wordprocessing" title="Permalink to this headline">¶</a></h2>
@@ -180,16 +185,11 @@ Paragraph contains all other sizes</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.duplicate_word_removal">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">duplicate_word_removal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.duplicate_word_removal" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> – The list of dictionaries of the form [{“Header”:””, “Header_keywords”: [],
+<dd><p>Function to remove duplicate words
+:param data: The list of dictionaries of the form [{“Header”:””, “Header_keywords”: [],
+“Paragraph_keywords”: [], slides:[int]}]
+:return: The list of dictionaries with duplicate keywords removed of the form [{“Header”:””, “Header_keywords”: [],
 “Paragraph_keywords”: [], slides:[int]}]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The list of dictionaries with duplicate keywords removed of the form [{“Header”:””, “Header_keywords”: [],
-“Paragraph_keywords”: [], slides:[int]}]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -202,42 +202,28 @@ Paragraph contains all other sizes</p>
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">keyword_extractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.keyword_extractor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to extract keywords from the headers and paragraphs of slides
 :param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, slide:int}]
-:return: The list of dictionaries with keywords extracted of the form [{“Header”:””, “Paragraph”:””,</p>
-<blockquote>
-<div><p>“Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
-</div></blockquote>
+:return: The list of dictionaries with keywords extracted of the form [{“Header”:””, “Paragraph”:””,
+“Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.merge_slide_with_same_headers">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_slide_with_same_headers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.merge_slide_with_same_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to merge slides with the same header.
-:param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, “Header_keywords”: [],</p>
-<blockquote>
-<div><p>“Paragraph_keywords”: [], slide:int}]</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The list of dictionaries where slides containing the same header are merged
+:param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, “Header_keywords”: [],
+“Paragraph_keywords”: [], slide:int}]
+:return: The list of dictionaries where slides containing the same header are merged
 of the form [{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slides:[int]}]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.merge_slide_with_same_slide_number">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_slide_with_same_slide_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.merge_slide_with_same_slide_number" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to merge slides with the same slide number into a single one. Merge the dict with the same slide number into a single on
-:param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, “Header_keywords”: [],</p>
-<blockquote>
-<div><p>“Paragraph_keywords”: [], slide:int}]</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The list of dictionaries where slides containing the same slide number are merged
+:param data: The list of dictionaries of the form [{“Header”:””, “Paragraph”:””, “Header_keywords”: [],
+“Paragraph_keywords”: [], slide:int}]
+:return: The list of dictionaries where slides containing the same slide number are merged
 of the form [{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
-</dd>
-</dl>
 </dd></dl>
 
 </section>
@@ -271,8 +257,8 @@ of the form [{“Header”:””, “Header_keywords”: [], “Paragraph_keywo
 <li class="toctree-l3"><a class="reference internal" href="#module-code.extract_sizes">code.extract_sizes module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.google_search">code.google_search module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.rapidapi_search">code.rapidapi_search module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code-search-api-controller-module">code.search_api_controller module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code-user-cli-module">code.user_cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-code.search_api_controller">code.search_api_controller module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-code.user_cli">code.user_cli module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.wordprocessing">code.wordprocessing module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code">Module contents</a></li>
 </ul>
