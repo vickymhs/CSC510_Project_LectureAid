@@ -15,52 +15,68 @@ SEARCH_COUNT = 10
 config = configparser.ConfigParser()
 config.read('config/search_api_config.cfg')
 
+
 def getCredentials(key):
     """
     Returns the sensitive credentials from the configuration files
+
     :param key: The key for the credential value
+    :type: string
     :return: The authenticate value for the key
 
+
     """
-    key_map = {'api_key' : config['credentials']['api_key'],'cse_id' : config['credentials']['cse_id']}
-    if(key_map[key]):
+    key_map = {'api_key': config['credentials']['api_key'], 'cse_id': config['credentials']['cse_id']}
+    if key_map[key]:
         return key_map[key]
-    else:return -1
+    else:
+        return -1
 
 
 def google_search(search_term: str, api_key: str, cse_id: str, **kwargs) -> json:
-   """
+    """
 
    Perform a Google search using Custom Search API
+
    :param search_term: The param represents the search strings for the web search
    :param api_key: Represents the credentials for API hit
    :param cse_id: Represents the credentials for API hit
    :return: The web search API response in JSON format
 
    """
-   # Build request
-   service = build("customsearch", "v1", developerKey=api_key)
-   # Execute request
-   query_result = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
-   return query_result['items']
+    # Build request
+    service = build("customsearch", "v1", developerKey=api_key)
+    # Execute request
+    query_result = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
+    return query_result['items']
 
 
 # Call for the Web search
-def search_call(search_term) -> json:
+def search_call(search_term: str) -> list:
     """
-        Returns the sensitive credentials from the configuration files
-        :param key: The key for the credential value
-        :return: The authenticate value for the key
+    Given a search term, returns the google links
+
+    :param search_term: The query for google
+    :type: string
+    :return: The links returned by google
+    :type: list
     """
 
-    query_result = google_search(search_term, getCredentials(API_KEY), getCredentials(CSE_ID), num = SEARCH_COUNT)
+    query_result = google_search(search_term, getCredentials(API_KEY), getCredentials(CSE_ID), num=SEARCH_COUNT)
     links = []
     if "items" in query_result:
         for item in query_result["items"]:
             links.append(item["formattedUrl"])
         return links
 
-def get_people_also_ask_links(search_term):
+
+def get_people_also_ask_links(search_term: str) -> list:
+    """
+    Given a search term, returns the google People Also Ask links
+
+    :param search_term: The query to google
+    :return: list of links returned by people also ask
+    """
     rel_qns = people_also_ask.get_related_questions(search_term)
     result = []
     if rel_qns:
