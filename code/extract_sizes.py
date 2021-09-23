@@ -6,10 +6,15 @@ of headers and paragraphs
 """
 import sys
 import fitz
+import re
 
-def extract_words():
-    pdf =  sys.argv[1]
-    document = fitz.open(pdf)
+def extract_words(file: str) -> dict:
+    '''
+
+    :param file: String representing file path
+    :return: dictionary representing document metadata and words extracted from each slide
+    '''
+    document = fitz.open(file)
     doc_data = {}
     doc_data["meta_data"] = document.metadata
     doc_data["data"] = []
@@ -23,7 +28,7 @@ def extract_words():
                 for line in block["lines"]:  # iterate through the text lines
                     for span in line["spans"]:  # iterate through the text spans
                         page_data["blocks"].append({
-                            "text": span["text"],
+                            "text": re.sub(r"\W{3,}", " ", span["text"]),
                             "size": span["size"]
                         })
         doc_data["data"].append(page_data)
@@ -105,58 +110,6 @@ def text_to_groupings(doc: list) -> dict:
 
 
 if __name__ == "__main__":
-    pdf_doc = {
-        "metadata": {"format": "PDF 1.7",
-                     "title": "NCSU Course Syllabus: CSC 422&522",
-                     "author": "steffen", "subject": "", "keywords": "",
-                     "creator": "Microsoft® Word for Microsoft 365", "producer":
-            "Microsoft® Word for Microsoft 365", "creationDate": "D:20210815222418-04'00'",
-                     "modDate": "D:20210815222418-04'00'", "trapped": "", "encryption": ""},
-        "data": [
-            {
-                "blocks": [
-                    {
-                        "text": "Possible title",
-                        "size": 14.0
-                    }
-                ],
-                "slide": 1
-            },
-            {
-                "blocks": [
-                    {
-                        "text":"Possible heading",
-                        "size": 12.0
-                    },
-                    {
-                        "text":"Possible subheading",
-                        "size": 11.0
-                    },
-                    {
-                        "text":"Possible paragraph",
-                        "size": 10.0
-                    }
-                ],
-                "slide": 1
-            },
-            {
-                "blocks": [
-                    {
-                        "text":"Heading",
-                        "size": 12.0
-                    },
-                    {
-                        "text":"Paragraph",
-                        "size": 10.0
-                    },
-                    {
-                        "text":"Another Heading",
-                        "size": 12.0
-                    }
-                ],
-                "slide": 2
-            }
-        ]
-    }
+    pdf_doc = extract_words("../data/lecture4.pdf")
     my_dict = text_to_groupings(pdf_doc)
     print(my_dict)

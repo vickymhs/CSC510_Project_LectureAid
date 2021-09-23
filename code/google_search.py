@@ -1,6 +1,8 @@
 from googleapiclient.discovery import build
 import json
 import configparser
+import people_also_ask
+import re
 
 # requires pip install google-api-python-client
 
@@ -52,12 +54,22 @@ def search_call(search_term) -> json:
     """
 
     query_result = google_search(search_term, getCredentials(API_KEY), getCredentials(CSE_ID), num = SEARCH_COUNT)
-    urls = []
-    for i in query_result:
-        # print(i['link'])
-        urls.append(i['link'])
-    return urls
+    links = []
+    if "items" in query_result:
+        for item in query_result["items"]:
+            links.append(item["formattedUrl"])
+        return links
 
+def get_people_also_ask_links(search_term):
+    rel_qns = people_also_ask.get_related_questions(search_term)
+    result = []
+    if rel_qns:
+        for rel_qn in rel_qns:
+            question = re.search(r"[^?]*", rel_qn).group(0) + "?"
+            answer = people_also_ask.get_answer(question)
+            if answer["has_answer"]:
+                result.append({"Question": answer["question"], "Answer": answer["link"]})
+    return result
 
 # Store result
 # with open('venv/output_data.txt', 'w') as output_file:
