@@ -50,7 +50,11 @@ def generate_wordcloud(keyword_data: list, file: str) -> None:
     Given keywords of a document, display a wordcloud.
 
     :param keyword_data: List of cleaned keywords in a document
+    :type: list
     :param file: The name of the lecture document
+    :type: str
+    :rtype: None
+    :return: None
     """
     wordcloud_string = ''
     for slide in keyword_data:
