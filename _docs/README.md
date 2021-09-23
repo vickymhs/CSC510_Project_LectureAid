@@ -24,3 +24,7 @@ This is the directory used to generate documentation, using [sphinx](https://www
 # Why document using sphinx
 
 Our workflow is to only publish this to the documentation branch. This reduces confusion and reduces the large amount of files present on main.
+
+# Issues / workaround
+- code is not a package
+  - one workaround is to run a sphinx task instead (pycharm plugin)

@@ -12,6 +12,14 @@ test.test\_extract\_sizes module
    :undoc-members:
    :show-inheritance:
 
+test.test\_wordprocessing module
+--------------------------------
+
+.. automodule:: test.test_wordprocessing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

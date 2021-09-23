@@ -1,5 +1,4 @@
 # Minimal makefile for Sphinx documentation
-#
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
@@ -17,6 +16,8 @@ help:
 generate:
 	sphinx-apidoc -f -o "$(SOURCEDIR)" ..
 
+html:
+	sphinx-build -b html source build
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

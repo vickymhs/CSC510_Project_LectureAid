@@ -9,15 +9,25 @@ Welcome to Lecture Aid's documentation!
 Lecture aid is a tool to automatically recommend relevant academic links based upon a lecture PDF.
 
 Setup
+######
 
-insert stuff here
++ install python 3.8
++ run `pip install -r requirements.txt`
 
 How to run
+##########
++ `python code/user_cli.py`
++ Press 1 to enter a pdf
+   + Future work includes press 2 for pptx
++ Enter the path to your pdf file
++ The results of the program are stored in results.txt
 
-insert stuff here
 
-How to constribute
-check out the link for it
+Future work
+############
++ Include more than pdf
++ Have a website instead
++ Speed up the program
 
 
 .. toctree::

@@ -8,7 +8,6 @@ import unittest
 from code.extract_sizes import (get_sizes, tag_text, text_to_groupings)
 
 
-
 class TestExtractSizes(unittest.TestCase):
     """
 
