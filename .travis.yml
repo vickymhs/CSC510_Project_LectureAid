@@ -8,4 +8,4 @@ script:
   - python -m pytest -v test/
   - coverage run --source ./code/ -m pytest -v ./test/
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
