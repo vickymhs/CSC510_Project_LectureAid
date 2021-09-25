@@ -4,6 +4,7 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/mtkumar123/CSC510_Project_LectureAid)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/mtkumar123/CSC510_Project_LectureAid)
 ![GitHub forks](https://img.shields.io/github/forks/mtkumar123/CSC510_Project_LectureAid?style=social)
+[![codecov](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid/branch/main/graph/badge.svg?token=EEGIC8T7QM)](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid)
 
 # CSC510_Project_LectureAid
 Project 1 for CSC510 SE Fall 21
