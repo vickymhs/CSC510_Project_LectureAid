@@ -12,7 +12,7 @@
   license: MIT License
   repository-code: https://github.com/mtkumar123/CSC510_Project_LectureAid
   identifiers:
-  - description: This is the collection of archived snapshots of all versions of CSC510_Project_LectureAid
+  - description: This is the collection of archived snapshots of version 1.0.0 of CSC510_Project_LectureAid
     type: doi
     value: <insert doi number>
   ```
