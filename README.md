@@ -1,4 +1,4 @@
-[![Build Status](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid.svg?branch=main)](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid)
+[![Build Status](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid.svg?branch=main)](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid) [![Coverage Status](https://coveralls.io/repos/github/mtkumar123/CSC510_Project_LectureAid/badge.svg?branch=main)](https://coveralls.io/github/mtkumar123/CSC510_Project_LectureAid?branch=main)
 
 # CSC510_Project_LectureAid
 Project 1 for CSC510 SE Fall 21
