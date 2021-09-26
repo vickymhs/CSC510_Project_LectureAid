@@ -14,7 +14,7 @@ class TestGoogleSearch(unittest.TestCase):
 
     def test_get_people_also_ask_links_data_check(self):
         """Test the get_people_also_ask_links method and checks data"""
-        filename = "./test/data/Test_0.json"
+        filename = "./test/data/people_also_ask_links_results.json"
         with open(filename, encoding='utf-8') as file_pointer:
             doc = json.load(file_pointer)
             test = "Continuous integration"
