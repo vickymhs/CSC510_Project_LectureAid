@@ -22,7 +22,7 @@ def extract_words(file: str) -> dict:
         document = fitz.open(file)
     except:
         print("Invalid file/path")
-        return
+        return {}
 
     doc_data = {}
     doc_data["meta_data"] = document.metadata

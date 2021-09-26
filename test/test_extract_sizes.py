@@ -5,7 +5,7 @@ Unit tests for extract sizes
 """
 import json
 import unittest
-from code.extract_sizes import (get_sizes, tag_text, text_to_groupings)
+from code.extract_sizes import (get_sizes, tag_text, text_to_groupings, extract_words)
 
 
 
@@ -109,6 +109,24 @@ class TestExtractSizes(unittest.TestCase):
             self.assertEqual(page2, actual_dict[2], f'Expected Page 2 to be {page2}')
             self.assertEqual([page0, page1, page2], actual_dict)
 
+    def test_extract_words_invalid_path(self):
+        """
+        Asserts that when an invalid file is passed into extract_words,
+        no error happens and None is returned
+        """
+        # assert when an invalid file path is passed, it returns an empty dict
+        doc_data = extract_words("invalid/path")
+        self.assertEqual(doc_data, {})
+
+    def test_extract_words_1(self):
+        """
+        Tests the doc_data extracted from a file
+        """
+        filename = "./test/data/Test_0.json"
+        with open(filename, encoding='utf-8') as file_pointer:
+            doc = json.load(file_pointer)
+            doc_data = extract_words("./test/data/sample.pdf")
+            self.assertEqual(doc_data, doc)
 
 if __name__ == '__main__':
     unittest.main()
