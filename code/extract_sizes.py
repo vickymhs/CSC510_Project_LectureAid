@@ -17,10 +17,13 @@ def extract_words(file: str) -> dict:
     :rtype: dict
     :return: dictionary representing document metadata and words extracted from each slide
     """
+    document = None
+    try:
+        document = fitz.open(file)
+    except:
+        print("Invalid file/path")
+        return
 
-    if not file:
-        return {}
-    document = fitz.open(file)
     doc_data = {}
     doc_data["meta_data"] = document.metadata
     doc_data["data"] = []
