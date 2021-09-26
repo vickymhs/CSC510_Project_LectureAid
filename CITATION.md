@@ -4,7 +4,7 @@
   authors:
     - Ashley King
     - Manoj Kumar
-    - Rakesh VM
+    - Rakesh Muppala
     - Sayali Parab
     - Ashwin Das
     - Renji Joseph Sabu
