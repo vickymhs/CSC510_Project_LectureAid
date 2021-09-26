@@ -1,13 +1,13 @@
 import shutil
 import pyfiglet
 import sys
-from extract_sizes import extract_words, text_to_groupings
-import wordprocessing as wp
-from google_search import get_people_also_ask_links
+from code.extract_sizes import extract_words, text_to_groupings
+import code.wordprocessing as wp
+from code.google_search import get_people_also_ask_links
 import concurrent.futures
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from browser_output import *
+from code.browser_output import *
 
 def user_menu():
     """
