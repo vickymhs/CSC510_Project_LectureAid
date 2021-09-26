@@ -14,10 +14,15 @@ class TestGoogleSearch(unittest.TestCase):
 
     def test_get_people_also_ask_links_data_check(self):
         """Test the get_people_also_ask_links method and checks data"""
-
         filename = "./test/data/Test_0.json"
         with open(filename, encoding='utf-8') as file_pointer:
             doc = json.load(file_pointer)
             test = "Continuous integration"
             result = get_people_also_ask_links(test)
             self.assertEqual(result, doc)
+
+    def test_get_people_also_ask_links_empty_data_check(self):
+        """Test the get_people_also_ask_links method with empty string and checks data"""
+        test = ""
+        result = get_people_also_ask_links(test)
+        self.assertEqual(result, [])
