@@ -7,7 +7,7 @@ from google_search import get_people_also_ask_links
 import concurrent.futures
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-
+from browser_output import *
 
 def user_menu():
     """
@@ -77,6 +77,8 @@ def generate_wordcloud(keyword_data: list, file: str) -> None:
     plt.title(f'Wordcloud for {formatted_name}')
     plt.tight_layout(pad=0)
     plt.savefig(f'{formatted_name}.png')
+    global WORDCLOUD_FILE_NAME
+    WORDCLOUD_FILE_NAME = formatted_name + ".png"
 
 
 if __name__ == "__main__":
@@ -101,3 +103,5 @@ if __name__ == "__main__":
                 f.write("Question: {}".format(qa["Question"]) + "\n")
                 f.write("Answer Link: {}".format(qa["Answer"]) + "\n")
             f.write("\n\n")
+
+    showResult(WORDCLOUD_FILE_NAME)
