@@ -12,6 +12,7 @@ Project 1 for CSC510 SE Fall 21
 
 # Requirements
 - Python (atleast 3.8) and pip
+- [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
 # Setup
 - run `pip install -r requirements.txt`
