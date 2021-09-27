@@ -43,8 +43,14 @@ https://spacy.io/api/doc
 - The results are stored in results.txt
 - A wordcloud is generated as a png file
 
+# Troubleshooting
+- When running the code/tests, I'm getting a `no such module named code` error?
+  - Try prefixing the command with `python -m`, for example, `python -m pytest`
+- When I try to run pip install, I'm getting an error for wordcloud relating to Microsoft C++?
+  - Microsoft C++ build tools are needed to generate the wordcloud. See the requirements section for the download link.
 
 # Future work
 - Include more than pdf
 - Have a website instead
 - Speed up the program
+
