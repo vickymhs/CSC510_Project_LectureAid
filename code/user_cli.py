@@ -104,4 +104,5 @@ if __name__ == "__main__":
                 f.write("Answer Link: {}".format(qa["Answer"]) + "\n")
             f.write("\n\n")
 
-    showResult(WORDCLOUD_FILE_NAME)
+    content = output_formatter()
+    result_display(content, WORDCLOUD_FILE_NAME)
