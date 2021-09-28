@@ -4,7 +4,7 @@ from code.extract_sizes import extract_words, text_to_groupings
 import code.wordprocessing as wp
 from code.google_search import get_people_also_ask_links
 import concurrent.futures
-from code.browser_output import showResult
+from code.browser_output import show_result
 import pyfiglet
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -106,4 +106,4 @@ if __name__ == "__main__":
                 f.write(f"Answer Link: {answer}")
             f.write("\n\n")
 
-    showResult(WORDCLOUD_FILE_NAME)
+    show_result(WORDCLOUD_FILE_NAME)
