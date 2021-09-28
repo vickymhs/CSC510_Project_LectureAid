@@ -1,78 +1,6 @@
 """ google_search.py """
-import json
-import configparser
 import re
 import people_also_ask
-from googleapiclient.discovery import build
-
-# requires pip install google-api-python-client
-
-# Global variables for search request
-API_KEY = "api_key"
-CSE_ID = "cse_id"
-SEARCH_COUNT = 10
-
-# Initialize config parameters
-config = configparser.ConfigParser()
-config.read('config/search_api_config.cfg')
-
-
-def get_credentials(key):
-    """
-    Returns the sensitive credentials from the configuration files
-
-    :param key: The key for the credential value
-    :type: string
-    :return: The authenticate value for the key
-
-
-    """
-    key_map = {'api_key': config['credentials']['api_key'],
-               'cse_id': config['credentials']['cse_id']}
-    if key_map[key]:
-        return key_map[key]
-    return -1
-
-
-def google_search(search_term: str, api_key: str, cse_id: str, **kwargs) -> json:
-    """
-
-   Perform a Google search using Custom Search API
-
-   :param search_term: The param represents the search strings for the web search
-   :param api_key: Represents the credentials for API hit
-   :param cse_id: Represents the credentials for API hit
-   :return: The web search API response in JSON format
-
-   """
-    # Build request
-    service = build("customsearch", "v1", developerKey=api_key)
-    # Execute request
-    query_result = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
-    return query_result['items']
-
-
-# Call for the Web search
-def search_call(search_term: str) -> list:
-    """
-    Given a search term, returns the google links
-
-    :param search_term: The query for google
-    :type: string
-    :return: The links returned by google
-    :type: list
-    """
-
-    query_result = google_search(search_term,
-                                 get_credentials(API_KEY),
-                                 get_credentials(CSE_ID),
-                                 num=SEARCH_COUNT)
-    links = []
-    if "items" in query_result:
-        for item in query_result["items"]:
-            links.append(item["formattedUrl"])
-        return links
-    return []
 
 
 def get_people_also_ask_links(search_term: str) -> list:
@@ -94,6 +22,4 @@ def get_people_also_ask_links(search_term: str) -> list:
                 result.append({"Question": answer["question"], "Answer": answer["link"]})
     return result
 
-# Store result
-# with open('venv/output_data.txt', 'w') as output_file:
-#         json.dump(query_result, output_file)
+
