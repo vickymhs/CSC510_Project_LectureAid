@@ -1,3 +1,4 @@
+""" google_search.py """
 import json
 import configparser
 import re
@@ -26,7 +27,8 @@ def get_credentials(key):
 
 
     """
-    key_map = {'api_key': config['credentials']['api_key'], 'cse_id': config['credentials']['cse_id']}
+    key_map = {'api_key': config['credentials']['api_key'],
+               'cse_id': config['credentials']['cse_id']}
     if key_map[key]:
         return key_map[key]
     return -1
@@ -61,13 +63,17 @@ def search_call(search_term: str) -> list:
     :type: list
     """
 
-    query_result = google_search(search_term, get_credentials(API_KEY), get_credentials(CSE_ID), num=SEARCH_COUNT)
+    query_result = google_search(search_term,
+                                 get_credentials(API_KEY),
+                                 get_credentials(CSE_ID),
+                                 num=SEARCH_COUNT)
     links = []
     if "items" in query_result:
         for item in query_result["items"]:
             links.append(item["formattedUrl"])
         return links
     return []
+
 
 def get_people_also_ask_links(search_term: str) -> list:
     """
