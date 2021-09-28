@@ -1,6 +1,6 @@
 import json
-import requests
 import configparser
+import requests
 import people_also_ask
 
 # Global variables for search request
@@ -32,8 +32,8 @@ def rapid_search(search_term: str) -> json:
     for i in obj['value']:
         urls.append(i['url'])
     rel_qns = people_also_ask.get_related_questions(search_term)
-    for qn in rel_qns:
-        param = {'q': qn, 'pageNumber': '1', 'pageSize': 1, 'autoCorrect': 'true'}
+    for question in rel_qns:
+        param = {'q': question, 'pageNumber': '1', 'pageSize': 1, 'autoCorrect': 'true'}
         rel_url = (requests.get('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI', params=param,
                        headers=head))
         rel_obj = rel_url.json()
