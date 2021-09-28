@@ -1,6 +1,7 @@
+""" rapidapi_search.py """
 import json
-import requests
 import configparser
+import requests
 import people_also_ask
 
 # Global variables for search request
@@ -25,17 +26,18 @@ def rapid_search(search_term: str) -> json:
     head = {'x-rapidapi-host': 'contextualwebsearch-websearch-v1.p.rapidapi.com',
             'x-rapidapi-key': config['credentials']['rapid_api_key']}
     param = {'q': search_term, 'pageNumber': '1', 'pageSize': SEARCH_COUNT, 'autoCorrect': 'true'}
-    res = requests.get('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI', params=param,
+    base_url = 'https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI'
+    res = requests.get(base_url, params=param,
                        headers=head)
     obj = res.json()
     urls = []
     for i in obj['value']:
         urls.append(i['url'])
     rel_qns = people_also_ask.get_related_questions(search_term)
-    for qn in rel_qns:
-        param = {'q': qn, 'pageNumber': '1', 'pageSize': 1, 'autoCorrect': 'true'}
-        rel_url = (requests.get('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI', params=param,
-                       headers=head))
+    for question in rel_qns:
+        param = {'q': question, 'pageNumber': '1', 'pageSize': 1, 'autoCorrect': 'true'}
+        rel_url = (requests.get(base_url, params=param,
+                                headers=head))
         rel_obj = rel_url.json()
         for i in rel_obj['value']:
             urls.append(i['url'])

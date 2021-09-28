@@ -1,4 +1,5 @@
-from google_search import *
+""" search_api_controller.py """
+from code.google_search import search_call
 # from rapidapi_search import *
 
 if __name__ == "main":

@@ -1,8 +1,9 @@
-from googleapiclient.discovery import build
+""" google_search.py """
 import json
 import configparser
-import people_also_ask
 import re
+import people_also_ask
+from googleapiclient.discovery import build
 
 # requires pip install google-api-python-client
 
@@ -16,7 +17,7 @@ config = configparser.ConfigParser()
 config.read('config/search_api_config.cfg')
 
 
-def getCredentials(key):
+def get_credentials(key):
     """
     Returns the sensitive credentials from the configuration files
 
@@ -26,11 +27,11 @@ def getCredentials(key):
 
 
     """
-    key_map = {'api_key': config['credentials']['api_key'], 'cse_id': config['credentials']['cse_id']}
+    key_map = {'api_key': config['credentials']['api_key'],
+               'cse_id': config['credentials']['cse_id']}
     if key_map[key]:
         return key_map[key]
-    else:
-        return -1
+    return -1
 
 
 def google_search(search_term: str, api_key: str, cse_id: str, **kwargs) -> json:
@@ -62,12 +63,16 @@ def search_call(search_term: str) -> list:
     :type: list
     """
 
-    query_result = google_search(search_term, getCredentials(API_KEY), getCredentials(CSE_ID), num=SEARCH_COUNT)
+    query_result = google_search(search_term,
+                                 get_credentials(API_KEY),
+                                 get_credentials(CSE_ID),
+                                 num=SEARCH_COUNT)
     links = []
     if "items" in query_result:
         for item in query_result["items"]:
             links.append(item["formattedUrl"])
         return links
+    return []
 
 
 def get_people_also_ask_links(search_term: str) -> list:
