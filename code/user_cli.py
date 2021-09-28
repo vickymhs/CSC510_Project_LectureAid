@@ -1,10 +1,11 @@
+""" user_cli.py """
 import sys
 import shutil
 from code.extract_sizes import extract_words, text_to_groupings
 import code.wordprocessing as wp
 from code.google_search import get_people_also_ask_links
-import concurrent.futures
 from code.browser_output import show_result
+import concurrent.futures
 import pyfiglet
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -21,7 +22,8 @@ def user_menu():
     valid_choices = ["1", "2", "Q", "q"]
     print(format_welcome_message.center(size.columns) + "\n")
     print("Welcome to Lecture Aid. Choose from the following options:\n")
-    print("Option 1: Press 1 to enter the file location you would like Lecture Aid to help you find resources on.")
+    print("Option 1: Press 1 to enter the file location you would like Lecture Aid" +
+          " to help you find resources on.")
     print("Option 2: Press 2 ")
     print()
     print("Press Q to quit the program.")
@@ -93,11 +95,13 @@ if __name__ == "__main__":
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
     search_query = wp.construct_search_query(keyword_data)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        #when testing use searchquery[:10 or less]. Still working on better threading to get faster results
+    thread_executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
+    with thread_executor as executor:
+        # when testing use searchquery[:10 or less].
+        # Still working on better threading to get faster results
         results = executor.map(get_people_also_ask_links, search_query[:3])
 
-    with open("results.txt", mode="w") as f:
+    with open("results.txt", mode="w", encoding="utf-8") as f:
         for result in results:
             for qa in result:
                 question = qa["Question"] + "\n"
