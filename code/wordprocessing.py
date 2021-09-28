@@ -1,9 +1,8 @@
 import string
-from collections import OrderedDict
+from collections import OrderedDict, Counter
 import sys
-import spacy
 import re
-from collections import Counter
+import spacy
 import numpy as np
 
 
@@ -18,9 +17,9 @@ def keyword_extractor(data: list) -> list:
     """
     try:
         nlp = spacy.load("en_core_web_lg")
-    except OSError as e:
+    except OSError as error:
         print("Please make sure you have Spacy Word Model en_core_web_lg downloaded.")
-        print(e)
+        print(error)
         sys.exit()
     pos_tag = ["NOUN"]
     dep_tag = ["nsubj"]
@@ -156,9 +155,9 @@ def extract_noun_chunks(data: list) -> list:
     """
     try:
         nlp = spacy.load("en_core_web_lg")
-    except OSError as e:
+    except OSError as error:
         print("Please make sure you have Spacy Word Model en_core_web_lg downloaded.")
-        print(e)
+        print(error)
         sys.exit()
     for slide in data:
         doc_header_noun_chunks = nlp(slide["Header"].lower()).noun_chunks
