@@ -82,31 +82,6 @@ but nevertheless, here is a track record that everyone is contributing a lot)|ev
 | Question 11.6: Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional? |  |  |
 | Question 11.7: Can you download dependencies using a dependency management tool or package manager? *e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/) |  |  |
 | Question 11.8: Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? |  |  |
-| Question 6.1: Is your software’s architecture and design modular? |  |  |
-| Question 6.2: Does your software use an accepted coding standard or convention? |  |  |
-| Q7 - Open standards and your software |  |  |
-| Question 7.1: Does your software allow data to be imported and exported using open data formats? e.g. GIF, SVG, HTML, XML, tar, zip, CSV, JSON, NetCDF, or domain specific ones  |  |  |
-| Question 7.2: Does your software allow communications using open communications protocols? e.g. HTTP, FTP, XMPP, SOAP over HTTP, or domain-specific ones  |  |  |
-| Q8 - Your software's portability |  |  |
-| Question 8.1: Is your software cross-platform compatible? e.g. does it run under two or more of Windows, Unix/Linux and Mac OS X, or can be used from within two or more of Internet Explorer, Chrome, Firefox and Safari?  |  |  |
-| Q9 - Your software and accessibility |  |  |
-| Question 9.1: Does your software adhere to appropriate accessibility conventions or standards? |  |  |
-| Question 9.2: Does your documentation adhere to appropriate accessibility conventions or standards? |  |  |
-| Q10 - How you manage your source code |  |  |
-| Question 10.1: Is your source code stored in a repository under revision control? |  |  |
-| Question 10.2: Is each source code release a snapshot of the repository? |  |  |
-| Question 10.3: Are releases tagged in the repository? |  |  |
-| Question 10.4: Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) |  |  |
-| Question 10.5: Do you back-up your repository? |  |  |
-| Q11 - Building and installing your software  |  |  |
-| Question 11.1: Do you provide publicly-available instructions for building your software from the source code? |  |  |
-| Question 11.2: Can you build, or package, your software using an automated tool? e.g. Make (https://www.gnu.org/software/make/), ANT (http://ant.apache.org/), Maven (https://maven.apache.org/), CMake (https://cmake.org/), Python setuptools (https://pypi.python.org/pypi/setuptools), or R package tools (https://cran.r-project.org/doc/manuals/r-devel/R-exts.html)  |  |  |
-| Question 11.3: Do you provide publicly-available instructions for deploying your software? |  |  |
-| Question 11.4: Does your documentation list all third-party dependencies? |  |  |
-| Question 11.5: Does your documentation list the version number for all third-party dependencies? |  |  |
-| Question 11.6: Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional? |  |  |
-| Question 11.7: Can you download dependencies using a dependency management tool or package manager? e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/)  |  |  |
-| Question 11.8: Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? |  |  |
 | Question 12.1: Do you have an automated test suite for your software? |  |  |
 | Question 12.2: Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? |  |  |
 | Question 12.3: Do you use continuous integration, automatically running tests whenever changes are made to your source code? |  |  |
@@ -136,5 +111,5 @@ but nevertheless, here is a track record that everyone is contributing a lot)|ev
 | Question 15.7: Do you have a recommended citation for your software? |  |  |
 | Q16 - Your plans for the future |  |  |
 | Question 16.1: Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? |  |  |
-| Question 16.2: Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? |  |  |
+| Question 16.2: Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? | Not Applicable | Not Applicable |
 | Question 16.3: Do you make timely announcements of the deprecation of components, APIs, etc.? | | |
