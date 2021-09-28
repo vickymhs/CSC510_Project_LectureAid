@@ -1,13 +1,14 @@
-import shutil
-import pyfiglet
 import sys
+import shutil
 from code.extract_sizes import extract_words, text_to_groupings
 import code.wordprocessing as wp
 from code.google_search import get_people_also_ask_links
 import concurrent.futures
+from code.browser_output import showResult
+import pyfiglet
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from code.browser_output import *
+
 
 def user_menu():
     """
@@ -29,35 +30,34 @@ def user_menu():
         choice = input("Please Enter your choice:")[0]
         if choice in valid_choices:
             break
-        else:
-            print("That choice is not available now. Please try again")
-            continue
+        print("That choice is not available now. Please try again")
+        continue
 
     if choice == valid_choices[0]:
-        file = input("Please enter the path to the file: ")
-        return file
+        file_path = input("Please enter the path to the file: ")
+        return file_path
 
-    elif choice == valid_choices[1]:
+    if choice == valid_choices[1]:
         input("")
 
-    elif (choice == valid_choices[-1] or choice == valid_choices[-2]):
+    elif choice in [valid_choices[-1], valid_choices[-2]]:
         print("Thank you for using Lecture Aid. Closing Program now.")
         sys.exit(0)
 
 
-def generate_wordcloud(keyword_data: list, file: str) -> None:
+def generate_wordcloud(keyword_data_list: list, file_name: str) -> None:
     """
     Given keywords of a document, display a wordcloud.
 
-    :param keyword_data: List of cleaned keywords in a document
+    :param keyword_data_list: List of cleaned keywords in a document
     :type: list
-    :param file: The name of the lecture document
+    :param file_name: The name of the lecture document
     :type: str
     :rtype: None
     :return: None
     """
     wordcloud_string = ''
-    for slide in keyword_data:
+    for slide in keyword_data_list:
         # get the header keywords
         curr_slide_keywords = ' '.join(slide['Header_keywords']) + ' '
         # if the words showed up multiple times, duplicate it
@@ -69,7 +69,7 @@ def generate_wordcloud(keyword_data: list, file: str) -> None:
     wordcloud = WordCloud().generate(wordcloud_string)
     # gets the filename by choosing the last word split by /
     # then selects everything but .pdf
-    formatted_name = file.split("/")[-1].replace(".pdf", "")
+    formatted_name = file_name.split("/")[-1].replace(".pdf", "")
 
     plt.figure(figsize=(8, 8), facecolor=None)
     plt.imshow(wordcloud)
@@ -100,8 +100,10 @@ if __name__ == "__main__":
     with open("results.txt", mode="w") as f:
         for result in results:
             for qa in result:
-                f.write("Question: {}".format(qa["Question"]) + "\n")
-                f.write("Answer Link: {}".format(qa["Answer"]) + "\n")
+                question = qa["Question"] + "\n"
+                f.write(f"Question: {question}")
+                answer = qa["Answer"] + "\n"
+                f.write(f"Answer Link: {answer}")
             f.write("\n\n")
 
     showResult(WORDCLOUD_FILE_NAME)
