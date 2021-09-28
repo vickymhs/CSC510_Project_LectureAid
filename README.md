@@ -30,6 +30,16 @@ https://spacy.io/api/doc
 # Requirements
 - Python (atleast 3.8) and pip
 - [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+- Using pip install 
+  - google-api-python-client, version 2.22.0
+  - people_also_ask, version 0.0.6
+  - spacy, version 3.1.2 or greater
+  - spacy-legacy, version 3.0.8
+  - en_core_web_lg-3.1.0
+  - pyfiglet, version 0.8.post1
+  - PyMuPDF, version 1.18.19
+  - wordcloud, version 1.8.1
+  - matplotlib, version 3.4.3
 
 # Setup
 - run `pip install -r requirements.txt`
