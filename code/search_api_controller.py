@@ -1,4 +1,4 @@
-from google_search import *
+from code.google_search import search_call
 # from rapidapi_search import *
 
 if __name__ == "main":
