@@ -22,7 +22,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|ev
 | test cases are routinely executed|e.g. travis-com.com or github actions or something| Executed every push to origin and merge to main with travis |
  | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|
 | issues are discussed before they are closed|even if you discuss in slack, need a sumamry statement here| Issues are okayed either on github [example](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/39) [example2](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/38) or over discord, with majority vote.|
-| Chat channel: exists|
+| Chat channel: exists| 3| Discord Chat Channel exists.
 | test cases:.a large proportion of the issues related to handling failing cases.|if a test case fails, open an issue and fix it|
 | evidence that the whole team is using the same tools: everyone can get to all tools and files|
 | evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|
