@@ -7,7 +7,7 @@ setup(
     description='Upload lecture PDFs and get relevant URLs to helpful websites',
     tests_require=['pytest'],
     author='CSC510 - Group 21',
-    author_email='',
+    author_email='lectureaidnscu@gmail.com',
     url='https://github.com/mtkumar123/CSC510_Project_LectureAid',
     python_requires='>=3.7',
     classifiers=[
