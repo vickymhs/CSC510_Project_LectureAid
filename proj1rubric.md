@@ -9,7 +9,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|ev
 | DOI badge: exists | 3 | https://zenodo.org/record/5528349#.YVGy_kbMIeY
 |Docs: doco generated , format not ugly |in GH|
 |Docs: what: point descriptions of each class/function (in isolation) | 3 | For each method, there is a description of the method. There are then descriptions of parameters, types, and return types. [Ex](https://mtkumar123.github.io/CSC510_Project_LectureAid/code.html#module-code.extract_sizes)|
-|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|doc page entries| https://docs.google.com/document/d/1mFLvZGwi3hxd93_E-HHUfquX04lgNsGXn8X-wFe-7HU/edit?usp=sharing
+|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|doc page entries| Please find the use cases and mini tutorials for the same at the given link : https://docs.google.com/document/d/1mFLvZGwi3hxd93_E-HHUfquX04lgNsGXn8X-wFe-7HU/edit?usp=sharing
 |Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|
 | Use of version control tools| 3| Use of git and github. Use of branches, and commits. https://github.com/mtkumar123/CSC510_Project_LectureAid
