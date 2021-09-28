@@ -75,6 +75,8 @@ def get_people_also_ask_links(search_term: str) -> list:
     Given a search term, returns the google People Also Ask links
 
     :param search_term: The query to google
+    :type: str
+    :rtype: list
     :return: list of links returned by people also ask
     """
     rel_qns = people_also_ask.get_related_questions(search_term)

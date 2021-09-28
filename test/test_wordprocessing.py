@@ -1,6 +1,7 @@
 import unittest
+import json
 from code.wordprocessing import keyword_extractor, duplicate_word_removal, merge_slide_with_same_headers, \
-    merge_slide_with_same_slide_number
+    merge_slide_with_same_slide_number, extract_noun_chunks, construct_search_query
 
 
 class TestWordProcessing(unittest.TestCase):
@@ -72,6 +73,28 @@ class TestWordProcessing(unittest.TestCase):
                         'Paragraph_keywords': ['machine', 'mapping', 'arp', 'caches', 'goal', 'projection']}]
 
         self.assertEqual(output_data, merged_data)
+
+    def test_extract_noun_chunks(self):
+        '''Test the extract_noun_chunks method'''
+
+        input_data = [{"Header": "This is a noun chunk", "Paragraph": "This is a noun chunk", "slide":1}]
+        noun_chunks_result = extract_noun_chunks(input_data)
+        output_data = [{'Header': 'This is a noun chunk', 'Paragraph': 'This is a noun chunk', 'slide': 1, 'Header_keywords': ['noun chunk'], 'Paragraph_keywords': ['noun chunk']}]
+
+        self.assertEqual(output_data, noun_chunks_result)
+
+    def test_construct_search_query(self):
+        '''Test the search query method'''
+
+        with open("./test/data/Test_3.json", mode="r") as f:
+            input_data = json.load(f)
+        with open("./test/data/Test_3_Result.json", mode="r") as f:
+            output_data = json.load(f)
+
+        search_query = construct_search_query(input_data)
+
+        self.assertEqual(output_data, search_query)
+
 
         if __name__ == "__main__":
             unittest.main()

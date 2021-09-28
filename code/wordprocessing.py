@@ -97,7 +97,7 @@ def merge_slide_with_same_slide_number(data: list) -> list:
     :param data: The list of dictionaries of the form
     :type: [{"Header":"", "Paragraph":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     :return: The list of dictionaries where slides containing the same slide number are merged of the form
-    :type: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
+    :rtype: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     """
     merged = []
     slide_number = []
@@ -153,7 +153,6 @@ def extract_noun_chunks(data: list) -> list:
     :type: list
     :return: list of data with nouns extracted
     :rtype: list
-
     """
     try:
         nlp = spacy.load("en_core_web_lg")

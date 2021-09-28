@@ -32,7 +32,7 @@ class TestExtractSizes(unittest.TestCase):
         """
         # assert when no document is passed, it returns an empty dict
         dict_none = tag_text([], [])
-        self.assertEqual(dict_none, {})
+        self.assertEqual(dict_none, [])
 
     def test_font_size_1(self):
         """
