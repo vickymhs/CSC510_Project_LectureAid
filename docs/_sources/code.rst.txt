@@ -4,6 +4,14 @@ code package
 Submodules
 ----------
 
+code.browser\_output module
+---------------------------
+
+.. automodule:: code.browser_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 code.extract\_sizes module
 --------------------------
 

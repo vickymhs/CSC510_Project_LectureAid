@@ -5,4 +5,5 @@ CSC510_Project_LectureAid
    :maxdepth: 4
 
    code
+   setup
    test

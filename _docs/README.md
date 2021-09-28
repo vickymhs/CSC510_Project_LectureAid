@@ -28,3 +28,6 @@ Our workflow is to only publish this to the documentation branch. This reduces c
 # Issues / workaround
 - code is not a package
   - one workaround is to run a sphinx task instead (pycharm plugin)
+- sphinx-build is not recognized
+  - try to uninstall Sphinx and instead `pip install python3-sphinx`
+  - Another option for windows is to install using `choco install sphinx`
