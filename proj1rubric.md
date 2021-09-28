@@ -20,7 +20,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|ev
 | other automated analysis tools|config files in GH|
 | test cases exist|dozens of tests and those test cases are more than 30% of the  code base| Code coverage can be seen [here](https://app.codecov.io/gh/mtkumar123/CSC510_Project_LectureAid/). We have over 18 test cases, covering atleast 55% of the code base. |
 | test cases are routinely executed|e.g. travis-com.com or github actions or something| Executed every push to origin and merge to main with travis |
- | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|
+ | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up| in GH | https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/CONTRIBUTING.md 
 | issues are discussed before they are closed|even if you discuss in slack, need a sumamry statement here| Issues are okayed either on github [example](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/39) [example2](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/38) or over discord, with majority vote.|
 | Chat channel: exists| 3| Discord Chat Channel exists.
 | test cases:.a large proportion of the issues related to handling failing cases.|if a test case fails, open an issue and fix it|
