@@ -63,7 +63,7 @@ def result_display(content, wordcloud_image_name):
        <p>{urls}</p>
        </div>
        <div style=" display: inline-block;vertical-align: top;margin:2%">
-       <img style="border-radius:50px" code="{src}" alt="Girl in a jacket" width="500" height="600">
+       <img style="border-radius:50px" src="{src}" alt="Girl in a jacket" width="500" height="600">
        </div>
        </div>
        </body>
