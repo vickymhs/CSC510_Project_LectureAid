@@ -1,9 +1,9 @@
 | Grading Points| Self Assessment | Evidence|
 |-----|---------|---------|
-|workload is spread over the whole team (one team member is often Xtimes more productive than the others... 
-but nevertheless, here is a track record that everyone is contributing a lot)|evidence  in GH|
-| Number of commits|in GH|
-| Number of commits: by different people|in GH|
+|workload is spread over the whole team (one team member is often Xtimes more productive than the others... |
+but nevertheless, here is a track record that everyone is contributing a lot)|2|https://github.com/mtkumar123/CSC510_Project_LectureAid/graphs/contributors
+| Number of commits|3| Total commits : 150 and counting
+| Number of commits: by different people|2|Maximum : 52, Minimum: 6 https://github.com/mtkumar123/CSC510_Project_LectureAid/graphs/contributors
 | Issues reports: there are **many**| 3 | Total issues opened 41 https://github.com/mtkumar123/CSC510_Project_LectureAid/issues?q=|
 | issues are being  closed| 3| Total issues closed 33 https://github.com/mtkumar123/CSC510_Project_LectureAid/issues?page=1&q=is%3Aclosed
 | DOI badge: exists | 3 | https://zenodo.org/record/5528349#.YVGy_kbMIeY
@@ -24,10 +24,10 @@ but nevertheless, here is a track record that everyone is contributing a lot)|ev
 | issues are discussed before they are closed|even if you discuss in slack, need a sumamry statement here| Issues are okayed either on github [example](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/39) [example2](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/38) or over discord, with majority vote.|
 | Chat channel: exists| 3| Discord Chat Channel exists.
 | test cases:.a large proportion of the issues related to handling failing cases.|if a test case fails, open an issue and fix it|
-| evidence that the whole team is using the same tools: everyone can get to all tools and files|
-| evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|
-| evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|
-| evidence that the members of the team are working across multiple places in the code base|
+| evidence that the whole team is using the same tools: everyone can get to all tools and files| 3| Everyone has a working instance of the project locally. All the team members are using the same IDE and have all the required packages installed.
+| evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3| All the team members use PyCharm IDE. The IDE adds a local .idea folder in all projects and everyone has this folder locally.
+| evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3| Everyone has a local instance of the latest version of the project. The output can be shown by anyone in the team.
+| evidence that the members of the team are working across multiple places in the code base|3| We assign issues in Github and start working on the required part of the project. The commit history of different members shows this. https://github.com/mtkumar123/CSC510_Project_LectureAid/commits/main
 |short release cycles | (hard to see in short projects) project members are committing often enough so that everyone can get your work|
 | Online Sustainability evaluation |  |  | 
 | Question 1.1: Does your website and documentation provide a clear, high-level overview of your software?|  |  |
