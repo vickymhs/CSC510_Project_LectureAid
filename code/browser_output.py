@@ -1,3 +1,4 @@
+""" browser_output.py """
 import webbrowser
 import os
 
@@ -14,10 +15,10 @@ def show_result(wordcloud_file_name):
     src = wordcloud_file_name
 
     # Default HTML file for rendering
-    html_file = open('result.html', 'w')
+    html_file = open('result.html', 'w', encoding="utf-8")
 
     # Formats the final result of word processing from the file
-    results = open('results.txt')
+    results = open('results.txt', encoding="utf-8")
     lines = results.read().splitlines()  # List with stripped line-breaks
     results.close()
 
@@ -26,7 +27,7 @@ def show_result(wordcloud_file_name):
     for line in lines:
         parts = line.split(':', 1)  # Breaks the answer into diff parts for hyperlink
         if parts[0] == 'Answer Link':
-            content += parts[0] + ": <a href=" + parts[1] + ">"+parts[1]+"</a><br><hr>"
+            content += parts[0] + ": <a href=" + parts[1] + ">" + parts[1] + "</a><br><hr>"
         else:
             content += line + "<br>"
 
@@ -53,5 +54,3 @@ def show_result(wordcloud_file_name):
     # Change path to reflect file location
     filename = 'file:///' + os.getcwd() + '/' + 'result.html'
     webbrowser.open_new_tab(filename)
-
-
