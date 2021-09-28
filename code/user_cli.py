@@ -1,15 +1,13 @@
-""" user_cli.py """
-import sys
 import shutil
+import pyfiglet
+import sys
 from code.extract_sizes import extract_words, text_to_groupings
 import code.wordprocessing as wp
 from code.google_search import get_people_also_ask_links
-from code.browser_output import show_result
 import concurrent.futures
-import pyfiglet
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-
+from code.browser_output import *
 
 def user_menu():
     """
@@ -22,8 +20,7 @@ def user_menu():
     valid_choices = ["1", "2", "Q", "q"]
     print(format_welcome_message.center(size.columns) + "\n")
     print("Welcome to Lecture Aid. Choose from the following options:\n")
-    print("Option 1: Press 1 to enter the file location you would like Lecture Aid" +
-          " to help you find resources on.")
+    print("Option 1: Press 1 to enter the file location you would like Lecture Aid to help you find resources on.")
     print("Option 2: Press 2 ")
     print()
     print("Press Q to quit the program.")
@@ -32,34 +29,35 @@ def user_menu():
         choice = input("Please Enter your choice:")[0]
         if choice in valid_choices:
             break
-        print("That choice is not available now. Please try again")
-        continue
+        else:
+            print("That choice is not available now. Please try again")
+            continue
 
     if choice == valid_choices[0]:
-        file_path = input("Please enter the path to the file: ")
-        return file_path
+        file = input("Please enter the path to the file: ")
+        return file
 
-    if choice == valid_choices[1]:
+    elif choice == valid_choices[1]:
         input("")
 
-    elif choice in [valid_choices[-1], valid_choices[-2]]:
+    elif (choice == valid_choices[-1] or choice == valid_choices[-2]):
         print("Thank you for using Lecture Aid. Closing Program now.")
         sys.exit(0)
 
 
-def generate_wordcloud(keyword_data_list: list, file_name: str) -> None:
+def generate_wordcloud(keyword_data: list, file: str) -> None:
     """
     Given keywords of a document, display a wordcloud.
 
-    :param keyword_data_list: List of cleaned keywords in a document
+    :param keyword_data: List of cleaned keywords in a document
     :type: list
-    :param file_name: The name of the lecture document
+    :param file: The name of the lecture document
     :type: str
     :rtype: None
     :return: None
     """
     wordcloud_string = ''
-    for slide in keyword_data_list:
+    for slide in keyword_data:
         # get the header keywords
         curr_slide_keywords = ' '.join(slide['Header_keywords']) + ' '
         # if the words showed up multiple times, duplicate it
@@ -71,7 +69,7 @@ def generate_wordcloud(keyword_data_list: list, file_name: str) -> None:
     wordcloud = WordCloud().generate(wordcloud_string)
     # gets the filename by choosing the last word split by /
     # then selects everything but .pdf
-    formatted_name = file_name.split("/")[-1].replace(".pdf", "")
+    formatted_name = file.split("/")[-1].replace(".pdf", "")
 
     plt.figure(figsize=(8, 8), facecolor=None)
     plt.imshow(wordcloud)
@@ -95,19 +93,16 @@ if __name__ == "__main__":
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
     search_query = wp.construct_search_query(keyword_data)
-    thread_executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
-    with thread_executor as executor:
-        # when testing use searchquery[:10 or less].
-        # Still working on better threading to get faster results
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        #when testing use searchquery[:10 or less]. Still working on better threading to get faster results
         results = executor.map(get_people_also_ask_links, search_query[:3])
 
-    with open("results.txt", mode="w", encoding="utf-8") as f:
+    with open("results.txt", mode="w") as f:
         for result in results:
             for qa in result:
-                question = qa["Question"] + "\n"
-                f.write(f"Question: {question}")
-                answer = qa["Answer"] + "\n"
-                f.write(f"Answer Link: {answer}")
+                f.write("Question: {}".format(qa["Question"]) + "\n")
+                f.write("Answer Link: {}".format(qa["Answer"]) + "\n")
             f.write("\n\n")
 
-    show_result(WORDCLOUD_FILE_NAME)
+    content = output_formatter()
+    result_display(content, WORDCLOUD_FILE_NAME)
