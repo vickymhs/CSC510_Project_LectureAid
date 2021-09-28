@@ -1,3 +1,4 @@
+""" wordprocessing.py """
 import string
 from collections import OrderedDict, Counter
 import sys
@@ -13,7 +14,11 @@ def keyword_extractor(data: list) -> list:
     :param data: The list of dictionaries of the form
     :type: [{"Header":"", "Paragraph":"", slide:int}]
     :return: The list of dictionaries with keywords extracted of the form
-    :rtype: [{"Header":"", "Paragraph":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
+    :rtype: [{"Header":"",
+            "Paragraph":"",
+            "Header_keywords": [],
+            "Paragraph_keywords": [],
+            slide:int}]
     """
     try:
         nlp = spacy.load("en_core_web_lg")
@@ -60,8 +65,11 @@ def duplicate_word_removal(data: list) -> list:
 
     """
     for dictionary in data:
-        dictionary['Header_keywords'] = list(OrderedDict.fromkeys(dictionary['Header_keywords']))
-        dictionary['Paragraph_keywords'] = list(OrderedDict.fromkeys(dictionary['Paragraph_keywords']))
+        ordered_headers = list(OrderedDict.fromkeys(dictionary['Header_keywords']))
+        dictionary['Header_keywords'] = ordered_headers
+
+        ordered_paragraph = list(OrderedDict.fromkeys(dictionary['Paragraph_keywords']))
+        dictionary['Paragraph_keywords'] = ordered_paragraph
     return data
 
 
@@ -70,7 +78,11 @@ def merge_slide_with_same_headers(data: list) -> list:
     Function to merge slides with the same header.
 
     :param data: The list of dictionaries of the form
-    :type: [{"Header":"", "Paragraph":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
+    :type: [{"Header":"",
+            "Paragraph":"",
+            "Header_keywords": [],
+            "Paragraph_keywords": [],
+            slide:int}]
     :return: The list of dictionaries where slides containing the same header are merged
     :rtype: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slides:[int]}]
     """
@@ -81,9 +93,9 @@ def merge_slide_with_same_headers(data: list) -> list:
             headers.append(slide["Header"])
             paragraph_keywords = []
             slide_numbers = []
-            for x in [y for y in data if y["Header"] == slide["Header"]]:
-                paragraph_keywords += x["Paragraph_keywords"]
-                slide_numbers.append(x["slide"])
+            for data_1 in [data_2 for data_2 in data if data_2["Header"] == slide["Header"]]:
+                paragraph_keywords += data_1["Paragraph_keywords"]
+                slide_numbers.append(data_1["slide"])
             merged.append({"Header": slide["Header"], "Header_keywords": slide["Header_keywords"],
                            "Paragraph_keywords": paragraph_keywords, "slides": slide_numbers})
     return merged
@@ -94,8 +106,12 @@ def merge_slide_with_same_slide_number(data: list) -> list:
     Function to merge slides with the same slide number into a single one.
 
     :param data: The list of dictionaries of the form
-    :type: [{"Header":"", "Paragraph":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
-    :return: The list of dictionaries where slides containing the same slide number are merged of the form
+    :type: [{"Header":"",
+            "Paragraph":"",
+            "Header_keywords": [],
+            "Paragraph_keywords": [],
+            slide:int}]
+    :return: The list of dictionaries where slides containing the same slide number are merged
     :rtype: [{"Header":"", "Header_keywords": [], "Paragraph_keywords": [], slide:int}]
     """
     merged = []
@@ -105,9 +121,9 @@ def merge_slide_with_same_slide_number(data: list) -> list:
             slide_number.append(slide["slide"])
             header_keywords = []
             paragraph_keywords = []
-            for x in [y for y in data if y["slide"] == slide["slide"]]:
-                header_keywords += x["Header_keywords"]
-                paragraph_keywords += x["Paragraph_keywords"]
+            for data_1 in [data_2 for data_2 in data if data_2["slide"] == slide["slide"]]:
+                header_keywords += data_1["Header_keywords"]
+                paragraph_keywords += data_1["Paragraph_keywords"]
             merged.append({"Header": slide["Header"], "Header_keywords": header_keywords,
                            "Paragraph_keywords": paragraph_keywords,
                            "slide": slide["slide"]})
@@ -171,9 +187,9 @@ def extract_noun_chunks(data: list) -> list:
                 word = re.sub(r"[^a-zA-Z]+", "", word).strip()
                 if word in nlp.Defaults.stop_words or word in string.punctuation:
                     continue
-                if len(word) >=3:
+                if len(word) >= 3:
                     processed_words.append(word)
-            if len(processed_words) >=2:
+            if len(processed_words) >= 2:
                 header_keywords.append(" ".join(processed_words))
         for token in doc_paragraph_noun_chunks:
             processed_words = []
@@ -182,9 +198,9 @@ def extract_noun_chunks(data: list) -> list:
                 word = re.sub(r"[^a-zA-Z]+", "", word).strip()
                 if word in nlp.Defaults.stop_words or word in string.punctuation:
                     continue
-                if len(word) >=3:
+                if len(word) >= 3:
                     processed_words.append(word)
-            if len(processed_words) >=2:
+            if len(processed_words) >= 2:
                 paragraph_keywords.append(" ".join(processed_words))
         slide["Header_keywords"] = header_keywords
         slide["Paragraph_keywords"] = paragraph_keywords
@@ -193,19 +209,23 @@ def extract_noun_chunks(data: list) -> list:
 
 if __name__ == "__main__":
     main_data = [{"Header": "Dimensionality Reduction PCA",
-                  "Paragraph": "Dimensionality Reduction Purposes: – Avoid curse of dimensionality – Reduce amount \
-            of time and memory required by data mining algorithms Allow data to be more easily \
+                  "Paragraph": "Dimensionality Reduction Purposes: – Avoid curse of dimensionality \
+                  – Reduce amount of time and memory required by data mining algorithms Allow data to be more easily \
             visualized May help to eliminate irrelevant features or reduce noise Techniques Principal Component Analysis \
             Singular Value Decomposition supervised and non-linear techniques",
                   "slide": 8},
                  {"Header": "Gratuitous ARP",
-                  "Paragraph": "Every machine broadcasts its mapping when it boots to update ARP caches in other machines \
-            n Example: A sends an ARP Request with its own IP address as the target IP address \
-            n Sender MAC=MACA, Sender IP=IPA n Target MAC=??, Target IP=IPA \
-            n What if a reply is received?",
+                  "Paragraph": "Every machine broadcasts its mapping when it boots to"
+                               " update ARP caches in other "
+                               "machines \n "
+                               "Example: A sends an ARP Request with its own IP"
+                               " address as the target IP address \n "
+                               "Sender MAC=MACA, Sender IP=IPA n Target MAC=??, Target IP=IPA \n "
+                               "What if a reply is received?",
                   "slide": 9},
                  {"Header": "Dimensionality Reduction PCA",
-                  "Paragraph": "Goal is to find a projection that captures the largest amount of variation in data \
+                  "Paragraph": "Goal is to find a projection that captures"
+                  "the largest amount of variation in data \
              Find the eigenvectors of the covariance matrix The eigenvectors define the new space",
                   "slide": 9}]
 
