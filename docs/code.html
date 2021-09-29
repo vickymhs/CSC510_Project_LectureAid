@@ -15,7 +15,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="setup module" href="setup.html" />
+    <link rel="next" title="test package" href="test.html" />
     <link rel="prev" title="CSC510_Project_LectureAid" href="modules.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -40,6 +40,7 @@
 </section>
 <section id="module-code.browser_output">
 <span id="code-browser-output-module"></span><h2>code.browser_output module<a class="headerlink" href="#module-code.browser_output" title="Permalink to this headline">¶</a></h2>
+<p>browser_output.py</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.browser_output.content_formatter">
 <span class="sig-prename descclassname"><span class="pre">code.browser_output.</span></span><span class="sig-name descname"><span class="pre">content_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#code.browser_output.content_formatter" title="Permalink to this definition">¶</a></dt>
@@ -168,23 +169,7 @@ Paragraph contains all other sizes</p>
 </section>
 <section id="module-code.google_search">
 <span id="code-google-search-module"></span><h2>code.google_search module<a class="headerlink" href="#module-code.google_search" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="code.google_search.getCredentials">
-<span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">getCredentials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#code.google_search.getCredentials" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the sensitive credentials from the configuration files</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> – The key for the credential value</p>
-</dd>
-<dt class="field-even">Type</dt>
-<dd class="field-even"><p>string</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The authenticate value for the key</p>
-</dd>
-</dl>
-</dd></dl>
-
+<p>google_search.py</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.google_search.get_people_also_ask_links">
 <span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">get_people_also_ask_links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.google_search.get_people_also_ask_links" title="Permalink to this definition">¶</a></dt>
@@ -205,79 +190,19 @@ Paragraph contains all other sizes</p>
 </dl>
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="code.google_search.google_search">
-<span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">google_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cse_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'C:\\Users\\kinga\\AppData\\Local\\Programs\\Python\\Python38\\lib\\json\\__init__.py'&gt;</span></span></span><a class="headerlink" href="#code.google_search.google_search" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform a Google search using Custom Search API</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>search_term</strong> – The param represents the search strings for the web search</p></li>
-<li><p><strong>api_key</strong> – Represents the credentials for API hit</p></li>
-<li><p><strong>cse_id</strong> – Represents the credentials for API hit</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The web search API response in JSON format</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="code.google_search.search_call">
-<span class="sig-prename descclassname"><span class="pre">code.google_search.</span></span><span class="sig-name descname"><span class="pre">search_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.google_search.search_call" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a search term, returns the google links</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>search_term</strong> – The query for google</p>
-</dd>
-<dt class="field-even">Type</dt>
-<dd class="field-even"><p>string</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The links returned by google</p>
-</dd>
-<dt class="field-even">Type</dt>
-<dd class="field-even"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-<section id="module-code.rapidapi_search">
-<span id="code-rapidapi-search-module"></span><h2>code.rapidapi_search module<a class="headerlink" href="#module-code.rapidapi_search" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="code.rapidapi_search.rapid_search">
-<span class="sig-prename descclassname"><span class="pre">code.rapidapi_search.</span></span><span class="sig-name descname"><span class="pre">rapid_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'C:\\Users\\kinga\\AppData\\Local\\Programs\\Python\\Python38\\lib\\json\\__init__.py'&gt;</span></span></span><a class="headerlink" href="#code.rapidapi_search.rapid_search" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform a search using Rapid Search API</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>search_term</strong> – The param represents the search strings for the web search</p></li>
-<li><p><strong>api_key</strong> – Represents the credentials for API hit</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The web search API response in JSON format</p>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-<section id="module-code.search_api_controller">
-<span id="code-search-api-controller-module"></span><h2>code.search_api_controller module<a class="headerlink" href="#module-code.search_api_controller" title="Permalink to this headline">¶</a></h2>
 </section>
 <section id="module-code.user_cli">
 <span id="code-user-cli-module"></span><h2>code.user_cli module<a class="headerlink" href="#module-code.user_cli" title="Permalink to this headline">¶</a></h2>
+<p>user_cli.py</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.user_cli.generate_wordcloud">
-<span class="sig-prename descclassname"><span class="pre">code.user_cli.</span></span><span class="sig-name descname"><span class="pre">generate_wordcloud</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword_data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#code.user_cli.generate_wordcloud" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">code.user_cli.</span></span><span class="sig-name descname"><span class="pre">generate_wordcloud</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#code.user_cli.generate_wordcloud" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given keywords of a document, display a wordcloud.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>keyword_data</strong> – List of cleaned keywords in a document</p></li>
-<li><p><strong>file</strong> – The name of the lecture document</p></li>
+<li><p><strong>data</strong> – List of cleaned keywords in a document</p></li>
+<li><p><strong>file_name</strong> – The name of the lecture document</p></li>
 </ul>
 </dd>
 <dt class="field-even">Type</dt>
@@ -304,6 +229,7 @@ Paragraph contains all other sizes</p>
 </section>
 <section id="module-code.wordprocessing">
 <span id="code-wordprocessing-module"></span><h2>code.wordprocessing module<a class="headerlink" href="#module-code.wordprocessing" title="Permalink to this headline">¶</a></h2>
+<p>wordprocessing.py</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="code.wordprocessing.construct_search_query">
 <span class="sig-prename descclassname"><span class="pre">code.wordprocessing.</span></span><span class="sig-name descname"><span class="pre">construct_search_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#code.wordprocessing.construct_search_query" title="Permalink to this definition">¶</a></dt>
@@ -379,7 +305,11 @@ Paragraph contains all other sizes</p>
 <dd class="field-odd"><p>The list of dictionaries with keywords extracted of the form</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[{“Header”:””, “Paragraph”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+<dd class="field-even"><p>[{“Header”:””,
+“Paragraph”:””,
+“Header_keywords”: [],
+“Paragraph_keywords”: [],
+slide:int}]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -393,7 +323,11 @@ Paragraph contains all other sizes</p>
 <dd class="field-odd"><p><strong>data</strong> – The list of dictionaries of the form</p>
 </dd>
 <dt class="field-even">Type</dt>
-<dd class="field-even"><p>[{“Header”:””, “Paragraph”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+<dd class="field-even"><p>[{“Header”:””,
+“Paragraph”:””,
+“Header_keywords”: [],
+“Paragraph_keywords”: [],
+slide:int}]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The list of dictionaries where slides containing the same header are merged</p>
@@ -413,10 +347,14 @@ Paragraph contains all other sizes</p>
 <dd class="field-odd"><p><strong>data</strong> – The list of dictionaries of the form</p>
 </dd>
 <dt class="field-even">Type</dt>
-<dd class="field-even"><p>[{“Header”:””, “Paragraph”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
+<dd class="field-even"><p>[{“Header”:””,
+“Paragraph”:””,
+“Header_keywords”: [],
+“Paragraph_keywords”: [],
+slide:int}]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The list of dictionaries where slides containing the same slide number are merged of the form</p>
+<dd class="field-odd"><p>The list of dictionaries where slides containing the same slide number are merged</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>[{“Header”:””, “Header_keywords”: [], “Paragraph_keywords”: [], slide:int}]</p>
@@ -455,14 +393,11 @@ Paragraph contains all other sizes</p>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.browser_output">code.browser_output module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.extract_sizes">code.extract_sizes module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.google_search">code.google_search module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-code.rapidapi_search">code.rapidapi_search module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-code.search_api_controller">code.search_api_controller module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.user_cli">code.user_cli module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code.wordprocessing">code.wordprocessing module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-code">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test.html">test package</a></li>
 </ul>
 </li>
@@ -474,7 +409,7 @@ Paragraph contains all other sizes</p>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="modules.html">CSC510_Project_LectureAid</a><ul>
       <li>Previous: <a href="modules.html" title="previous chapter">CSC510_Project_LectureAid</a></li>
-      <li>Next: <a href="setup.html" title="next chapter">setup module</a></li>
+      <li>Next: <a href="test.html" title="next chapter">test package</a></li>
   </ul></li>
   </ul></li>
 </ul>

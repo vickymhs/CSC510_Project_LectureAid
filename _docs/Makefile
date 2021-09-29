@@ -14,7 +14,7 @@ help:
 .PHONY: help Makefile
 
 generate:
-	sphinx-apidoc -f -o "$(SOURCEDIR)" ..
+	sphinx-apidoc -f -o "$(SOURCEDIR)" .. ../setup.py
 
 html:
 	sphinx-build -b html source build

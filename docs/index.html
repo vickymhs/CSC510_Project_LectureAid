@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Lecture Aid’s documentation! &#8212; Lecture Aid  documentation</title>
+    <title>Project Lecture AID &#8212; Lecture Aid  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -32,9 +32,8 @@
 
           <div class="body" role="main">
             
-  <section id="welcome-to-lecture-aid-s-documentation">
-<h1>Welcome to Lecture Aid’s documentation!<a class="headerlink" href="#welcome-to-lecture-aid-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Lecture aid is a tool to automatically recommend relevant academic links based upon a lecture PDF.</p>
+  <section id="project-lecture-aid">
+<h1>Project Lecture AID<a class="headerlink" href="#project-lecture-aid" title="Permalink to this headline">¶</a></h1>
 <p>This repo contains the code for Lecture Aid, a project for CSC510 Fall 21.</p>
 <section id="what-is-project-lecture-aid">
 <h2>What is Project Lecture AID?<a class="headerlink" href="#what-is-project-lecture-aid" title="Permalink to this headline">¶</a></h2>
@@ -54,6 +53,16 @@
 <ul class="simple">
 <li><p>Python (atleast 3.8) and pip</p></li>
 <li><p>[Microsoft Visual C++ Build tools](<a class="reference external" href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a>)</p></li>
+<li><p>Using pip install
+- google-api-python-client, version 2.22.0
+- people_also_ask, version 0.0.6
+- spacy, version 3.1.2 or greater
+- spacy-legacy, version 3.0.8
+- en_core_web_lg-3.1.0
+- pyfiglet, version 0.8.post1
+- PyMuPDF, version 1.18.19
+- wordcloud, version 1.8.1
+- matplotlib, version 3.4.3</p></li>
 </ul>
 </section>
 <section id="setup">
@@ -65,14 +74,19 @@
 </section>
 <section id="how-to-run">
 <h2>How to run<a class="headerlink" href="#how-to-run" title="Permalink to this headline">¶</a></h2>
+<p>User uploads the lecture pdf through the terminal menu, Lecture Aid process the pdf and provides relevant results in questions and answers format through a browser window.</p>
 <ul class="simple">
-<li><p><cite>python code/user_cli.py</cite></p></li>
-<li><p>Press 1 to enter a pdf
-- Future work includes pressing 2 for pptx</p></li>
-<li><p>Enter the path to your pdf file</p></li>
-<li><p>The results are stored in results.txt</p></li>
-<li><p>A wordcloud is generated as a png file</p></li>
+<li><p>Step 1: User Terminal Menu: (<cite>python code/user_cli.py</cite>)</p></li>
 </ul>
+<p>![1](<a class="reference external" href="https://user-images.githubusercontent.com/89501363/135198847-bf568a48-fa0b-4bfc-9e83-1b793b07d800.PNG">https://user-images.githubusercontent.com/89501363/135198847-bf568a48-fa0b-4bfc-9e83-1b793b07d800.PNG</a>)</p>
+<ul class="simple">
+<li><p>Step 2: Press 1 to enter a pdf. Enter the path of the PDF to be uploaded, ( Upload any lecture PDF with relevant contents )</p></li>
+</ul>
+<p>![2](<a class="reference external" href="https://user-images.githubusercontent.com/89501363/135198927-2fb98b67-4de8-460f-9f25-100d65dfa310.PNG">https://user-images.githubusercontent.com/89501363/135198927-2fb98b67-4de8-460f-9f25-100d65dfa310.PNG</a>)</p>
+<ul class="simple">
+<li><p>Step 3: Browser Window displaying the search results and word cloud for the pdf uploaded.</p></li>
+</ul>
+<p>![3](<a class="reference external" href="https://user-images.githubusercontent.com/89501363/135200016-e0214363-772d-4e6e-918e-bada1fcdfed3.PNG">https://user-images.githubusercontent.com/89501363/135200016-e0214363-772d-4e6e-918e-bada1fcdfed3.PNG</a>)</p>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
@@ -86,9 +100,18 @@
 <section id="future-work">
 <h2>Future work<a class="headerlink" href="#future-work" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Include more than pdf</p></li>
-<li><p>Have a website instead</p></li>
-<li><p>Speed up the program</p></li>
+<li><p>Build a website for a GUI interface for the user
+Our project is currently using a command line interface to get input, and output a .html file. A roadmap item would be to implement a website   instead. This way the user would open up the Lecture Aid website, be able to add a file to the website, and click a button to process the file. Then, the website would display the results (wordcloud and question and answers). This will make it easier for users to use the project, without having to download/execute code locally.</p></li>
+<li><p>Support for additional file types
+Currently the project supports only PDF format for the uploaded files. In future other formats such as .ppt, .doc should be supported</p></li>
+<li><p>Increase the concurrency efficiency
+Currently, we are using the maximum number of threads (10) for running search queries, but could still be room for improvement using other multithreading/multiprocessing tools.</p></li>
+<li><p>Improve Word Extraction Logic
+Currently Spacy is being used to extract noun phrases from each slide/page of the document. Then the high frequency noun phrases are calculated and used in the final search query. However this causes an issue when every slide has the document’s author name and email address listed. The author name is considered as a noun phrase, and since it appears on every slide has a high frequency, and thus appears on the final search query.</p></li>
+<li><p>Save favourite links to bookmarks
+A button can be added beside each link in the results to save those links to browser bookmarks.</p></li>
+<li><p>Build a browser extension
+Build a browser extension which lets the user to select text from a webpage and send a request to the application and get the links of pdf webpages.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
@@ -99,14 +122,11 @@
 <li class="toctree-l3"><a class="reference internal" href="code.html#module-code.browser_output">code.browser_output module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="code.html#module-code.extract_sizes">code.extract_sizes module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="code.html#module-code.google_search">code.google_search module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="code.html#module-code.rapidapi_search">code.rapidapi_search module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="code.html#module-code.search_api_controller">code.search_api_controller module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="code.html#module-code.user_cli">code.user_cli module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="code.html#module-code.wordprocessing">code.wordprocessing module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="code.html#module-code">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test.html">test package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="test.html#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="test.html#module-test.test_browser_output">test.test_browser_output module</a></li>
@@ -121,15 +141,15 @@
 </li>
 </ul>
 </div>
-</section>
-</section>
 <section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<h3>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
+</section>
+</section>
 </section>
 
 

@@ -4,6 +4,14 @@ code package
 Submodules
 ----------
 
+code.browser\_output module
+---------------------------
+
+.. automodule:: code.browser_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 code.extract\_sizes module
 --------------------------
 
@@ -16,22 +24,6 @@ code.google\_search module
 --------------------------
 
 .. automodule:: code.google_search
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-code.rapidapi\_search module
-----------------------------
-
-.. automodule:: code.rapidapi_search
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-code.search\_api\_controller module
------------------------------------
-
-.. automodule:: code.search_api_controller
    :members:
    :undoc-members:
    :show-inheritance:
