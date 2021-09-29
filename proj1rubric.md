@@ -30,20 +30,17 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | evidence that the members of the team are working across multiple places in the code base|3| We assign issues in Github and start working on the required part of the project. The commit history of different members shows this. https://github.com/mtkumar123/CSC510_Project_LectureAid/commits/main
 |short release cycles | (hard to see in short projects) project members are committing often enough so that everyone can get your work|
 | Online Sustainability evaluation |  |  | 
-| Question 1.1: Does your website and documentation provide a clear, high-level overview of your software?|  |  |
-| Question 1.2: Does your website and documentation clearly describe the type of user who should use your software? |  |  |
-| Question 1.3: Do you publish case studies to show how your software has been used by yourself and others? |  |  |
-| Q2 - Your project's and software's identity|  |  |
-| Question 2.1: Is the name of your project/software unique? |  |  |
-| Question 2.2: Is your project/software name free from trademark violations? |  |  |
-| Q3 - Availability of your software |  |  |
-| Question 3.1: Is your software available as a package that can be deployed without building it? |  |  |
-| Question 3.2: Is your software available for free? |  |  |
-| Question 3.3: Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository? |  |  |
-| Question 3.4: Is your software hosted in an established, third-party repository likeGitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)?  |  |  |
-| Q4 - Your software's documentation |  |  |
-| Question 4.1: Is your documentation clearly available on your website or within your software? |  |  |
-| Question 4.2: Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use? |  |  |
+| Question 1.1: Does your website and documentation provide a clear, high-level overview of your software?|  3|  Check README.md on homepage of repo. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md).|
+| Question 1.2: Does your website and documentation clearly describe the type of user who should use your software? |  3|  Check README.md on homepage of repo. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md).|
+| Question 1.3: Do you publish case studies to show how your software has been used by yourself and others? |  0|  Have not done a Case Study yet|
+| Question 2.1: Is the name of your project/software unique? |  3|  Could not find anything with the exact name, with the same purpose|
+| Question 2.2: Is your project/software name free from trademark violations? |  3|  Could not find anything with the exact name, with the same purpose|
+| Question 3.1: Is your software available as a package that can be deployed without building it? |  3|  Yes, we have a setup.py file. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/setup.py)|
+| Question 3.2: Is your software available for free? |  3|  Available on public repository for anyone to view and use|
+| Question 3.3: Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository? |  3|  Available on public repository for anyone to view and use|
+| Question 3.4: Is your software hosted in an established, third-party repository likeGitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)?  |  3|  Yes our [repo link](https://github.com/mtkumar123/CSC510_Project_LectureAid)|
+| Question 4.1: Is your documentation clearly available on your website or within your software? |  3|  Yes. [Here](https://mtkumar123.github.io/CSC510_Project_LectureAid/)|
+| Question 4.2: Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use? |  3|  Yes. In our README.md. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md)|
 | Question 4.3: If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software? |  |  |
 | Question 4.4: Do you provide a comprehensive guide to all your software’s commands, functions and options? |  |  |
 | Question 4.5: Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages? |  |  |
