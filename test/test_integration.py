@@ -6,7 +6,7 @@ from code.wordprocessing import extract_noun_chunks, merge_slide_with_same_heade
 Given some predefined PDFs, make sure that the results are not None
 """
 
-pdf_name = "data/arp.pdf"
+PDF_NAME = "data/arp.pdf"
 def test_groupings():
     """
 
@@ -14,7 +14,7 @@ def test_groupings():
 
     """
     # tests getting pdf -> getting groupings
-    pdf_doc = extract_words(pdf_name)
+    pdf_doc = extract_words(PDF_NAME)
     assert pdf_doc is not None
     groupings = text_to_groupings(pdf_doc)
     assert groupings is not None
@@ -39,7 +39,7 @@ def test_chunks():
 
     """
     # tests getting pdf -> getting groupings
-    pdf_doc = extract_words(pdf_name)
+    pdf_doc = extract_words(PDF_NAME)
     assert pdf_doc is not None
     groupings = text_to_groupings(pdf_doc)
     assert groupings is not None
@@ -66,7 +66,7 @@ def test_merge_slide_with_same_headers():
 
     """
     # tests getting pdf -> getting merge_slide_with_same_headers
-    pdf_doc = extract_words(pdf_name)
+    pdf_doc = extract_words(PDF_NAME)
     assert pdf_doc is not None
     groupings = text_to_groupings(pdf_doc)
     assert groupings is not None
@@ -96,7 +96,7 @@ def test_duplicate_word_removal():
 
     """
     # tests getting pdf -> getting merge_slide_with_same_headers
-    pdf_doc = extract_words(pdf_name)
+    pdf_doc = extract_words(PDF_NAME)
     assert pdf_doc is not None
     groupings = text_to_groupings(pdf_doc)
     assert groupings is not None
@@ -126,7 +126,7 @@ def test_construct_search_query():
 
     """
     # tests getting pdf -> getting merge_slide_with_same_headers
-    pdf_doc = extract_words(pdf_name)
+    pdf_doc = extract_words(PDF_NAME)
     assert pdf_doc is not None
     groupings = text_to_groupings(pdf_doc)
     assert groupings is not None

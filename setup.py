@@ -7,7 +7,7 @@ setup(
     description='Upload lecture PDFs and get relevant URLs to helpful websites',
     tests_require=['pytest'],
     author='CSC510 - Group 21',
-    author_email='',
+    author_email='lectureaidnscu@gmail.com',
     url='https://github.com/mtkumar123/CSC510_Project_LectureAid',
     python_requires='>=3.7',
     classifiers=[
@@ -23,9 +23,6 @@ setup(
         'spacy==3.1.2',
         'spacy-legacy==3.0.8',
         'en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.1.0/en_core_web_lg-3.1.0-py3-none-any.whl',
-        'pymupdf',
-        'pytest',
-        'Sphinx',
         'pyfiglet',
         'PyMuPDF'
 

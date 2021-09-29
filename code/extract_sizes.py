@@ -4,8 +4,9 @@ File completing step 2: given a pdf document, return a dictionary
 of headers and paragraphs
 
 """
-import fitz
+
 import re
+import fitz
 
 
 def extract_words(file: str) -> dict:

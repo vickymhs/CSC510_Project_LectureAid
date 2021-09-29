@@ -1,3 +1,4 @@
+""" browser_output.py """
 import webbrowser
 import os
 
@@ -10,9 +11,9 @@ def output_formatter():
     """
 
     # Formats the final result of word processing from the file
-    c = open('results.txt')
-    lines = c.read().splitlines()  # List with stripped line-breaks
-    c.close()
+    file = open('results.txt', encoding="utf-8")
+    lines = file.read().splitlines()  # List with stripped line-breaks
+    file.close()
     return content_formatter(lines)
 
 
@@ -49,31 +50,27 @@ def result_display(content, wordcloud_image_name):
     src = wordcloud_image_name
 
     # Default HTML file for rendering
-    f = open('result.html', 'w')
+    file = open('result.html', 'w', encoding="utf-8")
 
     # HTML content
-    urls = ""
-    message = """<html>
+    message = f"""<html>
        <head></head>
        <body style="background-color:#000000">
        <h1 style="color:#87D7FA;margin-left:6%;margin-top:4%">LectureAid</h1>
        <div style="text-align: center">
        <div style="background-color:#FFFFFF;width:40%;overflow-wrap: break-word;margin:2%;padding:4%;display: inline-block;
          vertical-align: middle;text-align:left;border-radius:50px">
-       <p>{urls}</p>
+       <p>{content}</p>
        </div>
        <div style=" display: inline-block;vertical-align: top;margin:2%">
        <img style="border-radius:50px" src="{src}" alt="Girl in a jacket" width="500" height="600">
        </div>
        </div>
        </body>
-       </html>""".format(urls=content, src=src)
-
-    f.write(message)
-    f.close()
+       </html>"""
+    file.write(message)
+    file.close()
 
     # Change path to reflect file location
     filename = 'file:///' + os.getcwd() + '/' + 'result.html'
     webbrowser.open_new_tab(filename)
-
-
