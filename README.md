@@ -63,21 +63,21 @@ https://pypi.org/project/people-also-ask/
   - Microsoft C++ build tools are needed to generate the wordcloud. See the requirements section for the download link.
 
 # Future work
-- ###### Build a website for a GUI interface for the user
+- #### Build a website for a GUI interface for the user ####
   Our project is currently using a command line interface to get input, and output a .html file. A roadmap item would be to implement a website instead. This way the user would open up the Lecture Aid website, be able to add a file to the website, and click a button to process the file. Then, the website would display the results (wordcloud and question and answers). This will make it easier for users to use the project, without having to download/execute code locally.
 
-- ###### Support for additional file types such as PPT, .DOCX
+- #### Support for additional file types such as PPT, .DOCX ####
   Currently, the project supports only PDF format for the uploaded files. In future all other formats such as ppt, docx, should be supported.
   
-- ###### Increase the concurrency efficiency
+- #### Increase the concurrency efficiency ####
   Currently, we are using the maximum number of threads (10) for running search queries, but could still be room for improvement using other multithreading/multiprocessing tools.
 
-- ###### Improve Word Extraction Logic
+- #### Improve Word Extraction Logic ####
   Currently, Spacy is being used to extract noun phrases from each slide/page of the document. Then the high frequency noun phrases are calculated and used in the final search query. However this causes an issue when every slide has the document’s author name and email address listed. The author name is considered as a noun phrase, and since it appears on every slide has a high frequency, and thus appears on the final search query.
 
-- ###### Save favourite links to bookmarks
+- #### Save favourite links to bookmarks ####
   A button can be added beside each link in the results to save those links to browser bookmarks.
 
-- ###### Build a browser extension
+- #### Build a browser extension ####
   Build a browser extension which lets the user to select text from a webpage and send a request to the application and get the links of pdf webpages.
 
