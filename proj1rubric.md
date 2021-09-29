@@ -58,20 +58,20 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Question 5.5: Does your project have a ticketing system to manage bug reports and feature requests? |  |  |
 | Question 5.6: Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests? |  |  |
 | Question 6.1: Is your software’s architecture and design modular? |  |  |
-| Question 6.2: Does your software use an accepted coding standard or convention? |  |  |
+| Question 6.2: Does your software use an accepted coding standard or convention? | 3 | Our code adheres to python PEP standards, using pylint in our travis.yml file |
 | Q7 - Open standards and your software |  |  |
-| Question 7.1: Does your software allow data to be imported and exported using open data formats? e.g. GIF, SVG, HTML, XML, tar, zip, CSV, JSON, NetCDF, or domain specific ones |  |  |
-| Question 7.2: Does your software allow communications using open communications protocols? e.g. HTTP, FTP, XMPP, SOAP over HTTP, or domain-specific ones|  |  |
+| Question 7.1: Does your software allow data to be imported and exported using open data formats? e.g. GIF, SVG, HTML, XML, tar, zip, CSV, JSON, NetCDF, or domain specific ones | 3 | Our data allows to be exported to .html |
+| Question 7.2: Does your software allow communications using open communications protocols? e.g. HTTP, FTP, XMPP, SOAP over HTTP, or domain-specific ones | 3 | Our code communicates with google over HTTP |
 | Q8 - Your software's portability |  |  |
-| Question 8.1: Is your software cross-platform compatible? *e.g. does it run under two or more of Windows, Unix/Linux and Mac OS X, or can be used from within two or more of Internet Explorer, Chrome, Firefox and Safari? |  |  |
+| Question 8.1: Is your software cross-platform compatible? *e.g. does it run under two or more of Windows, Unix/Linux and Mac OS X, or can be used from within two or more of Internet Explorer, Chrome, Firefox and Safari? | 3 | Our software was tested/developed using mac computers and windows computers |
 | Q9 - Your software and accessibility |  |  |
 | Question 9.1: Does your software adhere to appropriate accessibility conventions or standards? |  |  |
-| Question 9.2: Does your documentation adhere to appropriate accessibility conventions or standards? |  |  |
+| Question 9.2: Does your documentation adhere to appropriate accessibility conventions or standards? | 3 | The projects documentation uses Sphinx, which  |
 | Q10 - How you manage your source code |  |  |
-| Question 10.1: Is your source code stored in a repository under revision control? |  |  |
-| Question 10.2: Is each source code release a snapshot of the repository? |  |  |
-| Question 10.3: Are releases tagged in the repository? |  |  |
-| Question 10.4: Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) |  |  |
+| Question 10.1: Is your source code stored in a repository under revision control? | 3 | Our software is stored in the CSC510_Project_LectureAid github repository. |
+| Question 10.2: Is each source code release a snapshot of the repository? | 3 | [Version1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0) |
+| Question 10.3: Are releases tagged in the repository? | 3 | Tagged as V1.0.0 |
+| Question 10.4: Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) | 3 | The main branch is used for stability |
 | Question 10.5: Do you back-up your repository? |  |  |
 | Q11 - Building and installing your software|  |  |
 | Question 11.1: Do you provide publicly-available instructions for building your software from the source code? |  |  |
