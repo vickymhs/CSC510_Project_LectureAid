@@ -9,7 +9,7 @@
  -->
 # Project Lecture AID
 
-This repo contains the code for Lecture Aid, a project for CSC510 Fall 21. 
+This repo contains the code for Lecture Aid [v1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0), a project for CSC510 Fall 21. 
 
 # What is Project Lecture AID?
 
@@ -88,3 +88,5 @@ User uploads the lecture pdf through the terminal menu, Lecture Aid process the 
 - #### Build a browser extension
   Build a browser extension which lets the user to select text from a webpage and send a request to the application and get the links of pdf webpages.
 
+# Contact Us
+   E-mail: lectureaidnscu@gmail.com
