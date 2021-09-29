@@ -21,5 +21,3 @@ def get_people_also_ask_links(search_term: str) -> list:
             if answer["has_answer"]:
                 result.append({"Question": answer["question"], "Answer": answer["link"]})
     return result
-
-
