@@ -62,8 +62,8 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Q8 - Your software's portability |  |  |
 | Question 8.1: Is your software cross-platform compatible? *e.g. does it run under two or more of Windows, Unix/Linux and Mac OS X, or can be used from within two or more of Internet Explorer, Chrome, Firefox and Safari? | 3 | Our software was tested/developed using mac computers and windows computers |
 | Q9 - Your software and accessibility |  |  |
-| Question 9.1: Does your software adhere to appropriate accessibility conventions or standards? |  |  |
-| Question 9.2: Does your documentation adhere to appropriate accessibility conventions or standards? | 3 | The projects documentation uses Sphinx, which  |
+| Question 9.1: Does your software adhere to appropriate accessibility conventions or standards? | 0 | The software does not adhede to conventions/standards |
+| Question 9.2: Does your documentation adhere to appropriate accessibility conventions or standards? | 3 | When tested using [a web accessibility tool](https://www.webaccessibility.com) our documentation scored 93%  |
 | Q10 - How you manage your source code |  |  |
 | Question 10.1: Is your source code stored in a repository under revision control? | 3 | Our software is stored in the CSC510_Project_LectureAid github repository. |
 | Question 10.2: Is each source code release a snapshot of the repository? | 3 | [Version1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0) |
