@@ -85,12 +85,12 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Question 12.4: Are your test results publicly visible? |  |  |
 | Question 12.5: Are all manually-run tests documented? | 1 | https://drive.google.com/drive/u/1/folders/1TgB2LLneRLWdjTbk6rbtxJQNDU19IZOX |
 | Q13 - How you engage with your community |  |  |
-| Question 13.1: Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? * e.g. release announcements, publications, workshops, conference presentations  | 0 | We haven't implemented this yet |
-| Question 13.2: Does your website state how many projects and users are associated with your project? | 0 | We haven't implemented this yet |
+| Question 13.1: Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? * e.g. release announcements, publications, workshops, conference presentations  | 0 | Not implemented yet |
+| Question 13.2: Does your website state how many projects and users are associated with your project? | 0 | Not implemented yet |
 | Question 13.3: Do you provide success stories on your website? | 0 | Not implemented yet |
-| Question 13.4: Do you list your important partners and collaborators on your website? | 0 | Website not implemented yet |
-| Question 13.5: Do you list your project's publications on your website or link to a resource where these are available? | 0 | Website not implemented yet |
-| Question 13.6: Do you list third-party publications that refer to your software on your website or link to a resource where these are available? | 0 | Website not implemented yet |
+| Question 13.4: Do you list your important partners and collaborators on your website? | 0 | Not implemented yet |
+| Question 13.5: Do you list your project's publications on your website or link to a resource where these are available? | 0 | Not implemented yet |
+| Question 13.6: Do you list third-party publications that refer to your software on your website or link to a resource where these are available? | 0 | Not implemented yet |
 | Question 13.7: Can users subscribe to notifications to changes to your source code repository? | 0 | No |
 | Question 13.8: If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model? | 0 | No |
 | Q14 - How you manage contributions |  |  |
