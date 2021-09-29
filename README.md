@@ -52,6 +52,9 @@ User uploads the lecture pdf through the terminal menu, Lecture Aid process the 
 
 ![3](https://user-images.githubusercontent.com/89501363/135200016-e0214363-772d-4e6e-918e-bada1fcdfed3.PNG)
 
+Here is a GIF showing the complete process. 
+
+![](tutorial.gif)
 
 # Troubleshooting
 - When running the code/tests, I'm getting a `no such module named code` error?
