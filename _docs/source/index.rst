@@ -27,39 +27,45 @@ https://spacy.io/api/doc
 Requirements
 -------------
 - Python (atleast 3.8) and pip
-- [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+- Microsoft Visual C++ Build tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/
 - Using pip install
-  - google-api-python-client, version 2.22.0
-  - people_also_ask, version 0.0.6
-  - spacy, version 3.1.2 or greater
-  - spacy-legacy, version 3.0.8
-  - en_core_web_lg-3.1.0
-  - pyfiglet, version 0.8.post1
-  - PyMuPDF, version 1.18.19
-  - wordcloud, version 1.8.1
-  - matplotlib, version 3.4.3
+- google-api-python-client, version 2.22.0
+- people_also_ask, version 0.0.6
+- spacy, version 3.1.2 or greater
+- spacy-legacy, version 3.0.8
+- en_core_web_lg-3.1.0
+- pyfiglet, version 0.8.post1
+- PyMuPDF, version 1.18.19
+- wordcloud, version 1.8.1
+- matplotlib, version 3.4.3
 
 Setup
 -----
 - run `pip install -r requirements.txt`
-  - this installs all of the required python libraries
+- this installs all of the required python libraries
 
 How to run
 -----------
 
 User uploads the lecture pdf through the terminal menu, Lecture Aid process the pdf and provides relevant results in questions and answers format through a browser window.
 
-- Step 1: User Terminal Menu: (`python code/user_cli.py`)
+Step 1: User Terminal Menu: (`python code/user_cli.py`)
 
-![1](https://user-images.githubusercontent.com/89501363/135198847-bf568a48-fa0b-4bfc-9e83-1b793b07d800.PNG)
+.. image:: https://user-images.githubusercontent.com/89501363/135198847-bf568a48-fa0b-4bfc-9e83-1b793b07d800.PNG
+  :width: 400
+  :alt: Step 2
 
-- Step 2: Press 1 to enter a pdf. Enter the path of the PDF to be uploaded, ( Upload any lecture PDF with relevant contents )
+Step 2: Press 1 to enter a pdf. Enter the path of the PDF to be uploaded, ( Upload any lecture PDF with relevant contents )
 
-![2](https://user-images.githubusercontent.com/89501363/135198927-2fb98b67-4de8-460f-9f25-100d65dfa310.PNG)
+.. image:: https://user-images.githubusercontent.com/89501363/135198927-2fb98b67-4de8-460f-9f25-100d65dfa310.PNG
+  :width: 400
+  :alt: Step 2
 
-- Step 3: Browser Window displaying the search results and word cloud for the pdf uploaded.
+Step 3: Browser Window displaying the search results and word cloud for the pdf uploaded.
 
-![3](https://user-images.githubusercontent.com/89501363/135200016-e0214363-772d-4e6e-918e-bada1fcdfed3.PNG)
+.. image:: https://user-images.githubusercontent.com/89501363/135200016-e0214363-772d-4e6e-918e-bada1fcdfed3.PNG
+   :width: 400
+   :alt: Step 3
 
 
 Troubleshooting
