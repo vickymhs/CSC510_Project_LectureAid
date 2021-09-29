@@ -27,9 +27,6 @@ https://pymupdf.readthedocs.io/en/latest/
 Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
 https://spacy.io/api/doc
 
-Questions and relevant links were found with the help of people_also_ask python library. Documentation can be viewed here:
-https://pypi.org/project/people-also-ask/
-
 # Requirements
 - Python (atleast 3.8) and pip
 - [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
@@ -49,12 +46,22 @@ https://pypi.org/project/people-also-ask/
   - this installs all of the required python libraries
 
 # How to run
-- `python code/user_cli.py`
-- Press 1 to enter a pdf
-  - Future work includes pressing 2 for pptx
-- Enter the path to your pdf file
-- The results are stored in results.txt
-- A wordcloud is generated as a png file
+
+
+User uploads the lecture pdf through the terminal menu, Lecture Aid process the pdf and provides relevant results in questions and answers format through a browser window.
+
+- Step 1: User Terminal Menu: (`python code/user_cli.py`)
+
+![1](https://user-images.githubusercontent.com/89501363/135198847-bf568a48-fa0b-4bfc-9e83-1b793b07d800.PNG)
+
+- Step 2: Press 1 to enter a pdf. Enter the path of the PDF to be uploaded, ( Upload any lecture PDF with relevant contents )
+
+![2](https://user-images.githubusercontent.com/89501363/135198927-2fb98b67-4de8-460f-9f25-100d65dfa310.PNG)
+
+- Step 3: Browser Window displaying the search results and word cloud for the pdf uploaded.
+
+![3](https://user-images.githubusercontent.com/89501363/135200016-e0214363-772d-4e6e-918e-bada1fcdfed3.PNG)
+
 
 # Troubleshooting
 - When running the code/tests, I'm getting a `no such module named code` error?
@@ -63,21 +70,7 @@ https://pypi.org/project/people-also-ask/
   - Microsoft C++ build tools are needed to generate the wordcloud. See the requirements section for the download link.
 
 # Future work
-- #### Build a website for a GUI interface for the user ####
-  Our project is currently using a command line interface to get input, and output a .html file. A roadmap item would be to implement a website instead. This way the user would open up the Lecture Aid website, be able to add a file to the website, and click a button to process the file. Then, the website would display the results (wordcloud and question and answers). This will make it easier for users to use the project, without having to download/execute code locally.
-
-- #### Support for additional file types such as PPT, .DOCX ####
-  Currently, the project supports only PDF format for the uploaded files. In future all other formats such as ppt, docx, should be supported.
-  
-- #### Increase the concurrency efficiency ####
-  Currently, we are using the maximum number of threads (10) for running search queries, but could still be room for improvement using other multithreading/multiprocessing tools.
-
-- #### Improve Word Extraction Logic ####
-  Currently, Spacy is being used to extract noun phrases from each slide/page of the document. Then the high frequency noun phrases are calculated and used in the final search query. However this causes an issue when every slide has the document’s author name and email address listed. The author name is considered as a noun phrase, and since it appears on every slide has a high frequency, and thus appears on the final search query.
-
-- #### Save favourite links to bookmarks ####
-  A button can be added beside each link in the results to save those links to browser bookmarks.
-
-- #### Build a browser extension ####
-  Build a browser extension which lets the user to select text from a webpage and send a request to the application and get the links of pdf webpages.
+- Include more than pdf
+- Have a website instead
+- Speed up the program
 
