@@ -41,20 +41,20 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Question 3.4: Is your software hosted in an established, third-party repository likeGitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)?  |  3|  Yes our [repo link](https://github.com/mtkumar123/CSC510_Project_LectureAid)|
 | Question 4.1: Is your documentation clearly available on your website or within your software? |  3|  Yes. [Here](https://mtkumar123.github.io/CSC510_Project_LectureAid/)|
 | Question 4.2: Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use? |  3|  Yes. In our README.md. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md)|
-| Question 4.3: If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software? |  |  |
-| Question 4.4: Do you provide a comprehensive guide to all your software’s commands, functions and options? |  |  |
+| Question 4.3: If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software? | 3 | Yes. In our README.md file [here](https://github.com/mtkumar123/CSC510_Project_LectureAid#requirements) |
+| Question 4.4: Do you provide a comprehensive guide to all your software’s commands, functions and options? | 3 | Yes, in our README.md [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid#how-to-run) |
 | Question 4.5: Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages? |  |  |
 | Question 4.6: If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation? |  |  |
-| Question 4.7: Do you store your documentation under revision control with your source code? |  |  |
-| Question 4.8: Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation? |  |  |
+| Question 4.7: Do you store your documentation under revision control with your source code? | 3 | Yes |
+| Question 4.8: Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation? | 3 | Yes. On our GitHub page. |
 | Q5 - How you support your software |  |  |
 | Question 5.1: Does your software describe how a user can get help with using your software? |  |  |
 | Question 5.2: Does your website and documentation describe what support, if any, you provide to users and developers? |  |  |
-| Question 5.3: Does your project have an e-mail address or forum that is solely for supporting users? |  |  |
+| Question 5.3: Does your project have an e-mail address or forum that is solely for supporting users? | 3 | Yes |
 | Question 5.4: Are e-mails to your support e-mail address received by more than one person? |  |  |
-| Question 5.5: Does your project have a ticketing system to manage bug reports and feature requests? |  |  |
-| Question 5.6: Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests? |  |  |
-| Question 6.1: Is your software’s architecture and design modular? |  |  |
+| Question 5.5: Does your project have a ticketing system to manage bug reports and feature requests? | 0 | No we haven't implemented that feature yet |
+| Question 5.6: Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests? | 0 |  |
+| Question 6.1: Is your software’s architecture and design modular? | 3 | As evidence by our code [here](https://github.com/mtkumar123/CSC510_Project_LectureAid/tree/main/code) |
 | Question 6.2: Does your software use an accepted coding standard or convention? | 3 | Our code adheres to python PEP standards, using pylint in our travis.yml file |
 | Q7 - Open standards and your software |  |  |
 | Question 7.1: Does your software allow data to be imported and exported using open data formats? e.g. GIF, SVG, HTML, XML, tar, zip, CSV, JSON, NetCDF, or domain specific ones | 3 | Our data allows to be exported to .html |
