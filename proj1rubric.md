@@ -69,20 +69,20 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Question 10.2: Is each source code release a snapshot of the repository? | 3 | [Version1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0) |
 | Question 10.3: Are releases tagged in the repository? | 3 | Tagged as V1.0.0 |
 | Question 10.4: Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) | 3 | The main branch is used for stability |
-| Question 10.5: Do you back-up your repository? |  |  |
+| Question 10.5: Do you back-up your repository? |3  |Backed up in zenodo. https://doi.org/10.5281/zenodo.5528349  |
 | Q11 - Building and installing your software|  |  |
-| Question 11.1: Do you provide publicly-available instructions for building your software from the source code? |  |  |
-| Question 11.2: Can you build, or package, your software using an automated tool? e.g. Make (https://www.gnu.org/software/make/), ANT (http://ant.apache.org/), Maven (https://maven.apache.org/), CMake (https://cmake.org/), Python setuptools (https://pypi.python.org/pypi/setuptools), or R package tools (https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) |  |  |
-| Question 11.3: Do you provide publicly-available instructions for deploying your software? |  |  |
-| Question 11.4: Does your documentation list all third-party dependencies? |  |  |
-| Question 11.5: Does your documentation list the version number for all third-party dependencies? |  |  |
-| Question 11.6: Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional? |  |  |
-| Question 11.7: Can you download dependencies using a dependency management tool or package manager? *e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/) |  |  |
-| Question 11.8: Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? |  |  |
-| Question 12.1: Do you have an automated test suite for your software? |  |  |
-| Question 12.2: Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? |  |  |
-| Question 12.3: Do you use continuous integration, automatically running tests whenever changes are made to your source code? |  |  |
-| Question 12.4: Are your test results publicly visible? |  |  |
+| Question 11.1: Do you provide publicly-available instructions for building your software from the source code? |3  |The required steps are documented in README along with screenshots and a GIF. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md) |
+| Question 11.2: Can you build, or package, your software using an automated tool? e.g. Make (https://www.gnu.org/software/make/), ANT (http://ant.apache.org/), Maven (https://maven.apache.org/), CMake (https://cmake.org/), Python setuptools (https://pypi.python.org/pypi/setuptools), or R package tools (https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) | 3 | The project is setup to be installed as a python package locally using the command `pip install .`  |
+| Question 11.3: Do you provide publicly-available instructions for deploying your software? | 3 |Documentation provides the required steps  |
+| Question 11.4: Does your documentation list all third-party dependencies? | 3 |Listed in README file. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md)  |
+| Question 11.5: Does your documentation list the version number for all third-party dependencies? | 3 |Version numbers are given in the requirements.txt file. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/requirements.txt)  |
+| Question 11.6: Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional? | 1 |Links are provided for a few libraries in the README. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md)  |
+| Question 11.7: Can you download dependencies using a dependency management tool or package manager? *e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/) |3  |All dependencies can be installed using pip  |
+| Question 11.8: Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | 3 |Travis tests after each build.  |
+| Question 12.1: Do you have an automated test suite for your software? |3  |Travis is used to automatically test the software after each push   |
+| Question 12.2: Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? | 2 |Currently, the tests are run only when new code is pushed.  |
+| Question 12.3: Do you use continuous integration, automatically running tests whenever changes are made to your source code? | 3 |The entire project is tested whenever changes are made to code  |
+| Question 12.4: Are your test results publicly visible? | 3 |Publicly available at https://app.travis-ci.com/github/mtkumar123/CSC510_Project_LectureAid  |
 | Question 12.5: Are all manually-run tests documented? | 1 | https://drive.google.com/drive/u/1/folders/1TgB2LLneRLWdjTbk6rbtxJQNDU19IZOX |
 | Q13 - How you engage with your community |  |  |
 | Question 13.1: Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? * e.g. release announcements, publications, workshops, conference presentations  | 0 | Not implemented yet |

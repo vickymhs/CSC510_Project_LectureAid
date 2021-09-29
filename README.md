@@ -7,17 +7,17 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/mtkumar123/CSC510_Project_LectureAid)
 <!-- ![GitHub forks](https://img.shields.io/github/forks/mtkumar123/CSC510_Project_LectureAid?style=social)
  -->
-# Project Lecture AID
+# Project LectureAid
 
-This repo contains the code for Lecture Aid [v1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0), a project for CSC510 Fall 21. 
+This repo contains the code for LectureAid [v1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0), a project for CSC510 Fall 21. 
 
-# What is Project Lecture AID?
+# What is Project LectureAid?
 
-After a long class, ever had to come back home and google everything you supposedly learnt from the lecture handout for that day's class? Ever spend ~30-45 minutes just to search through google and compile a list of websites that explain what you need? And then a month later when midterms are around a corner, ever spend that same 30-45 minutes trying to find those websites again cause you forgot to bookmark them? 
+After a long class, ever had to come back home and google everything you supposedly learnt from the lecture handout for that day's class? Ever spend ~30 - 45 minutes just to search through google and compile a list of websites that explain what you need? And then a month later when midterms are around a corner, ever spend that same 30-45 minutes trying to find those websites again cause you forgot to bookmark them? 
 
-Project Lecture AID hopes to solve that hassle for you. 
+Project LectureAid hopes to solve that hassle for you. 
 
-Upload your lecture pdf to our user based terminal menu, and Lecture AID will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, Lecture AID opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
+Upload your lecture pdf to our user based terminal menu, and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
 
 # Technologies Used
 
@@ -32,13 +32,16 @@ https://spacy.io/api/doc
 - [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
 # Setup
+
 - run `pip install -r requirements.txt`
   - this installs all of the required python libraries
+- run `pip install .`
+  - this installs the project as a python package
 
 # How to run
 
 
-User uploads the lecture pdf through the terminal menu, Lecture Aid process the pdf and provides relevant results in questions and answers format through a browser window.
+User uploads the lecture pdf through the terminal menu, LectureAid process the pdf and provides relevant results in questions and answers format through a browser window.
 
 - Step 1: User Terminal Menu: (`python code/user_cli.py`)
 
@@ -64,7 +67,7 @@ Here is a GIF showing the complete process.
 
 # Future work
 - #### Build a website for a GUI interface for the user
-  Our project is currently using a command line interface to get input, and output a .html file. A roadmap item would be to implement a website   instead. This way the user would open up the Lecture Aid website, be able to add a file to the website, and click a button to process the file. Then, the website would display the results (wordcloud and question and answers). This will make it easier for users to use the project, without having to download/execute code locally.
+  Our project is currently using a command line interface to get input, and output a .html file. A roadmap item would be to implement a website   instead. This way the user would open up the LectureAid website, be able to add a file to the website, and click a button to process the file. Then, the website would display the results (wordcloud and question and answers). This will make it easier for users to use the project, without having to download/execute code locally.
   
 - #### Support for additional file types
   Currently the project supports only PDF format for the uploaded files. In future other formats such as .ppt, .doc should be supported
