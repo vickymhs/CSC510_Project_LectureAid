@@ -71,6 +71,11 @@ Here is a GIF showing the complete process.
 
 ![](tutorial.gif)
 
+#Documentation
+
+More documentation can be viewed here:
+https://mtkumar123.github.io/CSC510_Project_LectureAid/
+
 # Troubleshooting
 - When running the code/tests, I'm getting a `no such module named code` error?
   - Try prefixing the command with `python -m`, for example, `python -m pytest`
