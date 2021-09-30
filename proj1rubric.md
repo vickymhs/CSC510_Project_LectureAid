@@ -17,9 +17,9 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Use of code  formatters. | 3 | Used Pylint, and ran Pylint Warning and Error checks as part of Travis CI|
 | Use of syntax checkers. |  3 | Used Pylint, and ran Pylint Warning and Error checks as part of Travis CI  |
 | Use of code coverage | 3| Coverage at 62%. Used coverage library, and then ran coverage check in Travis to update Coverage badge using Codecov. https://app.codecov.io/gh/mtkumar123/CSC510_Project_LectureAid|
-| other automated analysis tools|config files in GH|
-| test cases exist|dozens of tests and those test cases are more than 30% of the  code base| Code coverage can be seen [here](https://app.codecov.io/gh/mtkumar123/CSC510_Project_LectureAid/). We have over 18 test cases, covering atleast 55% of the code base. |
-| test cases are routinely executed|e.g. travis-com.com or github actions or something| Executed every push to origin and merge to main with travis |
+| other automated analysis tools|config files in GH| 3 | Pylint, CodeCoverage, Travis. Can check the status for the same through badges on homepage of repo. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md).| |
+| test cases exist| 3 | Code coverage can be seen [here](https://app.codecov.io/gh/mtkumar123/CSC510_Project_LectureAid/). We have over 18 test cases, covering atleast 55% of the code base. |
+| 3 |e.g. travis-com.com or github actions or something| Executed every push to origin and merge to main with travis |
  | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up| in GH | https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/CONTRIBUTING.md 
 | issues are discussed before they are closed|even if you discuss in slack, need a sumamry statement here| Issues are okayed either on github [example](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/39) [example2](https://github.com/mtkumar123/CSC510_Project_LectureAid/pull/38) or over discord, with majority vote.|
 | Chat channel: exists| 3| Discord Chat Channel exists.
