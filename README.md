@@ -27,6 +27,9 @@ https://pymupdf.readthedocs.io/en/latest/
 Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
 https://spacy.io/api/doc
 
+Returning the questions with the relevant links was done with the help of people_also_ask library. Documentation can be seen here:
+https://pypi.org/project/people-also-ask/
+
 # Requirements
 - Python (atleast 3.8) and pip
 - [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
