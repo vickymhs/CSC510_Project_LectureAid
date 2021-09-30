@@ -89,3 +89,11 @@ Here is a GIF showing the complete process.
 
 # Contact Us
    E-mail: lectureaidnscu@gmail.com
+   
+# Team Members
+- Ashley King
+- Manoj Kumar
+- Rakesh Muppala
+- Sayali Parab
+- Ashwin Das
+- Renji Joseph Sabu
