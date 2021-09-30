@@ -28,7 +28,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3| All the team members use PyCharm IDE. The IDE adds a local .idea folder in all projects and everyone has this folder locally.
 | evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3| Everyone has a local instance of the latest version of the project. The output can be shown by anyone in the team.
 | evidence that the members of the team are working across multiple places in the code base|3| We assign issues in Github and start working on the required part of the project. The commit history of different members shows this. https://github.com/mtkumar123/CSC510_Project_LectureAid/commits/main
-|short release cycles | (hard to see in short projects) project members are committing often enough so that everyone can get your work|
+|short release cycles | 3 | Commits statistics - https://github.com/mtkumar123/CSC510_Project_LectureAid/graphs/contributors |
 | Online Sustainability evaluation |  |  | 
 | Question 1.1: Does your website and documentation provide a clear, high-level overview of your software?|  3|  Check README.md on homepage of repo. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md).|
 | Question 1.2: Does your website and documentation clearly describe the type of user who should use your software? |  3|  Check README.md on homepage of repo. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md).|
@@ -108,5 +108,5 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Question 15.7: Do you have a recommended citation for your software? | 0 | No |
 | Q16 - Your plans for the future |  |  |
 | Question 16.1: Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? | 3 | Roadmap features included in project todo. https://github.com/mtkumar123/CSC510_Project_LectureAid/projects/2 |
-| Question 16.2: Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? | Not Applicable | Not Applicable |
+| Question 16.2: Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? | 0 | Not Applicable |
 | Question 16.3: Do you make timely announcements of the deprecation of components, APIs, etc.? | 0 | No |
