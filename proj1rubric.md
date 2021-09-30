@@ -1,3 +1,6 @@
+Total Self Assessment Points - 228 
+
+
 | Grading Points| Self Assessment | Evidence|
 |-----|---------|---------|
 |workload is spread over the whole team (one team member is often Xtimes more productive than the others... |
