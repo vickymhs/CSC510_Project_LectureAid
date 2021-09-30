@@ -101,7 +101,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Q15 - Your software's copyright and licensing  |  |  |
 | Question 15.1: Does your website and documentation clearly state the copyright owners of your software and documentation? | 0 | Not implemented yet |
 | Question 15.2: Does each of your source code files include a copyright statement? | 0 | No |
-| Question 15.3: Does your website and documentation clearly state the licence of your software? | 0 | Not yet implemented |
+| Question 15.3: Does your website and documentation clearly state the licence of your software? | 3 | Can check the license details here : https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/LICENSE |
 | Question 15.4: Is your software released under an open source licence? | 3 | CSC510_Project_LectureAid is licensed under the MIT License. https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/LICENSE |
 | Question 15.5: Is your software released under an OSI-approved open-source licence? | 3 | Yes, MIT is OSI approved. |
 | Question 15.6: Does each of your source code files include a licence header? | 0 | No |
