@@ -1,4 +1,4 @@
-Total Self Assessment Points - 228 
+Total Self Assessment Points - 230 
 
 
 | Grading Points| Self Assessment | Evidence|
@@ -79,7 +79,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Question 11.3: Do you provide publicly-available instructions for deploying your software? | 3 |Documentation provides the required steps  |
 | Question 11.4: Does your documentation list all third-party dependencies? | 3 |Listed in README file. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md)  |
 | Question 11.5: Does your documentation list the version number for all third-party dependencies? | 3 |Version numbers are given in the requirements.txt file. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/requirements.txt)  |
-| Question 11.6: Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional? | 1 |Links are provided for a few libraries in the README. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md)  |
+| Question 11.6: Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional? | 3 |Links are provided for the libraries in the README. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md)  |
 | Question 11.7: Can you download dependencies using a dependency management tool or package manager? *e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/) |3  |All dependencies can be installed using pip  |
 | Question 11.8: Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | 3 |Travis tests after each build.  |
 | Question 12.1: Do you have an automated test suite for your software? |3  |Travis is used to automatically test the software after each push   |

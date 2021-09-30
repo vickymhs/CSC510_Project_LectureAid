@@ -33,6 +33,15 @@ https://pypi.org/project/people-also-ask/
 # Requirements
 - Python (atleast 3.8) and pip
 - [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+- [google-api-python-client](https://github.com/googleapis/google-api-python-client) - Version 2.22.0 or greater
+- [people_also_ask](https://pypi.org/project/people-also-ask/) Version 0.0.6 or greater
+- [spacy](https://spacy.io/) - Version 3.1.2 or greater
+- [spacy-legacy](https://pypi.org/project/spacy-legacy/) - Version 3.0.8
+- [spacy models](https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.1.0/en_core_web_lg-3.1.0-py3-none-any.whl)
+- [pyfiglet](https://pypi.org/project/pyfiglet/0.8.post1/) - Version 0.8.post1
+- [PyMuPDF](https://github.com/pymupdf/PyMuPDF) - Version 1.18.19
+- [wordcloud](https://pypi.org/project/wordcloud/) - Version 1.8.1
+- [matplotlib](https://matplotlib.org/) - Version 3.4.3
 
 # Setup
 
