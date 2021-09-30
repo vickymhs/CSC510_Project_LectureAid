@@ -7,7 +7,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Issues reports: there are **many**| 3 | Total issues opened 41 https://github.com/mtkumar123/CSC510_Project_LectureAid/issues?q=|
 | issues are being  closed| 3| Total issues closed 33 https://github.com/mtkumar123/CSC510_Project_LectureAid/issues?page=1&q=is%3Aclosed
 | DOI badge: exists | 3 | https://zenodo.org/record/5528349#.YVGy_kbMIeY
-|Docs: doco generated , format not ugly |in GH|
+|Docs: doco generated , format not ugly | 3 | Check Documentation here. https://mtkumar123.github.io/CSC510_Project_LectureAid/ |
 |Docs: what: point descriptions of each class/function (in isolation) | 3 | For each method, there is a description of the method. There are then descriptions of parameters, types, and return types. [Ex](https://mtkumar123.github.io/CSC510_Project_LectureAid/code.html#module-code.extract_sizes)|
 |Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z| 3 | Please find the use cases and mini tutorials for the same at the given link : https://docs.google.com/document/d/1mFLvZGwi3hxd93_E-HHUfquX04lgNsGXn8X-wFe-7HU/edit?usp=sharing
 |Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing| 3 |  Check README.md on homepage of repo. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md).|
@@ -88,7 +88,7 @@ but nevertheless, here is a track record that everyone is contributing a lot)|2|
 | Question 13.1: Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? * e.g. release announcements, publications, workshops, conference presentations  | 0 | Not implemented yet |
 | Question 13.2: Does your website state how many projects and users are associated with your project? | 0 | Not implemented yet |
 | Question 13.3: Do you provide success stories on your website? | 0 | Not implemented yet |
-| Question 13.4: Do you list your important partners and collaborators on your website? | 0 | Not implemented yet |
+| Question 13.4: Do you list your important partners and collaborators on your website? | 3 | Check README.md on homepage of repo. [Here](https://github.com/mtkumar123/CSC510_Project_LectureAid/blob/main/README.md).|
 | Question 13.5: Do you list your project's publications on your website or link to a resource where these are available? | 0 | Not implemented yet |
 | Question 13.6: Do you list third-party publications that refer to your software on your website or link to a resource where these are available? | 0 | Not implemented yet |
 | Question 13.7: Can users subscribe to notifications to changes to your source code repository? | 0 | No |
