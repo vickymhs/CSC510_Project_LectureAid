@@ -71,7 +71,7 @@ Here is a GIF showing the complete process.
 
 ![](tutorial.gif)
 
-#Documentation
+# Documentation
 
 More documentation can be viewed here:
 https://mtkumar123.github.io/CSC510_Project_LectureAid/
