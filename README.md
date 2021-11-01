@@ -42,9 +42,11 @@ https://pypi.org/project/people-also-ask/
 - [PyMuPDF](https://github.com/pymupdf/PyMuPDF) - Version 1.18.19
 - [wordcloud](https://pypi.org/project/wordcloud/) - Version 1.8.1
 - [matplotlib](https://matplotlib.org/) - Version 3.4.3
+- [python-docx](https://pypi.org/project/python-docx/) - Version 0.8.11
 
 # Setup
 
+- `pip3 install python-docx`
 - run `pip install -r requirements.txt`
   - this installs all of the required python libraries
 - run `pip install .`
