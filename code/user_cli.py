@@ -3,7 +3,7 @@ import shutil
 import sys
 import concurrent.futures
 import pyfiglet
-from extract_sizes import extract_words, text_to_groupings
+from extract_sizes import extract_from_docx, extract_words, text_to_groupings
 import wordprocessing as wp
 from google_search import get_people_also_ask_links
 from wordcloud import WordCloud
@@ -84,7 +84,14 @@ def generate_wordcloud(data: list, file_name: str) -> None:
 
 if __name__ == "__main__":
     file = user_menu()
-    raw_data = extract_words(file)
+    # Used for testing. Can be removed once luis' code is merged
+    file_type = ".docx"
+
+    if file_type == ".docx":
+        raw_data = extract_from_docx(file)
+    else:
+        raw_data = extract_words(file)
+
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.extract_noun_chunks(raw_data)
     keyword_data = wp.merge_slide_with_same_headers(keyword_data)
@@ -93,12 +100,11 @@ if __name__ == "__main__":
     generate_wordcloud(keyword_data, file)
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
-    search_query = wp.construct_search_query(
-        keyword_data)
+    search_query = wp.construct_search_query(keyword_data)
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         # when testing use searchquery[:10 or less].
         # Still working on better threading to get faster results
-        results = executor.map(get_people_also_ask_links, search_query[:3])
+        results = executor.map(get_people_also_ask_links, search_query)
 
     with open("results.txt", mode="w", encoding="utf-8") as f:
         for result in results:
