@@ -109,7 +109,10 @@ def process_file(filename: str):
         for qa in result:
             question = qa["Question"]
             answer = qa["Answer"]
-            result_object["results"].append({"question": question, "answer": answer})
+            simple_answer = qa["Simple Answer"]
+            result_object["results"].append({"question": question, "answer": answer, "simple_answer": simple_answer})
 
-    with open("./data/results-{}.txt".format(filename), mode="w", encoding="utf-8") as f:
+    filename = filename.split(".")
+
+    with open("./data/results-{}.txt".format(filename[0]), mode="w", encoding="utf-8") as f:
         f.write(json.dumps(result_object))

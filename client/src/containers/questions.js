@@ -45,7 +45,6 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function CustomizedAccordions(props) {
   const [expanded, setExpanded] = React.useState("question0");
   const rows = props.results.results;
-
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -59,8 +58,9 @@ export default function CustomizedAccordions(props) {
           <Typography>{item.question}</Typography>
         </AccordionSummary>
         <AccordionDetails>
-            <Link color="inherit" underline="none" target="_blank" rel="noopener" href={item.answer}>
-                {item.answer}
+            <Typography>{item.simple_answer}</Typography>
+            <Link color="blue" underline="yes" target="_blank" rel="noopener" href={item.answer}>
+                {'Link'}
             </Link>{' '}
         </AccordionDetails>
       </Accordion>
