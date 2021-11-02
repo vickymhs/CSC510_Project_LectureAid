@@ -3,12 +3,14 @@ import shutil
 import sys
 import concurrent.futures
 import pyfiglet
-from extract_sizes import extract_words, text_to_groupings
-import wordprocessing as wp
-from google_search import get_people_also_ask_links
+from server.extract_sizes import extract_words, text_to_groupings
+import server.wordprocessing as wp
+from server.google_search import get_people_also_ask_links
 from wordcloud import WordCloud
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from browser_output import output_formatter, result_display
+from server.browser_output import output_formatter, result_display
 import json
 
 
@@ -84,14 +86,14 @@ def generate_wordcloud(data: list, file_name: str) -> None:
 
 
 def process_file(filename: str):
-    file_path = "../data/{}".format(filename)
+    file_path = "./data/{}".format(filename)
     raw_data = extract_words(file_path)
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.extract_noun_chunks(raw_data)
     keyword_data = wp.merge_slide_with_same_headers(keyword_data)
 
     # generate a wordcloud
-    generate_wordcloud(keyword_data, file_path)
+    #generate_wordcloud(keyword_data, file_path)
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
     search_query = wp.construct_search_query(
@@ -109,5 +111,5 @@ def process_file(filename: str):
             answer = qa["Answer"]
             result_object["results"].append({"question": question, "answer": answer})
 
-    with open("../data/results-{}.txt".format(filename), mode="w", encoding="utf-8") as f:
+    with open("./data/results-{}.txt".format(filename), mode="w", encoding="utf-8") as f:
         f.write(json.dumps(result_object))
