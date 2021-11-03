@@ -125,13 +125,13 @@ class TestExtractSizes(unittest.TestCase):
         test_dict = extract_from_docx(filename)
         assert 'data' in test_dict
 
-    def test_ppt_info(self):
+    def test_docx_info(self):
         """
-        Assert valid powerpoint information
+        Assert valid docx file information
         """
         filename = "./test/data/test_docx_file.docx"
         test_dict = extract_from_docx(filename)
         assert len(test_dict) > 0 
-        
+
 if __name__ == '__main__':
     unittest.main()
