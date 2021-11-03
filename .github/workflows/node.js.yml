@@ -40,7 +40,5 @@ jobs:
       working-directory: 'client'
     - run: npm test
       working-directory: 'client'
-    - name: Run the tests
-      run: npm test -- --coverage
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
