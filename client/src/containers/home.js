@@ -21,7 +21,7 @@ import BookmarkAccordian from './bookmarks.js';
 import {MainListItems, SecondaryListItems} from './listItems';
 import { UploadFile } from './upload';
 
-const result = {
+const initialResults = {
   results: [
     {
       answer: 'https://www.analyticsvidhya.com/blog/2021/08/data-preprocessing-in-data-mining-a-hands-on-guide/#:~:text=Data%20preprocessing%20is%20the%20process,learning%20or%20data%20mining%20algorithms.',
@@ -81,15 +81,6 @@ const result = {
   ]
 }
 
-
-function getResults(filename){
-  let results = {}
-  axios.get('http://127.0.0.1:5000/get-results', {params : {filename : "lecture4"}})
-      .then(res => {
-        results = JSON.parse(res.data);
-      })
-  return results
-}
 
 function Copyright(props) {
   return (
@@ -152,24 +143,11 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const mdTheme = createTheme();
 
-function renderPage(navItem) {
-  if (navItem === "Upload") {
-    return (
-      <UploadFile />
-    );
-  }
-  else if (navItem === "Home") {
-    return (
-      <CustomizedAccordions
-      results = {result} >
-      </CustomizedAccordions>
-    );
-  }
-}
 
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const [selectedNavItem, setNavItem] = React.useState("Home")
+  const [result, setResult] = React.useState(initialResults)
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -179,6 +157,26 @@ function DashboardContent() {
     setNavItem(navItem);
     // console.log("Selected Nav Item " + selectedNavItem);
   };
+
+  const handleResult = (res) => {
+    setResult(res);
+    setNavItem("Home");
+  }
+
+  function renderPage(navItem) {
+    if (navItem === "Upload") {
+      return (
+        <UploadFile getResult= {(res) => handleResult(res)}/>
+      );
+    }
+    else if (navItem === "Home") {
+      return (
+        <CustomizedAccordions
+        results = {result} >
+        </CustomizedAccordions>
+      );
+    }
+  }
 
   return (
     <ThemeProvider theme={mdTheme}>
