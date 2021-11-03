@@ -2,6 +2,7 @@ import * as React from 'react';
 import axios from 'axios';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import LoadingButton from '@mui/lab/LoadingButton';
 
 
 export const UploadFile = (props) => {
@@ -11,16 +12,32 @@ export const UploadFile = (props) => {
 		setFile(event.target.files[0])
 	}
 
-	React.useEffect(() => {
-		if (file) {
-			// console.log("You clicked file name" + file.name);
+	const [button, setButton] = React.useState("Upload")
+
+	// React.useEffect(() => {
+	// 	if (file) {
+	// 		// console.log("You clicked file name" + file.name);
+	// 	}
+	// }, [file]);
+
+	async function getResults(name){
+		let response = await axios.get('http://127.0.0.1:5000/get-results', {params : {filename : name.split(".")[0]}});
+		// const results = await JSON.stringify(response);
+		while (response.data == 404) {
+			response = await axios.get('http://127.0.0.1:5000/get-results', {params : {filename : name.split(".")[0]}});	
 		}
-	}, [file]);
+		setButton("Upload")
+		console.log("Results are " + JSON.stringify(response.data));
+		props.getResult(response.data)
+
+		return response
+	  }
 
 	const handleSubmission = () => {
 		if (file === undefined) {
 			return;
 		}
+		setButton("Loading")
 		// Create an object of formData
 		const formData = new FormData();
     
@@ -35,7 +52,13 @@ export const UploadFile = (props) => {
 	
 		// Request made to the backend api
 		// Send formData object
-		axios.post("http://127.0.0.1:5000/file-upload", formData);
+		axios.post("http://127.0.0.1:5000/file-upload", formData)
+		.then(response => {response.data === 200 && getResults(file.name);
+		})
+        .catch(error => {
+            this.setState({ errorMessage: error.message });
+            console.error('There was an error!', error);
+		});
 	};
 
 	return (
@@ -56,17 +79,21 @@ export const UploadFile = (props) => {
 				</Button>
 			</label>
 			<br/>
-			{/* <LoadingButton loading variant="outlined">
-        Submit
-      </LoadingButton> */}
-			<Button
+			{
+				button === "Upload" ? 
+				<Button
 					size="medium"
 					variant="contained"
 					color="primary"
 					onClick={handleSubmission}
 					>
 					Upload
-			</Button>
+				</Button> :
+				<LoadingButton loading variant="outlined">
+        			Submit
+      			</LoadingButton> 
+				}
+			
 		</Stack>
 		{
 			(file !== undefined) ? 
