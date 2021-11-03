@@ -5,8 +5,8 @@ Unit tests for extract sizes
 """
 import json
 import unittest
-from server.extract_sizes import (get_sizes, tag_text, text_to_groupings)
-
+from server.extract_sizes import (get_sizes, tag_text, text_to_groupings, extract_from_docx)
+import docx
 
 
 class TestExtractSizes(unittest.TestCase):
@@ -108,6 +108,14 @@ class TestExtractSizes(unittest.TestCase):
             self.assertEqual(page1, actual_dict[1], f'Expected Page 1 to be {page1}')
             self.assertEqual(page2, actual_dict[2], f'Expected Page 2 to be {page2}')
             self.assertEqual([page0, page1, page2], actual_dict)
+    
+    def test_docx_file_name(self):
+        """
+        Checks for valid word document file name
+        """
+        filename = "randomFileName"
+        test_dict = extract_from_docx(filename)
+        assert test_dict == None
 
 
 if __name__ == '__main__':
