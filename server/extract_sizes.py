@@ -36,7 +36,7 @@ def ppt(file: str)->dict:
                 for run in paragraph.runs:
                     page_data["blocks"].append({"text":run.text, "size": len(run.text)})
         doc_data["data"].append(page_data)
-  
+
     return doc_data
 
 
