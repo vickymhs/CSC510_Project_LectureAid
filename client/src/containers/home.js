@@ -18,7 +18,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import CustomizedAccordions from './questions';
 import BookmarkAccordian from './bookmarks.js';
-import {mainListItems, secondaryListItems } from './listItems';
+import UploadFile from './uploadFile'
+import { MainListItems, secondaryListItems } from './listItems';
 
 const result = {
   results: [
@@ -154,9 +155,29 @@ const mdTheme = createTheme();
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
 
+  const [selectedMenu, setSelectedMenu] = React.useState('home')
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  const changeContent = () => {
+    if(selectedMenu == 'home'){
+      return (<CustomizedAccordions
+        // results = {getResults("lecture4")}
+        results = {result}
+        >
+          
+        </CustomizedAccordions>)
+    }else if(selectedMenu == 'upload'){
+      return (<UploadFile></UploadFile>)
+    }else{
+      return (<div></div>)
+    }
+  }
+
+  const handleMenuSelection= (value) => {
+    setSelectedMenu(value)
+  }
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -206,7 +227,9 @@ function DashboardContent() {
             </IconButton>
           </Toolbar>
           <Divider />
-          <List>{mainListItems}</List>
+          <List>
+            <MainListItems getSelectedMenuItem = {handleMenuSelection}/>
+          </List>
           <Divider />
           <List>{secondaryListItems}</List>
         </Drawer>
@@ -228,11 +251,14 @@ function DashboardContent() {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <CustomizedAccordions
-                  //results = {getResults("lecture4")}
+                  {/* <CustomizedAccordions
+                  // results = {getResults("lecture4")}
                   results = {result}
                   >
-                  </CustomizedAccordions>
+                    
+                  </CustomizedAccordions> */}
+                  {changeContent()}
+                  {/* {onHandleChange('home')} */}
                 </Paper>
               </Grid>
             </Grid>
