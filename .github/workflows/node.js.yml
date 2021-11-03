@@ -42,4 +42,5 @@ jobs:
       working-directory: 'client'
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
-      token: ${{ secrets.CODECOV_TOKEN }}
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
