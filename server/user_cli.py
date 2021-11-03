@@ -1,14 +1,18 @@
 """ user_cli.py """
 import shutil
 import sys
+import os
 import concurrent.futures
 import pyfiglet
-from extract_sizes import extract_from_docx, extract_words, text_to_groupings
-import wordprocessing as wp
-from google_search import get_people_also_ask_links
+from server.extract_sizes import ppt, extract_words, text_to_groupings, extract_from_docx
+import server.wordprocessing as wp
+from server.google_search import get_people_also_ask_links
 from wordcloud import WordCloud
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from browser_output import output_formatter, result_display
+# from server.browser_output import output_formatter, result_display
+import json
 
 
 def user_menu():
@@ -38,7 +42,8 @@ def user_menu():
 
     if choice == valid_choices[0]:
         file_path = input("Please enter the path to the file: ")
-        return file_path
+        file_type = os.path.splitext(file_path)[1]
+        return file_path, file_type
 
     if choice == valid_choices[1]:
         input("")
@@ -82,22 +87,37 @@ def generate_wordcloud(data: list, file_name: str) -> None:
     plt.savefig(f'{formatted_name}.png')
 
 
-if __name__ == "__main__":
-    file = user_menu()
-    # Used for testing. Can be removed once luis' code is merged
-    file_type = ".docx"
+def process_file(file_name: str, file_type: str):
+    """
+    Given filename and filetype of a document, process the file to find questions and related links.
 
-    if file_type == ".docx":
-        raw_data = extract_from_docx(file)
-    else:
-        raw_data = extract_words(file)
+    :param file_name: The name of the lecture document
+    :type: str
+    :param file_type: The type of the file
+    :type: str
+    :rtype: None
+    :return: None
+    """
 
+    file_path = "./data/{}".format(file_name)
+    raw_data = []
+    # for powerpoint input
+    if file_type == "pptx":
+        raw_data = ppt(file_path)
+
+    # for pdf input
+    if file_type == "pdf":
+        raw_data = extract_words(file_path)
+    
+    if (file_type == "docx" or file_type == "doc"):
+        raw_data = extract_from_docx(file_path)
+    
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.extract_noun_chunks(raw_data)
     keyword_data = wp.merge_slide_with_same_headers(keyword_data)
 
     # generate a wordcloud
-    generate_wordcloud(keyword_data, file)
+    #generate_wordcloud(keyword_data, file_path)
 
     keyword_data = wp.duplicate_word_removal(keyword_data)
     search_query = wp.construct_search_query(keyword_data)
@@ -106,16 +126,15 @@ if __name__ == "__main__":
         # Still working on better threading to get faster results
         results = executor.map(get_people_also_ask_links, search_query)
 
-    with open("results.txt", mode="w", encoding="utf-8") as f:
-        for result in results:
-            for qa in result:
-                question = qa["Question"] + "\n"
-                f.write(f"Question: {question}")
-                answer = qa["Answer"] + "\n"
-                f.write(f"Answer Link: {answer}")
-            f.write("\n\n")
+    result_object = {"results": []}
 
-    content = output_formatter()
-    name = file.split("/")[-1].replace(".pdf", "")
-    wordcloud_filename = name + ".png"
-    result_display(content, wordcloud_filename)
+    for result in results:
+        for qa in result:
+            question = qa["Question"]
+            answer = qa["Answer"]
+            simple_answer = qa["Simple Answer"]
+            result_object["results"].append({"question": question, "answer": answer, "simple_answer": simple_answer})
+
+    filename = file_name.split(".")
+    with open("./data/results-{}.txt".format(filename[0]), mode="w", encoding="utf-8") as f:
+        f.write(json.dumps(result_object))

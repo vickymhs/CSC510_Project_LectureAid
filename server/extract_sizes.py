@@ -7,6 +7,7 @@ of headers and paragraphs
 
 import re
 import fitz
+from pptx import Presentation
 import os
 import docx
 
@@ -20,11 +21,10 @@ def extract_from_docx(file: str) -> dict:
     """
     doc = docx.Document(file)
     fullText = []
-
     doc_data = {}
     doc_data["data"] = []
     index=0
-
+    
     # To read paragraphs
     page_data = {}
     page_data["blocks"] = []
@@ -45,6 +45,37 @@ def extract_from_docx(file: str) -> dict:
                 if(len(cell.text) > 0):
                     page_data["blocks"].append({"text":cell.text, "size": len(cell.text)})
             doc_data["data"].append(page_data)
+
+    return doc_data
+
+
+def ppt(file: str)->dict:
+    """
+    Given a filename, opens the Powerpoint and extracts words and metadata from each slide.
+
+    :param file: String representing file path
+    :type: string
+    :rtype: dict
+    :return: dictionary representing document metadata and words extracted from each slide
+    """
+
+    prs=Presentation(file)
+    doc_data = {}
+    doc_data["data"] = []
+    index=0
+    
+    for slide in prs.slides:
+
+        for shape in slide.shapes:
+            page_data = {}
+            page_data["blocks"] = []
+            page_data["slide"] = index+1
+            if not shape.has_text_frame:
+                continue
+            for paragraph in shape.text_frame.paragraphs:
+                for run in paragraph.runs:
+                    page_data["blocks"].append({"text":run.text, "size": len(run.text)})
+        doc_data["data"].append(page_data)
 
     return doc_data
 

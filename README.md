@@ -46,7 +46,25 @@ https://pypi.org/project/people-also-ask/
 
 # Setup
 
-- `pip3 install python-docx`
+## Setup for MacOS M1 BigSur and higher versions
+A few of the libraries are not extensively supported for the latest MacOS M1 arm64 processor as the open source communities are yet to release an automatic installation of build dependencies for these packages. Below are the steps mentioned to setup this project for MacOS
+
+- Use the below command to cross check the version of the processor. 
+  - `uname-m`
+- Keep the **python version 3.8** or below for creating the virtual environment.
+  - `python3.8 -m venv <environment_name>`
+- Activate the environment
+  - `source <environment_name>/bin/activate`
+- After the virtual environment is setup, install all the dependencies one after another.
+  - `pip3 install pyfiglet`
+  - `pip3 install pymupdf`
+  - `pip3 install spacy`
+  - `pip3 install people_also_ask`
+  - `pip3 install wordcloud`
+  - `python3 -m spacy download en_core_web_lg `
+  - `pip3 install python-docx`
+
+## For other OS  
 - run `pip install -r requirements.txt`
   - this installs all of the required python libraries
 - run `pip install .`
