@@ -43,6 +43,8 @@ https://pypi.org/project/people-also-ask/
 - [wordcloud](https://pypi.org/project/wordcloud/) - Version 1.8.1
 - [matplotlib](https://matplotlib.org/) - Version 3.4.3
 - [python-docx](https://pypi.org/project/python-docx/) - Version 0.8.11
+- [python-pptx](https://python-pptx.readthedocs.io/en/latest/) - Version 0.6.21
+- [flask](https://pypi.org/project/Flask/) - Version 2.0.2
 
 # Setup
 
@@ -63,6 +65,8 @@ A few of the libraries are not extensively supported for the latest MacOS M1 arm
   - `pip3 install wordcloud`
   - `python3 -m spacy download en_core_web_lg `
   - `pip3 install python-docx`
+  - `pip3 install python-pptx`
+  - `pip3 install flask`
 
 ## For other OS  
 - run `pip install -r requirements.txt`
