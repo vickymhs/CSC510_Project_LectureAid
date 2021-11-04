@@ -1,5 +1,6 @@
 ## Contributing
 First of all thank you very much for showing interest in LectureAid and reaching the contribution page. We do believe that the more the merrier. You are most welcome to suggest improvements and contribute to the project. Here are a few things to keep in mind before sending in a pull request:
+
 * When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository.
 * There must be a really good reason to change the existing code. We would like to avoid breaking previous code as much as possible.
 * If you are adding a new feature, please let us know the use case and the rationale behind how you did it (unless it's obvious)
