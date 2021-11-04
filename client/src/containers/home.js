@@ -214,7 +214,7 @@ function DashboardContent() {
 
 /**
  * Starting point of code which renders the main home page
- * @returns
+ * @returns {*} HTML layout for home page
  */
 export default function Dashboard() {
   return <DashboardContent />;

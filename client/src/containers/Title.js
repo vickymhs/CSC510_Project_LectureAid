@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 /**
  * Renders the title of the webpage
  * @param {*} props 
- * @returns 
+ * @returns {Object} HTML layout for title
  */
 function Title(props) {
   return (

@@ -8,21 +8,6 @@ import { makeStyles } from "@mui/styles";
 import { keys } from "@mui/system";
 
 /**
- * Defines the CSS style eleements for bookmark icons
- * @returns
- */
-function iconStyles() {
-  return {
-    bookmarkedIcon: {
-      color: "dodgerblue"
-    },
-    unBookmarkedIcon: {
-      color: "grey"
-    }
-  };
-}
-
-/**
  * Renders the customised accordian for the questions fetched from the server for the page
  * @param {*} props contains the data passed on from the parent component
  * @returns {Object} HTML content for the accordians
@@ -33,6 +18,21 @@ export default function CustomizedAccordions(props) {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  /**
+   * Defines the CSS style elements for bookmark icons
+   * @returns {*} JSON data containing the style elements
+   */
+  const iconStyles = () => {
+    return {
+      bookmarkedIcon: {
+        color: "dodgerblue"
+      },
+      unBookmarkedIcon: {
+        color: "grey"
+      }
+    };
+  }
 
   /**
    * Verfifies if a specific item has been bookmarked

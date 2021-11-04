@@ -4,15 +4,6 @@ import Typography from "@mui/material/Typography";
 import { Accordion, AccordionSummary, AccordionDetails } from "./commons";
 
 /**
- * Fetches cache data from chrome storage
- * @returns {Object} contains information about the cached items  
- */
-function getBookmarksFromLocalStorage() {
-  let linksInStorage = JSON.parse(localStorage.getItem("links"));
-  return linksInStorage;
-}
-
-/**
  * Constructs the react components for the bookmarks page by fetching the locally stored cache and iterating over each item
  * @returns {Components} HTML for constructing the layout of the bookmarks
  */
@@ -22,9 +13,20 @@ export default function BookmarkAccordian() {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-  
+
+
+  /**
+   * Fetches cache data from chrome storage
+   * @returns {Object} contains information about the cached items
+   */
+  const getBookmarksFromLocalStorage = () => {
+    let linksInStorage = JSON.parse(localStorage.getItem("links"));
+    return linksInStorage;
+  }
+
+
   let keys = []
-  if(rows)
+  if (rows)
     keys = Object.keys(rows)
 
   return (
