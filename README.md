@@ -73,6 +73,10 @@ https://spacy.io/api/doc
 6. Returning the questions with the relevant links was done with the help of people_also_ask library. Documentation can be seen here:
 https://pypi.org/project/people-also-ask/
 
+## The interesting UI part
+1. It is a React application. Documentation can be accessible here https://reactjs.org/docs/getting-started.html
+2. Material UI is way to go. https://mui.com/getting-started/installation/
+
 # Requirements
 - Python (atleast 3.8) and pip
 - [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
