@@ -1,5 +1,5 @@
 import * as React from "react";
-import axios from "axios"; 
+import axios from "axios";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
@@ -18,7 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import CustomizedAccordions from "./questions";
 import BookmarkAccordian from "./bookmarks.js";
-import {MainListItems} from "./listItems";
+import { MainListItems } from "./listItems";
 import { UploadFile } from "./upload";
 
 function Copyright(props) {
@@ -40,55 +40,51 @@ const drawerWidth = 240;
  * Defines the CSS style elements to use for the Navigational app bar
  */
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== "open",
+  shouldForwardProp: (prop) => prop !== "open"
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(["width", "margin"], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+    duration: theme.transitions.duration.leavingScreen
   }),
   ...(open && {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
+      duration: theme.transitions.duration.enteringScreen
+    })
+  })
 }));
-
 
 /**
  * Defines the style elements to use for the Drawer
  */
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" })(
-  ({ theme, open }) => ({
-    "& .MuiDrawer-paper": {
-      position: "relative",
-      whiteSpace: "nowrap",
-      width: drawerWidth,
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" })(({ theme, open }) => ({
+  "& .MuiDrawer-paper": {
+    position: "relative",
+    whiteSpace: "nowrap",
+    width: drawerWidth,
+    transition: theme.transitions.create("width", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen
+    }),
+    boxSizing: "border-box",
+    ...(!open && {
+      overflowX: "hidden",
       transition: theme.transitions.create("width", {
         easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
+        duration: theme.transitions.duration.leavingScreen
       }),
-      boxSizing: "border-box",
-      ...(!open && {
-        overflowX: "hidden",
-        transition: theme.transitions.create("width", {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up("sm")]: {
-          width: theme.spacing(9),
-        },
-      }),
-    },
-  }),
-);
+      width: theme.spacing(7),
+      [theme.breakpoints.up("sm")]: {
+        width: theme.spacing(9)
+      }
+    })
+  }
+}));
 
 const mdTheme = createTheme();
-
 
 /**
  * Renders the HTML layout for the main home page of LectureAid. Uses material UI components - AppBar, ToolBar, Accordians, ListItems
@@ -96,13 +92,12 @@ const mdTheme = createTheme();
  */
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
-  const [selectedNavItem, setNavItem] = React.useState("Upload")
-  const [result, setResult] = React.useState("{[]}")
+  const [selectedNavItem, setNavItem] = React.useState("Upload");
+  const [result, setResult] = React.useState("{[]}");
 
   const toggleDrawer = () => {
     setOpen(!open);
   };
-
 
   const navListHandler = (navItem) => {
     setNavItem(navItem);
@@ -112,40 +107,35 @@ function DashboardContent() {
   const handleResult = (res) => {
     setResult(res);
     setNavItem("Home");
-  }
+  };
 
   function renderPage(navItem) {
     if (navItem === "Upload") {
-      return (
-        <UploadFile getResult= {(res) => handleResult(res)}/>
-      );
-    }
-    else if (navItem === "Home") {
-      if(result == "{[]}"){
-        return (<div><p> Upload a file to see the results </p></div>)
-      }
-      else{
+      return <UploadFile getResult={(res) => handleResult(res)} />;
+    } else if (navItem === "Home") {
+      if (result == "{[]}") {
         return (
-          <CustomizedAccordions
-          results = {result} >
-          </CustomizedAccordions>
+          <div>
+            <p> Upload a file to see the results </p>
+          </div>
         );
+      } else {
+        return <CustomizedAccordions results={result}></CustomizedAccordions>;
       }
-    }
-    else if (navItem === "Bookmarks") {
+    } else if (navItem === "Bookmarks") {
+      return <BookmarkAccordian></BookmarkAccordian>;
+    } else if (navItem === "History") {
       return (
-        <BookmarkAccordian>
-        </BookmarkAccordian>
+        <div>
+          {" "}
+          <Typography> Stay tuned for this feature in the next release! </Typography>
+        </div>
       );
-    }
-    else if (navItem === "History") {
+    } else if (navItem === "Online Search") {
       return (
-      <div> <Typography> Stay tuned for this feature in the next release! </Typography></div>
-      );
-    }
-    else if (navItem === "Online Search") {
-      return (
-      <div><Typography>Stay tuned for this feature in the next release! </Typography> </div>      
+        <div>
+          <Typography>Stay tuned for this feature in the next release! </Typography>{" "}
+        </div>
       );
     }
   }
@@ -157,7 +147,7 @@ function DashboardContent() {
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
-              pr: "24px",
+              pr: "24px"
             }}
           >
             <IconButton
@@ -167,18 +157,12 @@ function DashboardContent() {
               onClick={toggleDrawer}
               sx={{
                 marginRight: "36px",
-                ...(open && { display: "none" }),
+                ...(open && { display: "none" })
               }}
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
+            <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
               Lecture Aid
             </Typography>
           </Toolbar>
@@ -190,7 +174,7 @@ function DashboardContent() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
-              px: [1],
+              px: [1]
             }}
           >
             <IconButton onClick={toggleDrawer}>
@@ -207,24 +191,17 @@ function DashboardContent() {
           component="main"
           sx={{
             backgroundColor: (theme) =>
-              theme.palette.mode === "light"
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+              theme.palette.mode === "light" ? theme.palette.grey[100] : theme.palette.grey[900],
             flexGrow: 1,
             height: "100vh",
-            overflow: "auto",
+            overflow: "auto"
           }}
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                  {
-                    renderPage(selectedNavItem)
-                  }
-
-                </Paper>
+                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>{renderPage(selectedNavItem)}</Paper>
               </Grid>
             </Grid>
             {/* <Copyright sx={{ pt: 4 }} /> */}
@@ -237,10 +214,8 @@ function DashboardContent() {
 
 /**
  * Starting point of code which renders the main home page
- * @returns 
+ * @returns
  */
 export default function Dashboard() {
   return <DashboardContent />;
 }
-
-
