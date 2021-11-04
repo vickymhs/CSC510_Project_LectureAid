@@ -147,7 +147,7 @@ User uploads the lecture pdf, word doc or powerpoint through the GUI, LectureAid
 # Documentation
 
 More documentation can be viewed here:
-https://mtkumar123.github.io/CSC510_Project_LectureAid/
+https://ncsu-group7-se2021.github.io/CSC510_Project_LectureAid/
 
 # Troubleshooting
 - When running the code/tests, I'm getting a `no such module named code` error?
