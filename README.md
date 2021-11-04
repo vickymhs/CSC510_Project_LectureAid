@@ -138,11 +138,19 @@ Assuming the system already has NodeJS and NPM
 User uploads the lecture pdf, word doc or powerpoint through the GUI, LectureAid process the files and displays relevant results in questions and answers format. The user can bookmark the required questions which will be stored in google chrome cache and the user can view the bookmarked questions in the bookmark tab.
 
 - *Step 1*: Run the server side - flask: (`python app.py`)
-- *Step 2*: Run the client side - react : (`npm start run`)
-- *Step 3*: Browser window displaying the upload button where the user can upload the file.
-- *Step 4*: Client processes the file and displays the question and answer. 
-- *Step 5*: User can bookmark the required questions. 
-- *Step 6*: User can view the bookmarked questions on the bookmarks tab. 
+- *Step 2*: Run the client side - react : (`npm run start`)
+- *Step 3*: Open the browser and go to http://localhost:3000/. You will see a home page like this
+![Homepage image](./assets/homepage.png)
+- *Step 4*: Choose a file and upload it.
+![File upload](./assets/filedetails.png)
+- *Step 5*: Client processes the file and displays the questions and answers. 
+![File upload](./assets/results.png)
+- *Step 5*: User can bookmark the required questions by clicking on the bookmark icon.
+- *Step 6*: User can view the bookmarked questions on the bookmarks tab. /
+![File upload](./assets/bookmark.png)
+
+### How it works in a nutshell
+![Working GIF](./assets/LectureAidPhase2.gif)
 
 # Documentation
 
