@@ -39,33 +39,38 @@ The updated release of this project provides with some super cool features to im
 Here are the list of featuers we have included:
 
 1. Extended the processing support to different filetypes:
-   1. Word Document
-   2. Powerpoint Presentation
-   3. Text Files
-   4. Markdown Files
+   1. Word Document (.doc, .docx)
+   2. Powerpoint Presentation (.pptx)
+   3. Text Files (.txt)
+   4. Markdown Files (.md)
 
 2. Extract answers from the crawled websites and provide a brief overview of the answers. Include the link to read further.
 
-3. An interactive UI to help user learn better and in a more appealing way. 
-4. Instead of uploading files through command line instructions, an interactive UI based application is used to upload files. The web browser displays more related textual content from the input file along with the suitable questions and answers to provide more contextual detailing. Multiple file types like Microsoft Powerpoint (.pptx), Microsoft Word (.doc, .docx), text file (.txt) and markdown files (.md) are supported in the current version. Apart from plain text content, textual orientation in the tables and annotations are also parsed to get very detailed insight about the lecture content. Finally minor improvements are made for better text processing to suggest more closely related questions and answers.
+3. An interactive User Interface to help user learn better and in a more appealing way. 
+4. Capability to upload file through the UI
+5. Adding a bookmark feature to have important questions handy.
+6. Minor improvements in processing data, getting related questions and answers.
+
+[comment]: <> (7. Instead of uploading files through command line instructions, an interactive UI based application is used to upload files. The web browser displays more related textual content from the input file along with the suitable questions and answers to provide more contextual detailing. Multiple file types like Microsoft Powerpoint &#40;.pptx&#41;, Microsoft Word &#40;.doc, .docx&#41;, text file &#40;.txt&#41; and markdown files &#40;.md&#41; are supported in the current version. Apart from plain text content, textual orientation in the tables and annotations are also parsed to get very detailed insight about the lecture content. Finally minor improvements are made for better text processing to suggest more closely related questions and answers.)
 
 # Technologies Used
 
-Text Extraction from pdfs was done with the help of PyMuPDF. Documentation can be viewed here:
+## The usual backend story
+1. Text Extraction from pdfs was done with the help of PyMuPDF. Documentation can be viewed here:
 https://pymupdf.readthedocs.io/en/latest/
 
-Text Extraction from word documents (docx) was done with the help of python-docx. Documentation can be viewed here:
+2. Text Extraction from word documents (docx) was done with the help of python-docx. Documentation can be viewed here:
 https://python-docx.readthedocs.io/en/latest/
 
-Text Extraction from powerpoint presentation (pptx) was done with the help of python-pptx. Documentation can be viewed here:
+3. Text Extraction from powerpoint presentation (pptx) was done with the help of python-pptx. Documentation can be viewed here:
 https://python-pptx.readthedocs.io/en/latest/
 
-Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
+4. Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
 https://spacy.io/api/doc
 
-Text extraction for powerpoint files was done with the packaga python-pptx. Documentation can be viewed here: https://python-pptx.readthedocs.io/en/latest/index.html
+5. Text extraction for powerpoint files was done with the packaga python-pptx. Documentation can be viewed here: https://python-pptx.readthedocs.io/en/latest/index.html
 
-Returning the questions with the relevant links was done with the help of people_also_ask library. Documentation can be seen here:
+6. Returning the questions with the relevant links was done with the help of people_also_ask library. Documentation can be seen here:
 https://pypi.org/project/people-also-ask/
 
 # Requirements
