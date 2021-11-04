@@ -9,11 +9,6 @@ import { Accordion, AccordionSummary, AccordionDetails } from "./commons";
  */
 export default function BookmarkAccordian() {
   const [expanded, setExpanded] = React.useState("bookmark0");
-  const rows = getBookmarksFromLocalStorage();
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
 
   /**
    * Fetches cache data from chrome storage
@@ -24,6 +19,10 @@ export default function BookmarkAccordian() {
     return linksInStorage;
   }
 
+  const rows = getBookmarksFromLocalStorage();
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   let keys = []
   if (rows)
