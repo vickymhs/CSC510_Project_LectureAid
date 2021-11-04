@@ -8,7 +8,6 @@ of headers and paragraphs
 import re
 import fitz
 from pptx import Presentation
-import os
 import docx
 
 def extract_from_txt(file: str)->dict:
@@ -23,7 +22,7 @@ def extract_from_txt(file: str)->dict:
     doc_data["data"] = []
     index=0
 
-    with open(file, 'r') as f:
+    with open(file, 'r', encoding="utf-8") as f:
         lines = f.readlines()
     page_data = {}
     page_data["slide"] = index+1
@@ -45,7 +44,6 @@ def extract_from_docx(file: str) -> dict:
     :return: dictionary representing document metadata and words extracted from each page
     """
     doc = docx.Document(file)
-    fullText = []
     doc_data = {}
     doc_data["data"] = []
     index=0
