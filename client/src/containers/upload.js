@@ -3,7 +3,7 @@ import axios from "axios";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import LoadingButton from "@mui/lab/LoadingButton";
-
+import Typography from "@mui/material/Typography";
 
 export const UploadFile = (props) => {
 
@@ -63,7 +63,8 @@ export const UploadFile = (props) => {
 
 	return (
 		<div>
-		<h3> Upload a file!</h3>
+		<Typography> Upload a file!</Typography>
+		<p></p>
 		<Stack direction="row" alignItems="center" spacing={2}>
 			<label>
 				<input

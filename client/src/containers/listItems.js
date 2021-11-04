@@ -19,35 +19,35 @@ import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 export const MainListItems = (props) => {
   return (
   <div>
+    <ListItem button={true} onClick={() => props.clickHandler("Upload")}>
+      <ListItemIcon>
+        <FileUploadIcon />
+      </ListItemIcon>
+      <ListItemText primary="Upload" />
+    </ListItem >
     <ListItem button={true} onClick={() => props.clickHandler("Home")}>
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
-    <ListItem button={true} onClick={() => props.clickHandler("Upload")}>
-      <ListItemIcon>
-        <FileUploadIcon />
-      </ListItemIcon>
-      <ListItemText primary="Upload" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <HistoryIcon />
-      </ListItemIcon>
-      <ListItemText primary="History" />
-    </ListItem>
-    <ListItem button>
+    <ListItem button={true} onClick={() => props.clickHandler("Bookmarks")}>
       <ListItemIcon>
         <BookmarkIcon />
       </ListItemIcon>
       <ListItemText primary="Bookmarks" />
     </ListItem>
-    <ListItem button>
+    <ListItem button={true} onClick={() => props.clickHandler("Online Search")}>
       <ListItemIcon>
         <ScreenSearchDesktopIcon />
       </ListItemIcon>
       <ListItemText primary="Online Search" />
+    </ListItem>
+    <ListItem button={true} onClick={() => props.clickHandler("History")}>
+      <ListItemIcon>
+        <HistoryIcon />
+      </ListItemIcon>
+      <ListItemText primary="History" />
     </ListItem>
   </div>
 
