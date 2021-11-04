@@ -1,8 +1,8 @@
-import * as React from 'react';
-import axios from 'axios';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import LoadingButton from '@mui/lab/LoadingButton';
+import * as React from "react";
+import axios from "axios";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import LoadingButton from "@mui/lab/LoadingButton";
 
 
 export const UploadFile = (props) => {
@@ -21,10 +21,10 @@ export const UploadFile = (props) => {
 	// }, [file]);
 
 	async function getResults(name){
-		let response = await axios.get('http://127.0.0.1:5000/get-results', {params : {filename : name.split(".")[0]}});
+		let response = await axios.get("http://127.0.0.1:5000/get-results", {params : {filename : name.split(".")[0]}});
 		// const results = await JSON.stringify(response);
 		while (response.data == 404) {
-			response = await axios.get('http://127.0.0.1:5000/get-results', {params : {filename : name.split(".")[0]}});	
+			response = await axios.get("http://127.0.0.1:5000/get-results", {params : {filename : name.split(".")[0]}});	
 		}
 		setButton("Upload")
 		console.log("Results are " + JSON.stringify(response.data));
@@ -57,7 +57,7 @@ export const UploadFile = (props) => {
 		})
         .catch(error => {
             this.setState({ errorMessage: error.message });
-            console.error('There was an error!', error);
+            console.error("There was an error!", error);
 		});
 	};
 
@@ -67,7 +67,7 @@ export const UploadFile = (props) => {
 		<Stack direction="row" alignItems="center" spacing={2}>
 			<label>
 				<input
-					style={{ display: 'none' }}
+					style={{ display: "none" }}
 					type="file"
 					onChange={selectFile} />
 				<Button
@@ -102,7 +102,7 @@ export const UploadFile = (props) => {
 			<p>Filetype: {file.type}</p>
 			<p>Size in bytes: {file.size}</p>
 			<p>
-			lastModifiedDate:{' '}
+			lastModifiedDate:{" "}
 			{file.lastModifiedDate.toLocaleDateString()}
 			</p>
 			</div>) : 
