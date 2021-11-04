@@ -1,6 +1,6 @@
 |Score|Notes| Self Assesment | Evidence|
 |-|-----|---------|---------|
-|.5| short release cycles| 0.5 | pending --- release tag needed |
+|.5| short release cycles| 0.5 | https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/releases/tag/v2.0.0 |
 |.5| workload is spread over the whole team (so one team member is often Xtimes more productive than the others...|0.33| https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/pulse |
 |.5|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing | 0.5 | Pending |
 |.5|the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up  |0.5 | https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/blob/main/CONTRIBUTING.md |
