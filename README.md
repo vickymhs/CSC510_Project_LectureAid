@@ -23,9 +23,7 @@ After a long class, ever had to come back home and google everything you suppose
 
 Project LectureAid hopes to solve that hassle for you. 
 
-## Phase 1 Feature update
-
-Upload your lecture pdf to our user based terminal menu, and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
+Upload your lecture pdf, word doc or powerpoint to our user based terminal menu, and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
 
 ## Phase 2 Feature update
 
@@ -44,6 +42,8 @@ https://python-pptx.readthedocs.io/en/latest/
 
 Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
 https://spacy.io/api/doc
+
+Text extraction for powerpoint files was done with the packaga python-pptx. Documentation can be viewed here: https://python-pptx.readthedocs.io/en/latest/index.html
 
 Returning the questions with the relevant links was done with the help of people_also_ask library. Documentation can be seen here:
 https://pypi.org/project/people-also-ask/
@@ -94,13 +94,13 @@ A few of the libraries are not extensively supported for the latest MacOS M1 arm
 
 # How to run
 
-User uploads the lecture pdf through the terminal menu, LectureAid process the pdf and provides relevant results in questions and answers format through a browser window.
+User uploads the lecture pdf, word doc or powerpoint through the terminal menu, LectureAid process the files and provides relevant results in questions and answers format through a browser window.
 
 - Step 1: User Terminal Menu: (`python code/user_cli.py`)
 
 ![1](https://user-images.githubusercontent.com/89501363/135198847-bf568a48-fa0b-4bfc-9e83-1b793b07d800.PNG)
 
-- Step 2: Press 1 to enter a pdf. Enter the path of the PDF to be uploaded, ( Upload any lecture PDF with relevant contents )
+- Step 2: Press 1 to enter a pdf, word doc or powerpoint. Enter the path of the PDF, WordDoc or PowerPoint to be uploaded, ( Upload any lecture PDF, word doc or powerpoint with relevant contents )
 
 ![2](https://user-images.githubusercontent.com/89501363/135198927-2fb98b67-4de8-460f-9f25-100d65dfa310.PNG)
 
@@ -128,7 +128,7 @@ https://mtkumar123.github.io/CSC510_Project_LectureAid/
   Our project is currently using a command line interface to get input, and output a .html file. A roadmap item would be to implement a website   instead. This way the user would open up the LectureAid website, be able to add a file to the website, and click a button to process the file. Then, the website would display the results (wordcloud and question and answers). This will make it easier for users to use the project, without having to download/execute code locally.
   
 - #### Support for additional file types
-  Currently the project supports only PDF format for the uploaded files. In future other formats such as .ppt, .doc should be supported
+  Currently the project supports PDF, WordDoc, and PowerPoint formats for the uploaded files. In future other formats such as .ppt, .doc should be supported
  
 - #### Increase the concurrency efficiency
   Currently, we are using the maximum number of threads (10) for running search queries, but could still be room for improvement using other multithreading/multiprocessing tools.

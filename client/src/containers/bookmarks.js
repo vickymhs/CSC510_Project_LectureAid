@@ -3,25 +3,34 @@ import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { Accordion, AccordionSummary, AccordionDetails } from "./commons";
 
-function getRatingsFromLocalStorage() {
+function getBookmarksFromLocalStorage() {
   let linksInStorage = JSON.parse(localStorage.getItem("links"));
   return linksInStorage;
 }
 
 export default function BookmarkAccordian() {
   const [expanded, setExpanded] = React.useState("bookmark0");
-  const rows = getRatingsFromLocalStorage();
+  const rows = getBookmarksFromLocalStorage();
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-  let keys = Object.keys(rows);
+  
+  let keys = []
+  if(rows)
+    keys = Object.keys(rows)
 
   return (
     <div>
       {keys.map((item, index) => (
         <Accordion key={"bookmark" + index}>
           <AccordionSummary aria-controls={"bookmark" + index + "-content"} id={"bookmark" + index + "-header"}>
-            <Typography>{rows[item].question}</Typography>
+            <Typography
+              style={{
+                marginRight: "auto"
+              }}
+            >
+              {rows[item].question}
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>{rows[item].simple_answer}</Typography>

@@ -5,12 +5,36 @@ of headers and paragraphs
 
 """
 
-import re
+import re, os
 import fitz
 from pptx import Presentation
-import os
 import docx
 
+def extract_from_txt(file: str)->dict:
+    """
+    Given a filename, opens the txt file and extracts words and metadata from the file.
+    :param file: String representing file path
+    :type: string
+    :rtype: dict
+    :return: dictionary representing document metadata and words extracted from file
+    """
+    doc_data = {}
+    doc_data["data"] = []
+    index=0
+
+    with open(file, 'r', encoding="utf-8") as f:
+        lines = f.readlines()
+    page_data = {}
+    page_data["slide"] = index+1
+    page_data["blocks"] = []
+    for line in lines:
+        page_data["blocks"].append({
+            "text": line,
+            "size": len(line)
+        })
+    doc_data["data"].append(page_data)
+    return doc_data
+    
 def extract_from_docx(file: str) -> dict:
     """
     Given a filepath, opens the word document and extracts words and metadata from each page.
@@ -19,12 +43,12 @@ def extract_from_docx(file: str) -> dict:
     :rtype: dict
     :return: dictionary representing document metadata and words extracted from each page
     """
-    
+
     if os.path.exists(file):
         doc = docx.Document(file)
     else:
         return
-
+      
     doc_data = {}
     doc_data["data"] = []
     index=0
@@ -53,7 +77,7 @@ def extract_from_docx(file: str) -> dict:
     return doc_data
 
 
-def ppt(file: str)->dict:
+def extract_from_pptx(file: str)->dict:
     """
     Given a filename, opens the Powerpoint and extracts words and metadata from each slide.
 
@@ -62,12 +86,14 @@ def ppt(file: str)->dict:
     :rtype: dict
     :return: dictionary representing document metadata and words extracted from each slide
     """
-
-    prs=Presentation(file)
+    if os.path.exists(file):
+        prs=Presentation(file)
+    else:
+        return
+        
     doc_data = {}
     doc_data["data"] = []
     index=0
-    
     for slide in prs.slides:
 
         for shape in slide.shapes:
@@ -80,7 +106,7 @@ def ppt(file: str)->dict:
                 for run in paragraph.runs:
                     page_data["blocks"].append({"text":run.text, "size": len(run.text)})
         doc_data["data"].append(page_data)
-
+  
     return doc_data
 
 
