@@ -1,14 +1,14 @@
-![GitHub](https://img.shields.io/github/license/mtkumar123/CSC510_Project_LectureAid)
-<!-- [![Build Status](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid.svg?branch=main)](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid) -->
+![GitHub](https://img.shields.io/github/license/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![Nodejs Build](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/node.js.yml/badge.svg)
 ![Python Build](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/python.yml/badge.svg)
 ![Pylint](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/pylint.yml/badge.svg)
-
 [![codecov](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid/branch/main/graph/badge.svg?token=EEGIC8T7QM)](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5528349.svg)](https://doi.org/10.5281/zenodo.5528349)
 ![Top Language](https://img.shields.io/github/languages/top/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub issues](https://img.shields.io/github/issues-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
+
+<!-- [![Build Status](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid.svg?branch=main)](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid) -->
 <!-- ![GitHub forks](https://img.shields.io/github/forks/mtkumar123/CSC510_Project_LectureAid?style=social)
  -->
 # Project LectureAid
@@ -23,11 +23,31 @@ After a long class, ever had to come back home and google everything you suppose
 
 Project LectureAid hopes to solve that hassle for you. 
 
-Upload your lecture pdf, word doc or powerpoint to our user based terminal menu, and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
+Now we support a lot of new file extensions:
+1. Word Document
+2. PDF
+3. Powerpoint
+4. Text
+5. Markdown
+
+Upload your lecture pdf, word doc or powerpoint and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid will show a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
 
 ## Phase 2 Feature update
 
-The updated release of this project provides with some super cool features to improve the user experience and support with multiple file formats. Instead of uploading files through command line instructions, an interactive UI based application is used to upload files. The web browser displays more related textual content from the input file along with the suitable questions and answers to provide more contextual detailing. Multiple file types like Microsoft Powerpoint (.pptx), Microsoft Word (.doc, .docx), text file (.txt) and markdown files (.md) are supported in the current version. Apart from plain text content, textual orientation in the tables and annotations are also parsed to get very detailed insight about the lecture content. Finally minor improvements are made for better text processing to suggest more closely related questions and answers.
+The updated release of this project provides with some super cool features to improve the user experience and support with multiple file formats. 
+
+Here are the list of featuers we have included:
+
+1. Extended the processing support to different filetypes:
+   1. Word Document
+   2. Powerpoint Presentation
+   3. Text Files
+   4. Markdown Files
+
+2. Extract answers from the crawled websites and provide a brief overview of the answers. Include the link to read further.
+
+3. An interactive UI to help user learn better and in a more appealing way. 
+4. Instead of uploading files through command line instructions, an interactive UI based application is used to upload files. The web browser displays more related textual content from the input file along with the suitable questions and answers to provide more contextual detailing. Multiple file types like Microsoft Powerpoint (.pptx), Microsoft Word (.doc, .docx), text file (.txt) and markdown files (.md) are supported in the current version. Apart from plain text content, textual orientation in the tables and annotations are also parsed to get very detailed insight about the lecture content. Finally minor improvements are made for better text processing to suggest more closely related questions and answers.
 
 # Technologies Used
 
@@ -155,6 +175,7 @@ https://mtkumar123.github.io/CSC510_Project_LectureAid/
 - [Isha Gupta](https://github.com/isha-bansal0115)
 - [Kiran Teja](https://github.com/kirantejatummuri)
 
+
 ## Phase 1 Team Members
 - Ashley King
 - Manoj Kumar
@@ -162,3 +183,9 @@ https://mtkumar123.github.io/CSC510_Project_LectureAid/
 - Sayali Parab
 - Ashwin Das
 - Renji Joseph Sabu
+
+## All Contributors to-date
+
+<a href = "https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/graphs/contributors">
+<img src = "https://contrib.rocks/image?repo=NCSU-Group7-SE2021/CSC510_Project_LectureAid"/>
+</a>
