@@ -5,9 +5,8 @@ of headers and paragraphs
 
 """
 
-import re
+import re, os
 import fitz
-import os
 from pptx import Presentation
 import docx
 
@@ -78,7 +77,7 @@ def extract_from_docx(file: str) -> dict:
     return doc_data
 
 
-def ppt(file: str)->dict:
+def extract_from_pptx(file: str)->dict:
     """
     Given a filename, opens the Powerpoint and extracts words and metadata from each slide.
 
@@ -87,12 +86,14 @@ def ppt(file: str)->dict:
     :rtype: dict
     :return: dictionary representing document metadata and words extracted from each slide
     """
-
-    prs=Presentation(file)
+    if os.path.exists(file):
+        prs=Presentation(file)
+    else:
+        return
+        
     doc_data = {}
     doc_data["data"] = []
     index=0
-    
     for slide in prs.slides:
 
         for shape in slide.shapes:
@@ -105,7 +106,7 @@ def ppt(file: str)->dict:
                 for run in paragraph.runs:
                     page_data["blocks"].append({"text":run.text, "size": len(run.text)})
         doc_data["data"].append(page_data)
-
+  
     return doc_data
 
 

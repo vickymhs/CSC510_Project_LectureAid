@@ -11,6 +11,11 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 
 
+/**
+ * Contains the HTML layout the Navigation bar options for the webpage
+ * @param {*} props contains the data passed on from the parent component
+ * @returns HTML content for the navigational bar
+ */
 export const MainListItems = (props) => {
   return (
   <div>

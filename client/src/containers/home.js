@@ -97,6 +97,9 @@ function Copyright(props) {
 
 const drawerWidth = 240;
 
+/**
+ * Defines the CSS style elements to use for the Navigational app bar
+ */
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
@@ -115,6 +118,10 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
+
+/**
+ * Defines the style elements to use for the Drawer
+ */
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" })(
   ({ theme, open }) => ({
     "& .MuiDrawer-paper": {
@@ -144,6 +151,10 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 const mdTheme = createTheme();
 
 
+/**
+ * Renders the HTML layout for the main home page of LectureAid. Uses material UI components - AppBar, ToolBar, Accordians, ListItems
+ * @returns {Object} HTML content for the home page
+ */
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const [selectedNavItem, setNavItem] = React.useState("Home")
@@ -152,6 +163,7 @@ function DashboardContent() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
 
   const navListHandler = (navItem) => {
     setNavItem(navItem);
@@ -253,6 +265,7 @@ function DashboardContent() {
                   {
                     renderPage(selectedNavItem)
                   }
+
                 </Paper>
               </Grid>
             </Grid>
@@ -264,6 +277,12 @@ function DashboardContent() {
   );
 }
 
+/**
+ * Starting point of code which renders the main home page
+ * @returns 
+ */
 export default function Dashboard() {
   return <DashboardContent />;
 }
+
+
