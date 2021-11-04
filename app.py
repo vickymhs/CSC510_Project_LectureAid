@@ -6,8 +6,13 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route('/file-upload', methods=['POST'])
 def file_upload():
+    """
+    POST end point for receiving the file send by the client. The file has to be sent as form data with the key file
+    :return: HTTP 400 response code if the file data is missing; HTTP 200 response code if the request was successful
+    """
     file = request.files['file']
     filename = file.filename
     filetype = filename.split(".")[1]
@@ -22,6 +27,13 @@ def file_upload():
 
 @app.route('/get-results')
 def send_data():
+    """
+    GET API end point that returns the file details the client requests for.
+    The client must send the file name as a query parameters with the key - filename
+    :return: HTTP 400 response code if the filename is missing in the query parameters;
+             HTTP 404 response code if the file is not found on the server;
+             JSON data containing the question - answer pairs for the file
+    """
     filename = request.args.get('filename')
 
     if filename is None:
@@ -41,10 +53,8 @@ def send_data():
         return '404'
 
 
-@app.route("/")
-def index():
-    return "Hello World!"
-
-
 if __name__ == "__main__":
+    """
+    Starts the flask server on port 5000 in debug mode. This is the entry point for the code.
+    """
     app.run(debug=True, port=5000)
