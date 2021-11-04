@@ -78,6 +78,9 @@ https://pypi.org/project/people-also-ask/
 2. Material UI is way to go. https://mui.com/getting-started/installation/
 
 # Requirements
+
+## Python powered Backend
+- 
 - Python (atleast 3.8) and pip
 - [Microsoft Visual C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 - [google-api-python-client](https://github.com/googleapis/google-api-python-client) - Version 2.22.0 or greater
@@ -93,9 +96,16 @@ https://pypi.org/project/people-also-ask/
 - [python-pptx](https://python-pptx.readthedocs.io/en/latest/) - Version 0.6.21
 - [flask](https://pypi.org/project/Flask/) - Version 2.0.2
 
+## React-ive Frontend
+
+- [NodeJS](https://nodejs.org/en/download/) 14.x or higher
+- React v17.x
+- MaterialUI v5.x
+
 # Setup
 
-## Setup for MacOS M1 BigSur and higher versions
+## Backend Formality
+### Setup for MacOS M1 BigSur and higher versions
 A few of the libraries are not extensively supported for the latest MacOS M1 arm64 processor as the open source communities are yet to release an automatic installation of build dependencies for these packages. Below are the steps mentioned to setup this project for MacOS.
 
 - Use the below command to cross check the version of the processor. 
@@ -115,14 +125,24 @@ A few of the libraries are not extensively supported for the latest MacOS M1 arm
   - `pip3 install python-pptx`
   - `pip3 install flask`
 
-## For other OS  
+### For other OS  
 - run `pip install -r requirements.txt`
   - this installs all of the required python libraries
 - run `pip install .`
   - this installs the project as a python package
 
+## Frontend 
+
+Assuming the system already has NodeJS and NPM
+
+- Go to `client` using command `cd client`
+- Run `npm install`
+
+That's it !!
+
 # How to run
 
+## Start a Server
 User uploads the lecture pdf, word doc or powerpoint through the terminal menu, LectureAid process the files and provides relevant results in questions and answers format through a browser window.
 
 - Step 1: User Terminal Menu: (`python code/user_cli.py`)
