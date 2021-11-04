@@ -45,7 +45,6 @@ export default function BookmarkAccordian() {
             <Link color="rgb(30,144,255)" underline="always" target="_blank" rel="noopener" href={item}>
               {"Link"}
             </Link>{" "}
-            ~
           </AccordionDetails>
         </Accordion>
       ))}
