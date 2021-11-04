@@ -11,18 +11,32 @@
 
 This repo contains the code for LectureAid [v1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0), a project for CSC510 Fall 21. 
 
+The updated version of the project [v2.0.0](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/releases/tag/v2.0.0) contains some interesting UI and extended application features that facilitates more seamless learning across platforms.
+
 # What is Project LectureAid?
 
 After a long class, ever had to come back home and google everything you supposedly learnt from the lecture handout for that day's class? Ever spend ~30 - 45 minutes just to search through google and compile a list of websites that explain what you need? And then a month later when midterms are around a corner, ever spend that same 30-45 minutes trying to find those websites again cause you forgot to bookmark them? 
 
 Project LectureAid hopes to solve that hassle for you. 
 
+## Phase 1 Feature update
+
 Upload your lecture pdf to our user based terminal menu, and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
+
+## Phase 2 Feature update
+
+The updated release of this project provides with some super cool features to improve the user experience and support with multiple file formats. Instead of uploading files through command line instructions, an interactive UI based application is used to upload files. The web browser displays more related textual content from the input file along with the suitable questions and answers to provide more contextual detailing. Multiple file types like Microsoft Powerpoint (.pptx), Microsoft Word (.doc, .docx), text file (.txt) and markdown files (.md) are supported in the current version. Apart from plain text content, textual orientation in the tables and annotations are also parsed to get very detailed insight about the lecture content. Finally minor improvements are made for better text processing to suggest more closely related questions and answers.
 
 # Technologies Used
 
 Text Extraction from pdfs was done with the help of PyMuPDF. Documentation can be viewed here:
 https://pymupdf.readthedocs.io/en/latest/
+
+Text Extraction from word documents (docx) was done with the help of python-docx. Documentation can be viewed here:
+https://python-docx.readthedocs.io/en/latest/
+
+Text Extraction from powerpoint presentation (pptx) was done with the help of python-pptx. Documentation can be viewed here:
+https://python-pptx.readthedocs.io/en/latest/
 
 Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
 https://spacy.io/api/doc
@@ -49,7 +63,7 @@ https://pypi.org/project/people-also-ask/
 # Setup
 
 ## Setup for MacOS M1 BigSur and higher versions
-A few of the libraries are not extensively supported for the latest MacOS M1 arm64 processor as the open source communities are yet to release an automatic installation of build dependencies for these packages. Below are the steps mentioned to setup this project for MacOS
+A few of the libraries are not extensively supported for the latest MacOS M1 arm64 processor as the open source communities are yet to release an automatic installation of build dependencies for these packages. Below are the steps mentioned to setup this project for MacOS.
 
 - Use the below command to cross check the version of the processor. 
   - `uname-m`
