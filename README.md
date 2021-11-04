@@ -4,7 +4,6 @@
 ![Pylint](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/pylint.yml/badge.svg)
 [![codecov](https://codecov.io/gh/NCSU-Group7-SE2021/CSC510_Project_LectureAid/branch/main/graph/badge.svg?token=LEKW9OSGSV)](https://codecov.io/gh/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5528349.svg)](https://doi.org/10.5281/zenodo.5528349)
-![Top Language](https://img.shields.io/github/languages/top/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub issues](https://img.shields.io/github/issues-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub forks](https://img.shields.io/github/forks/NCSU-Group7-SE2021/CSC510_Project_LectureAid?style=social)
@@ -164,8 +163,20 @@ https://ncsu-group7-se2021.github.io/CSC510_Project_LectureAid/
   - Microsoft C++ build tools are needed to generate the wordcloud. See the requirements section for the download link.
 
 # Future work
-- #### Host the application on a public server
-  Host the application on a public server and provide user account login. Build a database to store the user information and move away from google chrome cache.
+- #### Create a Login Portal for users
+  Create a SignUp and SignIn window for user to create their own account. Firebase could ba probable choice. 
+
+- #### Store bookmarks in some database storage.
+  Build a database to store the user information and move away from browser cache. Currently, browser cache is being used as a default storage for bookmarks.
+
+- #### Extend the extraction process to wesbites
+  Right now, we are extracting text from different kind of files. Why stop there? The world reads online, add feature to extract data from online portal and process it to find results. The `Online Search` tab is made for that
+
+- #### Persist a definite amount of history
+  Store some questions, or the entire list of questions per file. Persist something in cookies. Its your choice. Have some history for users to work with.
+
+- #### Extend to more file types
+  Why not? We have docx, pptx, pdfs but why limit there. Add filetypes as HTML, RTF, ZIP etc
 
 - #### Build a browser extension
   Build a browser extension which lets the user to select text from a webpage and send a request to the application and get the links of pdf webpages.
