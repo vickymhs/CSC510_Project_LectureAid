@@ -4,7 +4,7 @@ import sys
 import os
 import concurrent.futures
 import pyfiglet
-from server.extract_sizes import ppt, extract_words, text_to_groupings, extract_from_docx
+from server.extract_sizes import ppt, extract_words, text_to_groupings, extract_from_docx, extract_from_txt
 import server.wordprocessing as wp
 from server.google_search import get_people_also_ask_links
 from wordcloud import WordCloud
@@ -111,6 +111,9 @@ def process_file(file_name: str, file_type: str):
     
     if (file_type == "docx" or file_type == "doc"):
         raw_data = extract_from_docx(file_path)
+
+    if (file_type == "txt" or file_type == "md"):
+        raw_data = extract_from_txt(file_path)
     
     raw_data = text_to_groupings(raw_data)
     keyword_data = wp.extract_noun_chunks(raw_data)

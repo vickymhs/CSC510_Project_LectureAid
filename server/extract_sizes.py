@@ -7,10 +7,35 @@ of headers and paragraphs
 
 import re
 import fitz
-from pptx import Presentation
 import os
+from pptx import Presentation
 import docx
 
+def extract_from_txt(file: str)->dict:
+    """
+    Given a filename, opens the txt file and extracts words and metadata from the file.
+    :param file: String representing file path
+    :type: string
+    :rtype: dict
+    :return: dictionary representing document metadata and words extracted from file
+    """
+    doc_data = {}
+    doc_data["data"] = []
+    index=0
+
+    with open(file, 'r', encoding="utf-8") as f:
+        lines = f.readlines()
+    page_data = {}
+    page_data["slide"] = index+1
+    page_data["blocks"] = []
+    for line in lines:
+        page_data["blocks"].append({
+            "text": line,
+            "size": len(line)
+        })
+    doc_data["data"].append(page_data)
+    return doc_data
+    
 def extract_from_docx(file: str) -> dict:
     """
     Given a filepath, opens the word document and extracts words and metadata from each page.
@@ -19,12 +44,12 @@ def extract_from_docx(file: str) -> dict:
     :rtype: dict
     :return: dictionary representing document metadata and words extracted from each page
     """
-    
+
     if os.path.exists(file):
         doc = docx.Document(file)
     else:
         return
-
+      
     doc_data = {}
     doc_data["data"] = []
     index=0
