@@ -7,11 +7,11 @@
 ![Top Language](https://img.shields.io/github/languages/top/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub issues](https://img.shields.io/github/issues-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
+![GitHub forks](https://img.shields.io/github/forks/NCSU-Group7-SE2021/CSC510_Project_LectureAid?style=social)
+ 
+# LectureAid
 
-<!-- [![Build Status](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid.svg?branch=main)](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid) -->
-<!-- ![GitHub forks](https://img.shields.io/github/forks/mtkumar123/CSC510_Project_LectureAid?style=social)
- -->
-# Project LectureAid
+![Banner](./assets/banner.png)
 
 This repo contains the code for LectureAid [v1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0), a project for CSC510 Fall 21. 
 
