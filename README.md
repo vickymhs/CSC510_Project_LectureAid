@@ -76,7 +76,6 @@ A few of the libraries are not extensively supported for the latest MacOS M1 arm
 
 # How to run
 
-
 User uploads the lecture pdf through the terminal menu, LectureAid process the pdf and provides relevant results in questions and answers format through a browser window.
 
 - Step 1: User Terminal Menu: (`python code/user_cli.py`)
@@ -129,6 +128,16 @@ https://mtkumar123.github.io/CSC510_Project_LectureAid/
    E-mail: lectureaidnscu@gmail.com
    
 # Team Members
+
+## Phase 2 Team Members
+- [Rahul Kalita](https://github.com/rahulkalita8)
+- [Vignesh Muthukumar](https://github.com/vickymhs)
+- [Eshita Arza](https://github.com/ArzaEshita)
+- [Luis](https://github.com/lgdeloss)
+- [Isha Gupta](https://github.com/isha-bansal0115)
+- [Kiran Teja](https://github.com/kirantejatummuri)
+
+## Phase 1 Team Members
 - Ashley King
 - Manoj Kumar
 - Rakesh Muppala
