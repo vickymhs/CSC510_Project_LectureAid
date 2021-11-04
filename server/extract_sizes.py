@@ -7,6 +7,7 @@ of headers and paragraphs
 
 import re
 import fitz
+import os
 from pptx import Presentation
 import docx
 
