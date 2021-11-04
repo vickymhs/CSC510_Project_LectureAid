@@ -2,7 +2,7 @@
 ![Nodejs Build](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/node.js.yml/badge.svg)
 ![Python Build](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/python.yml/badge.svg)
 ![Pylint](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/pylint.yml/badge.svg)
-[![codecov](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid/branch/main/graph/badge.svg?token=EEGIC8T7QM)](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid)
+[![codecov](https://codecov.io/gh/NCSU-Group7-SE2021/CSC510_Project_LectureAid/branch/main/graph/badge.svg?token=LEKW9OSGSV)](https://codecov.io/gh/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5528349.svg)](https://doi.org/10.5281/zenodo.5528349)
 ![Top Language](https://img.shields.io/github/languages/top/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 ![GitHub issues](https://img.shields.io/github/issues-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
