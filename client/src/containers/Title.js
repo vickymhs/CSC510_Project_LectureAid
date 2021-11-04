@@ -2,6 +2,11 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import Typography from "@mui/material/Typography";
 
+/**
+ * Renders the title of the webpage
+ * @param {*} props 
+ * @returns 
+ */
 function Title(props) {
   return (
     <Typography component="h2" variant="h6" color="primary" gutterBottom>

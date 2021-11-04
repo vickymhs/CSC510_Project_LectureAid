@@ -10,6 +10,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 
+/**
+ * Contains the HTML layout the Navigation bar options for the webpage
+ * @param {*} props contains the data passed on from the parent component
+ * @returns HTML content for the navigational bar
+ */
 export function MainListItems(props) {
   const [selectedMenu, setSelectedMenu] = React.useState("home");
 

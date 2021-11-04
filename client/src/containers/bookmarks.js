@@ -3,11 +3,19 @@ import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { Accordion, AccordionSummary, AccordionDetails } from "./commons";
 
+/**
+ * Fetches cache data from chrome storage
+ * @returns {Object} contains information about the cached items  
+ */
 function getBookmarksFromLocalStorage() {
   let linksInStorage = JSON.parse(localStorage.getItem("links"));
   return linksInStorage;
 }
 
+/**
+ * Constructs the react components for the bookmarks page by fetching the locally stored cache and iterating over each item
+ * @returns {Components} HTML for constructing the layout of the bookmarks
+ */
 export default function BookmarkAccordian() {
   const [expanded, setExpanded] = React.useState("bookmark0");
   const rows = getBookmarksFromLocalStorage();

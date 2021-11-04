@@ -6,6 +6,10 @@ import Button from '@mui/material/Button';
 import {Accordion, AccordionSummary, AccordionDetails} from './commons';
 import { makeStyles } from '@material-ui/core/styles';
 
+/**
+ * Defines the CSS style eleements for bookmark icons
+ * @returns 
+ */
 function iconStyles() {
   return {
     bookmarkedIcon: {
@@ -17,6 +21,11 @@ function iconStyles() {
   }
 }
 
+/**
+ * Renders the customised accordian for the questions fetched from the server for the page
+ * @param {*} props contains the data passed on from the parent component
+ * @returns {Object} HTML content for the accordians
+ */
 export default function CustomizedAccordions(props) {
   const [expanded, setExpanded] = React.useState("question0");
   const rows = props.results.results;
@@ -24,6 +33,11 @@ export default function CustomizedAccordions(props) {
     setExpanded(newExpanded ? panel : false);
   };
 
+  /**
+   * Verfifies if a specific item has been bookmarked
+   * @param {Object} item contains details about the specific item
+   * @returns {boolean} true if item is bookmarked else false
+   */
   const getButtonIcon = (item) => {
     let results = getBookmarksFromLocalStorage()
     if(results){
@@ -33,11 +47,20 @@ export default function CustomizedAccordions(props) {
     return false
   }
 
+  /**
+   * Fetches the links stored in chrome cache storage
+   * @returns {Object} JSON data containing the cached information
+   */
   const getBookmarksFromLocalStorage = () => {
     let linksInStorage = JSON.parse(localStorage.getItem("links"));
     return linksInStorage
   }
 
+  /**
+   * Adds a new bookmakred item to the cache storage
+   * @param {Object} event points to the bookmark icon component of the selected item
+   * @param {Object} item JSON data containing information about the item to be bookmarked
+   */
   const addBookmarkToLocalStorage = (event, item) => {
         let link = item.answer
         let question = item.question
