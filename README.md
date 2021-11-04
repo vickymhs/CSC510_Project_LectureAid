@@ -1,15 +1,21 @@
 ![GitHub](https://img.shields.io/github/license/mtkumar123/CSC510_Project_LectureAid)
-[![Build Status](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid.svg?branch=main)](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid)
+<!-- [![Build Status](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid.svg?branch=main)](https://app.travis-ci.com/mtkumar123/CSC510_Project_LectureAid) -->
+![Nodejs Build](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/node.js.yml/badge.svg)
+![Python Build](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/python.yml/badge.svg)
+![Pylint](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/actions/workflows/pylint.yml/badge.svg)
+
 [![codecov](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid/branch/main/graph/badge.svg?token=EEGIC8T7QM)](https://codecov.io/gh/mtkumar123/CSC510_Project_LectureAid)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5528349.svg)](https://doi.org/10.5281/zenodo.5528349)
-![Top Language](https://img.shields.io/github/languages/top/mtkumar123/CSC510_Project_LectureAid)
-![GitHub issues](https://img.shields.io/github/issues-raw/mtkumar123/CSC510_Project_LectureAid)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/mtkumar123/CSC510_Project_LectureAid)
+![Top Language](https://img.shields.io/github/languages/top/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
+![GitHub issues](https://img.shields.io/github/issues-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/NCSU-Group7-SE2021/CSC510_Project_LectureAid)
 <!-- ![GitHub forks](https://img.shields.io/github/forks/mtkumar123/CSC510_Project_LectureAid?style=social)
  -->
 # Project LectureAid
 
 This repo contains the code for LectureAid [v1.0.0](https://github.com/mtkumar123/CSC510_Project_LectureAid/releases/tag/v1.0.0), a project for CSC510 Fall 21. 
+
+The updated version of the project [v2.0.0](https://github.com/NCSU-Group7-SE2021/CSC510_Project_LectureAid/releases/tag/v2.0.0) contains some interesting UI and extended application features that facilitates more seamless learning across platforms.
 
 # What is Project LectureAid?
 
@@ -19,10 +25,20 @@ Project LectureAid hopes to solve that hassle for you.
 
 Upload your lecture pdf, word doc or powerpoint to our user based terminal menu, and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture. 
 
+## Phase 2 Feature update
+
+The updated release of this project provides with some super cool features to improve the user experience and support with multiple file formats. Instead of uploading files through command line instructions, an interactive UI based application is used to upload files. The web browser displays more related textual content from the input file along with the suitable questions and answers to provide more contextual detailing. Multiple file types like Microsoft Powerpoint (.pptx), Microsoft Word (.doc, .docx), text file (.txt) and markdown files (.md) are supported in the current version. Apart from plain text content, textual orientation in the tables and annotations are also parsed to get very detailed insight about the lecture content. Finally minor improvements are made for better text processing to suggest more closely related questions and answers.
+
 # Technologies Used
 
 Text Extraction from pdfs was done with the help of PyMuPDF. Documentation can be viewed here:
 https://pymupdf.readthedocs.io/en/latest/
+
+Text Extraction from word documents (docx) was done with the help of python-docx. Documentation can be viewed here:
+https://python-docx.readthedocs.io/en/latest/
+
+Text Extraction from powerpoint presentation (pptx) was done with the help of python-pptx. Documentation can be viewed here:
+https://python-pptx.readthedocs.io/en/latest/
 
 Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
 https://spacy.io/api/doc
@@ -51,7 +67,7 @@ https://pypi.org/project/people-also-ask/
 # Setup
 
 ## Setup for MacOS M1 BigSur and higher versions
-A few of the libraries are not extensively supported for the latest MacOS M1 arm64 processor as the open source communities are yet to release an automatic installation of build dependencies for these packages. Below are the steps mentioned to setup this project for MacOS
+A few of the libraries are not extensively supported for the latest MacOS M1 arm64 processor as the open source communities are yet to release an automatic installation of build dependencies for these packages. Below are the steps mentioned to setup this project for MacOS.
 
 - Use the below command to cross check the version of the processor. 
   - `uname-m`
@@ -77,7 +93,6 @@ A few of the libraries are not extensively supported for the latest MacOS M1 arm
   - this installs the project as a python package
 
 # How to run
-
 
 User uploads the lecture pdf, word doc or powerpoint through the terminal menu, LectureAid process the files and provides relevant results in questions and answers format through a browser window.
 
@@ -131,6 +146,16 @@ https://mtkumar123.github.io/CSC510_Project_LectureAid/
    E-mail: lectureaidnscu@gmail.com
    
 # Team Members
+
+## Phase 2 Team Members
+- [Rahul Kalita](https://github.com/rahulkalita8)
+- [Vignesh Muthukumar](https://github.com/vickymhs)
+- [Eshita Arza](https://github.com/ArzaEshita)
+- [Luis](https://github.com/lgdeloss)
+- [Isha Gupta](https://github.com/isha-bansal0115)
+- [Kiran Teja](https://github.com/kirantejatummuri)
+
+## Phase 1 Team Members
 - Ashley King
 - Manoj Kumar
 - Rakesh Muppala
