@@ -54,29 +54,3 @@ export const MainListItems = (props) => {
   );
 }
 
-export const SecondaryListItems = (props) => {
-  return (
-  <div>
-    <ListSubheader inset>Extra???</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="X" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Y" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Z" />
-    </ListItem>
-  </div>
-  );
-}
-

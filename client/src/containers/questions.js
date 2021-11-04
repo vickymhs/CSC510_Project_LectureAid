@@ -5,6 +5,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import Button from '@mui/material/Button';
 import {Accordion, AccordionSummary, AccordionDetails} from './commons';
 import { makeStyles } from '@material-ui/core/styles';
+import { keys } from '@mui/system';
 
 /**
  * Defines the CSS style eleements for bookmark icons
@@ -70,9 +71,18 @@ export default function CustomizedAccordions(props) {
         if (!linksInStorage) {
             linksInStorage = {};
         }
-        linksInStorage[link] = {"question" : question, "simple_answer" : simpleAnswer}
-        localStorage.setItem("links", JSON.stringify(linksInStorage));
-        event.target.style.color = "dodgerblue"
+
+        let links = Object.keys(linksInStorage)
+        if(links.includes(link) && question === linksInStorage[link].question && simpleAnswer === linksInStorage[link].simple_answer){
+          delete linksInStorage[link]
+          localStorage.setItem("links", JSON.stringify(linksInStorage));
+          event.target.style.color = "grey"
+        }
+        else{
+          linksInStorage[link] = {"question" : question, "simple_answer" : simpleAnswer}
+          localStorage.setItem("links", JSON.stringify(linksInStorage));
+          event.target.style.color = "dodgerblue"
+        }
     }
     
   const classes = makeStyles(iconStyles)();

@@ -18,7 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import CustomizedAccordions from "./questions";
 import BookmarkAccordian from "./bookmarks.js";
-import {MainListItems, SecondaryListItems} from "./listItems";
+import {MainListItems} from "./listItems";
 import { UploadFile } from "./upload";
 
 function Copyright(props) {
@@ -111,7 +111,7 @@ function DashboardContent() {
 
   const handleResult = (res) => {
     setResult(res);
-    setNavItem("Upload");
+    setNavItem("Home");
   }
 
   function renderPage(navItem) {
@@ -201,8 +201,6 @@ function DashboardContent() {
           <List>
             <MainListItems clickHandler={(value) => navListHandler(value)} />
           </List>
-          <Divider />
-          <List><SecondaryListItems /></List>
         </Drawer>
 
         <Box
