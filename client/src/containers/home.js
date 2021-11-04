@@ -178,17 +178,20 @@ function DashboardContent() {
   };
 
   const changeContent = () => {
-    if (selectedMenu == "home") {
-      return (
-        <CustomizedAccordions
-          // results = {getResults("lecture4")}
-          results={result}
-        ></CustomizedAccordions>
-      );
-    } else if (selectedMenu == "upload") {
-      return <UploadFile></UploadFile>;
-    } else {
-      return <div></div>;
+    if(selectedMenu == 'home'){
+      return (<CustomizedAccordions
+        // results = {getResults("lecture4")}
+        results = {result}
+        >
+          
+        </CustomizedAccordions>)
+    }else if(selectedMenu == 'upload'){
+      return (<UploadFile></UploadFile>)
+    }else if(selectedMenu == 'bookmarks'){
+      return (<BookmarkAccordian></BookmarkAccordian>)
+    }
+    else{
+      return (<div></div>)
     }
   };
 
@@ -259,15 +262,8 @@ function DashboardContent() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                  {/* <CustomizedAccordions
-                  // results = {getResults("lecture4")}
-                  results = {result}
-                  >
-                    
-                  </CustomizedAccordions> */}
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   {changeContent()}
-                  {/* {onHandleChange('home')} */}
                 </Paper>
               </Grid>
             </Grid>
@@ -282,3 +278,5 @@ function DashboardContent() {
 export default function Dashboard() {
   return <DashboardContent />;
 }
+
+
