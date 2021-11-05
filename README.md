@@ -66,9 +66,7 @@ https://python-pptx.readthedocs.io/en/latest/
 4. Word Processing Logic was done with the help of Spacy. Documentation can be viewed here:
 https://spacy.io/api/doc
 
-5. Text extraction for powerpoint files was done with the packaga python-pptx. Documentation can be viewed here: https://python-pptx.readthedocs.io/en/latest/index.html
-
-6. Returning the questions with the relevant links was done with the help of people_also_ask library. Documentation can be seen here:
+5. Returning the questions with the relevant links was done with the help of people_also_ask library. Documentation can be seen here:
 https://pypi.org/project/people-also-ask/
 
 ## The interesting UI part
