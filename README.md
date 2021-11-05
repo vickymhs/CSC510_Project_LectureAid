@@ -22,7 +22,8 @@ After a long class, ever had to come back home and google everything you suppose
 
 Project LectureAid hopes to solve that hassle for you.
 
-![Video](./assets/ATXE6J1FUVPJ80Y3.mp4)
+## Click to Play
+[![Intro Video](./assets/results.png)](https://youtu.be/yPYWEK7RHY8)
 
 ## Phase 1 Features
 
