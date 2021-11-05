@@ -22,6 +22,8 @@ After a long class, ever had to come back home and google everything you suppose
 
 Project LectureAid hopes to solve that hassle for you.
 
+![Video](./assets/ATXE6J1FUVPJ80Y3.mp4)
+
 ## Phase 1 Features
 
 Upload your lecture pdf, word doc or powerpoint to our user based terminal menu, and LectureAid will extract the text, process it, and search the internet for key topics from that lecture. Once it finds relevant results, LectureAid opens up a browser window with a list of questions relevant to your topic, and website links that should answer said questions, and also a wordcloud that highlights key words in the lecture.
